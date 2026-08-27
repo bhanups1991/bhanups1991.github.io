@@ -10,25 +10,29 @@
         <meta name="author" content="Bhanu Pratap Sharma">
       
       
+        <link rel="canonical" href="https://bhanups1991.github.io/posts/signorini_conditions/">
+      
+      
+        <link rel="prev" href="../..">
       
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Bhanu Pratap Sharma, PhD</title>
+        <title>Signorini Conditions in Contact Mechanics - Bhanu Pratap Sharma, PhD</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Bhanu Pratap Sharma, PhD" class="md-header__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+    <a href="../.." title="Bhanu Pratap Sharma, PhD" class="md-header__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Signorini Conditions in Contact Mechanics
             
           </span>
         </div>
@@ -179,7 +188,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Bhanu Pratap Sharma, PhD" class="md-nav__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+    <a href="../.." title="Bhanu Pratap Sharma, PhD" class="md-nav__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -197,7 +206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -221,8 +230,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -233,11 +244,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -258,7 +269,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -273,10 +284,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/posts/signorini_conditions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signorini Conditions in Contact Mechanics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -292,6 +330,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algebraic Reformulation with the Positive Part Operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization-of-the-projection-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization of the Projection Operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -311,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/contact.md" class="md-nav__link">
+      <a href="../../contact.md" class="md-nav__link">
         
   
   
@@ -348,6 +428,38 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algebraic Reformulation with the Positive Part Operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization-of-the-projection-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization of the Projection Operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -360,8 +472,51 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="reformulating-signorini-contact-conditions-via-the-positive-part-operator">Reformulating Signorini Contact Conditions via the Positive Part Operator</h1>
+<p>In Signorini contact mechanics, unilateral contact constraints on the boundary <span class="arithmatex">\(\Gamma_c\)</span> are typically expressed through the classical complementarity conditions:</p>
+<div class="arithmatex">\[g_n \ge 0, \quad p_n \ge 0, \quad p_n g_n = 0\]</div>
+<p>where <span class="arithmatex">\(g_n\)</span> is the normal gap function and <span class="arithmatex">\(p_n\)</span> is the normal contact pressure (defined positive in compression). </p>
+<h2 id="algebraic-reformulation-with-the-positive-part-operator">Algebraic Reformulation with the Positive Part Operator</h2>
+<p>To implement these non-smooth constraints efficiently in computational frameworks (such as Nitsche-based formulations in FEniCS), the complementarity system can be equivalently rewritten using the positive part operator <span class="arithmatex">\((\cdot)_+ = \max(0, \cdot)\)</span>. </p>
+<p>For a given penalty parameter <span class="arithmatex">\(\gamma &gt; 0\)</span>, the contact condition is compactly satisfied when:</p>
+<div class="arithmatex">\[p_n = \left( p_n - \gamma g_n \right)_+\]</div>
+<p>This projection formulation maps the trial contact pressure onto the admissible positive cone, avoiding explicit active-set search loops while ensuring thermodynamic and mechanical consistency.</p>
+<h2 id="visualization-of-the-projection-operator">Visualization of the Projection Operator</h2>
+<p>To build intuition around how the positive part operator enforces the Signorini complementarity subset, we can visualize the mapping of the unconstrained intermediate state to the valid mechanical contact response:</p>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="define-range-of-intermediate-gap-pressure-states">Define range of intermediate gap-pressure states</h1>
+<p>x = np.linspace(-3, 3, 400)</p>
+<h1 id="positive-part-operator-projection-p_n-max0-x">Positive part operator projection: p_n = max(0, x)</h1>
+<p>proj_positive = np.maximum(0, x)</p>
+<p>plt.figure(figsize=(8, 5))
+plt.plot(x, proj_positive, label=r'<span class="arithmatex">\(p_n = (p_n - \gamma g_n)_+\)</span>', color='indigo', lw=2.5)
+plt.axhline(0, color='black', lw=1)
+plt.axvline(0, color='black', lw=1)
+plt.title('Signorini Projection via Positive Part Operator', fontsize=12)
+plt.xlabel('Intermediate State (<span class="arithmatex">\(p_n - \gamma g_n\)</span>)', fontsize=10)
+plt.ylabel('Projected Contact Pressure (<span class="arithmatex">\(p_n\)</span>)', fontsize=10)
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.legend()
+plt.show()</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -398,12 +553,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.sections", "navigation.instant", "content.code.copy", "content.action.edit"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       

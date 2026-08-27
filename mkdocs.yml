@@ -14,6 +14,11 @@ theme:
     - content.code.copy
     - content.action.edit
 
+nav:
+  - Home: index.md
+  - About Me: about.md
+  - Signorini Conditions in Contact Mechanics: signorini_conditions.md
+
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
