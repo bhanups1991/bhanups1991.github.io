@@ -5,9 +5,23 @@ site_author: Bhanu Pratap Sharma
 theme:
   name: material
   palette:
-    scheme: default
-    primary: indigo
-    accent: indigo
+  # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: custom-dark
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
   features:
     - navigation.sections
     - navigation.instant
@@ -36,4 +50,8 @@ plugins:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+extra_css:
+  - javascripts/extra.css

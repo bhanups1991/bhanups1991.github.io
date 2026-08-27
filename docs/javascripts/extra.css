@@ -1,0 +1,29 @@
+[data-md-color-scheme="custom-dark"] {
+  /* Backgrounds */
+  --md-default-bg-color: #000000;
+  --md-default-bg-color--light: #111111;
+  --md-primary-bg-color: #000000;
+  --md-header-bg-color: #000000;
+  
+  /* Text and Headings (All Pure White) */
+  --md-default-fg-color: #ffffff;
+  --md-default-fg-color--light: #dddddd;
+  --md-default-fg-color--lighter: #cccccc;
+  --md-typeset-color: #ffffff;
+  
+  /* Headings & UI Elements */
+  --md-typeset-a-color: #39FF14;
+  
+  /* Code blocks */
+  --md-code-bg-color: #111111;
+  --md-code-fg-color: #ffffff;
+}
+
+/* Force specific elements that override base variables */
+[data-md-color-scheme="custom-dark"] h1, 
+[data-md-color-scheme="custom-dark"] h2, 
+[data-md-color-scheme="custom-dark"] h3, 
+[data-md-color-scheme="custom-dark"] h4, 
+[data-md-color-scheme="custom-dark"] strong {
+  color: #ffffff !important;
+}
