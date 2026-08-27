@@ -16,6 +16,8 @@
         <link rel="prev" href="../about/">
       
       
+        <link rel="next" href="../glossary/">
+      
       
         
       
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-skip">
+        <a href="#reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-skip">
           Skip to content
         </a>
       
@@ -316,10 +318,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-nav__link">
+  <a href="#reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        - Reformulating Signorini Contact Conditions via the Positive Part Operator
+        Reformulating Signorini Contact Conditions via the Positive Part Operator
       
     </span>
   </a>
@@ -327,10 +329,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
+  <a href="#algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        - Algebraic Reformulation with the Positive Part Operator
+        Algebraic Reformulation with the Positive Part Operator
       
     </span>
   </a>
@@ -338,10 +340,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-visualization-of-the-projection-operator" class="md-nav__link">
+  <a href="#visualization-of-the-projection-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        - Visualization of the Projection Operator
+        Visualization of the Projection Operator
       
     </span>
   </a>
@@ -352,6 +354,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -381,10 +410,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-nav__link">
+  <a href="#reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        - Reformulating Signorini Contact Conditions via the Positive Part Operator
+        Reformulating Signorini Contact Conditions via the Positive Part Operator
       
     </span>
   </a>
@@ -392,10 +421,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
+  <a href="#algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        - Algebraic Reformulation with the Positive Part Operator
+        Algebraic Reformulation with the Positive Part Operator
       
     </span>
   </a>
@@ -403,10 +432,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-visualization-of-the-projection-operator" class="md-nav__link">
+  <a href="#visualization-of-the-projection-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        - Visualization of the Projection Operator
+        Visualization of the Projection Operator
       
     </span>
   </a>
@@ -432,17 +461,17 @@
 
   <h1>Signorini Conditions in Contact Mechanics</h1>
 
-<h3 id="-reformulating-signorini-contact-conditions-via-the-positive-part-operator">- Reformulating Signorini Contact Conditions via the Positive Part Operator</h3>
+<h3 id="reformulating-signorini-contact-conditions-via-the-positive-part-operator">Reformulating Signorini Contact Conditions via the Positive Part Operator</h3>
 <p>In Signorini contact mechanics, unilateral contact constraints on the boundary <span class="arithmatex">\(\Gamma_c\)</span> are typically expressed through the classical complementarity conditions:</p>
 <div class="arithmatex">\[u_N \le g_N, \quad \sigma_N \le 0, \quad \sigma_N (u_N - g_N) = 0\]</div>
 <p>where <span class="arithmatex">\(g_N\)</span> is the normal gap function and <span class="arithmatex">\(\sigma_N\)</span> is the normal contact pressure (defined negative in compression).</p>
-<h3 id="-algebraic-reformulation-with-the-positive-part-operator">- Algebraic Reformulation with the Positive Part Operator</h3>
+<h3 id="algebraic-reformulation-with-the-positive-part-operator">Algebraic Reformulation with the Positive Part Operator</h3>
 <p>To implement these non-smooth constraints efficiently in computational frameworks (such as Nitsche-based formulations in FEniCS), the complementarity system can be equivalently rewritten using the positive part operator <span class="arithmatex">\((\cdot)_+ = \max(0, \cdot)\)</span>. </p>
 <p>For a given penalty parameter <span class="arithmatex">\(\kappa &gt; 0\)</span>, the contact condition is compactly satisfied when:</p>
 <div class="arithmatex">\[\sigma_N = - \left( \kappa (u_N - g_N) - \sigma_N \right)_+\]</div>
 <div class="arithmatex">\[\sigma_N = - \max\left( 0, \kappa (u_N - g_N) - \sigma_N \right)\]</div>
 <p>This projection formulation maps the trial contact pressure onto the admissible region, avoiding explicit active-set search loops while ensuring thermodynamic and mechanical consistency.</p>
-<h3 id="-visualization-of-the-projection-operator">- Visualization of the Projection Operator</h3>
+<h3 id="visualization-of-the-projection-operator">Visualization of the Projection Operator</h3>
 <p>To build intuition around how the positive part operator enforces the Signorini complementarity subset, we can refer to the following image.</p>
 <p><img alt="Signorini Conditions and Positive Part Operator" src="/images/signorini_conditions.png" /></p>
 
