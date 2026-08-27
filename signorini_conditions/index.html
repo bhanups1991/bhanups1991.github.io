@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-skip">
+        <a href="#-reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-skip">
           Skip to content
         </a>
       
@@ -266,8 +266,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -310,8 +308,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -320,10 +316,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
+  <a href="#-reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algebraic Reformulation with the Positive Part Operator
+        - Reformulating Signorini Contact Conditions via the Positive Part Operator
       
     </span>
   </a>
@@ -331,10 +327,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualization-of-the-projection-operator" class="md-nav__link">
+  <a href="#-algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visualization of the Projection Operator
+        - Algebraic Reformulation with the Positive Part Operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-visualization-of-the-projection-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        - Visualization of the Projection Operator
       
     </span>
   </a>
@@ -366,8 +373,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -376,10 +381,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
+  <a href="#-reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algebraic Reformulation with the Positive Part Operator
+        - Reformulating Signorini Contact Conditions via the Positive Part Operator
       
     </span>
   </a>
@@ -387,10 +392,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualization-of-the-projection-operator" class="md-nav__link">
+  <a href="#-algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visualization of the Projection Operator
+        - Algebraic Reformulation with the Positive Part Operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-visualization-of-the-projection-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        - Visualization of the Projection Operator
       
     </span>
   </a>
@@ -414,36 +430,21 @@
 
 
 
-<h1 id="reformulating-signorini-contact-conditions-via-the-positive-part-operator">Reformulating Signorini Contact Conditions via the Positive Part Operator</h1>
+  <h1>Signorini Conditions in Contact Mechanics</h1>
+
+<h3 id="-reformulating-signorini-contact-conditions-via-the-positive-part-operator">- Reformulating Signorini Contact Conditions via the Positive Part Operator</h3>
 <p>In Signorini contact mechanics, unilateral contact constraints on the boundary <span class="arithmatex">\(\Gamma_c\)</span> are typically expressed through the classical complementarity conditions:</p>
-<div class="arithmatex">\[g_n \ge 0, \quad p_n \ge 0, \quad p_n g_n = 0\]</div>
-<p>where <span class="arithmatex">\(g_n\)</span> is the normal gap function and <span class="arithmatex">\(p_n\)</span> is the normal contact pressure (defined positive in compression). </p>
-<h2 id="algebraic-reformulation-with-the-positive-part-operator">Algebraic Reformulation with the Positive Part Operator</h2>
+<div class="arithmatex">\[u_N \le g_N, \quad \sigma_N \le 0, \quad \sigma_N (u_N - g_N) = 0\]</div>
+<p>where <span class="arithmatex">\(g_N\)</span> is the normal gap function and <span class="arithmatex">\(\sigma_N\)</span> is the normal contact pressure (defined negative in compression).</p>
+<h3 id="-algebraic-reformulation-with-the-positive-part-operator">- Algebraic Reformulation with the Positive Part Operator</h3>
 <p>To implement these non-smooth constraints efficiently in computational frameworks (such as Nitsche-based formulations in FEniCS), the complementarity system can be equivalently rewritten using the positive part operator <span class="arithmatex">\((\cdot)_+ = \max(0, \cdot)\)</span>. </p>
-<p>For a given penalty parameter <span class="arithmatex">\(\gamma &gt; 0\)</span>, the contact condition is compactly satisfied when:</p>
-<div class="arithmatex">\[p_n = \left( p_n - \gamma g_n \right)_+\]</div>
-<p>This projection formulation maps the trial contact pressure onto the admissible positive cone, avoiding explicit active-set search loops while ensuring thermodynamic and mechanical consistency.</p>
-<h2 id="visualization-of-the-projection-operator">Visualization of the Projection Operator</h2>
-<p>To build intuition around how the positive part operator enforces the Signorini complementarity subset, we can visualize the mapping of the unconstrained intermediate state to the valid mechanical contact response:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Define range of intermediate gap-pressure states</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Positive part operator projection: p_n = max(0, x)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">proj_positive</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">proj_positive</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$p_n = (p_n - \gamma g_n)_+$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;indigo&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Signorini Projection via Positive Part Operator&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Intermediate State ($p_n - \gamma g_n$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Projected Contact Pressure ($p_n$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
+<p>For a given penalty parameter <span class="arithmatex">\(\kappa &gt; 0\)</span>, the contact condition is compactly satisfied when:</p>
+<div class="arithmatex">\[\sigma_N = - \left( \kappa (u_N - g_N) - \sigma_N \right)_+\]</div>
+<div class="arithmatex">\[\sigma_N = - \max\left( 0, \kappa (u_N - g_N) - \sigma_N \right)\]</div>
+<p>This projection formulation maps the trial contact pressure onto the admissible region, avoiding explicit active-set search loops while ensuring thermodynamic and mechanical consistency.</p>
+<h3 id="-visualization-of-the-projection-operator">- Visualization of the Projection Operator</h3>
+<p>To build intuition around how the positive part operator enforces the Signorini complementarity subset, we can refer to the following image.</p>
+<p><img alt="Signorini Conditions and Positive Part Operator" src="/images/signorini_conditions.png" /></p>
 
 
 
