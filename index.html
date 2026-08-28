@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="javascripts/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -61,6 +63,8 @@
   
   
     
+    
+      
     
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-my-research-register" class="md-skip">
+        <a href="#welcome-to-my-research-website" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +122,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="custom-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -262,10 +292,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-my-research-register" class="md-nav__link">
+  <a href="#welcome-to-my-research-website" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Welcome to My Research Register
+        Welcome to My Research Website
       
     </span>
   </a>
@@ -335,6 +365,86 @@
   
   
   
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Log
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research Log
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="weak_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weak Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="signorini_conditions/" class="md-nav__link">
         
@@ -352,6 +462,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -408,10 +526,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-my-research-register" class="md-nav__link">
+  <a href="#welcome-to-my-research-website" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Welcome to My Research Register
+        Welcome to My Research Website
       
     </span>
   </a>
@@ -460,12 +578,12 @@
   <h1>Home</h1>
 
 <p><img src="images/website_photo_small.jpeg" alt="Bhanu Pratap Sharma" width="170" style="float: left; border-radius: 5px; margin-left: 0px; margin-right: 20px; margin-bottom: 10px; border: 0px solid #ccc;"></p>
-<h3 id="welcome-to-my-research-register">Welcome to My Research Register</h3>
+<h3 id="welcome-to-my-research-website">Welcome to My Research Website</h3>
 <p>Welcome to my digital working notebook and technical log. This space serves as an open extension of my physical research notebooks. Here, I document literature notes, derivations, and implementation principles focused on my work in <strong>computational solid mechanics, finite element analysis, and contact mechanics</strong>.</p>
 <h3 id="core-principle">Core Principle</h3>
-<p>I try to explain things as simply as I possibly can. I have observed that as I progress in research, understanding books and papers is getting increasingly difficult. The reason, I suspect, is that technical literature is often too terse—tightly worded, sharp, compressed, and clinical. More often than not, several key concepts and notations are assumed a priori. While this may suit some (perhaps a large community), I sometimes find it a bit difficult to follow and tend to fall asleep as my brain shuts down. Naturally, this is a personal observation, and others may view the same papers differently based on their own backgrounds. Ultimately, I am documenting these concepts, equations, and implementations for my own future reference and for anyone else who might find them useful. I warmly welcome any comments or feedback you may have to help improve the material shared here.</p>
+<p>In these notes, I try to explain things as simply as I possibly can. I have observed that technical literature is often too terse—tightly worded, sharp, compressed, and clinical. More often than not, several key concepts and notations are assumed a priori. While this may suit some (perhaps a large community), I sometimes find it a bit difficult to follow and tend to fall asleep as my brain shuts down. Naturally, this is a personal observation, and others may view the same research papers differently based on their own backgrounds. Ultimately, I am documenting these concepts, equations, and implementations for my own future reference and for anyone else who might find them useful. The reader should also keep in mind that there is no particular order in these notes. Moreover the level of difficulty varies from note to note. Some of these are revisions of old concepts from undergraduate to graduate level mechanics, while others are at the postgraduate research level. I warmly welcome any comments or feedback you may have to help improve the material shared here.</p>
 <h3 id="ai-usage">AI Usage</h3>
-<p>I use local (<code>qwen2.5-coder-7b-instruct</code>, <code>qwen2.5-14b-instruct</code>) and cloud-based (Gemini) AI tools to assist in editing and proofreading text, debugging and optimizing code, and generating images (ChatGPT). I do not claim any novelty for the concepts I discuss here as are already well documented in numerous books and papers. I am simply revisiting the same concepts and explaining them in simple words.</p>
+<p>I use local (<a href="https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct"><code>qwen2.5-coder-7b-instruct</code></a>, <a href="https://huggingface.co/Qwen/Qwen2.5-14B-Instruct"><code>qwen2.5-14b-instruct</code></a>) and cloud-based (Gemini, ChatGPT) AI tools to edit and proofread text, debug and optimize code, and generate images. I do not claim any novelty for the material shared here as most of it is already well documented in numerous books and research papers. I am simply revisiting the same and explaining it in simple words.</p>
 <hr />
 <p><em>Note: All derivations and code snippets shared here are generalized for educational purposes.</em></p>
 
@@ -485,8 +603,16 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -517,14 +643,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.instant", "content.code.copy", "content.action.edit"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.instant", "navigation.top", "content.code.copy", "content.action.edit", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="javascripts/mathjax.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
