@@ -61,7 +61,7 @@ Let's break down every single component piece-by-piece:
 
 ---
 
-### Cheat Sheet: Taxonomy of Mathematical Symbols (Work in Progress)
+### Cheat Sheet: Taxonomy of Mathematical Symbols
 
 | Symbol / Notation | Meaning in Plain English | Example |
 | --- | --- | --- |
@@ -76,3 +76,6 @@ Let's break down every single component piece-by-piece:
 | $\forall$ | **"For all"** (universal quantifier). | $\forall T \in \mathcal{T}_h$ |
 | $\times$ | Cartesian product (combining sets or spaces). | $\mathbf{V}_h^1 \times \mathbf{V}_h^2$ combines the spaces of both bodies into a joint system. |
 | $\mid_T$ | **Restriction** of a function to a specific subdomain or element $T$. | $v\vert{}_T$ is the function evaluated strictly inside element $T$. |
+
+!!! info "Work in Progress"
+    More symbols to be added as needed.

@@ -25,13 +25,17 @@ theme:
   features:
     - navigation.sections
     - navigation.instant
+    - navigation.top
     - content.code.copy
     - content.action.edit
+    - content.tabs.link
 
 nav:
   - Home: index.md
   - About Me: about.md
-  - Signorini Conditions in Contact Mechanics: signorini_conditions.md
+  - Research Log:
+    - Weak Form: weak_form.md
+    - Signorini Conditions in Contact Mechanics: signorini_conditions.md
   - Glossary: glossary.md
 
 markdown_extensions:
@@ -39,6 +43,8 @@ markdown_extensions:
       generic: true
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - admonition

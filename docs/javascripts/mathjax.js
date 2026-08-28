@@ -1,9 +1,12 @@
 window.MathJax = {
+  loader: {load: ["[tex]/boldsymbol", "[tex]/ams"]},
   tex: {
+    packages: {"[+]": ["boldsymbol", "ams"]},
     inlineMath: [["$", "$"], ["\\(", "\\)"]],
     displayMath: [["$$", "$$"], ["\\[", "\\]"]],
     processEscapes: true,
-    processEnvironments: true
+    processEnvironments: true,
+    tags: "ams"
   },
   options: {
     ignoreHtmlClass: ".*|",
