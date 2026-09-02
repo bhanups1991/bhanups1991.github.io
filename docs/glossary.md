@@ -2,6 +2,62 @@ Let us revisit some key definitions and recall the symbols used. This page shoul
 
 ---
 
+### Definiteness of a Matrix
+
+For a **symmetric** matrix (or second-order tensor), definiteness can be classified based on the signs of its eigenvalues $\lambda_i$:
+
+- **Positive Definite:** All eigenvalues are strictly positive,
+  $\lambda_i > 0$ for all $i$.
+
+- **Positive Semi-Definite:** All eigenvalues are non-negative,
+  $\lambda_i \geq 0$ for all $i$.
+
+- **Negative Definite:** All eigenvalues are strictly negative,
+  $\lambda_i < 0$ for all $i$.
+
+- **Negative Semi-Definite:** All eigenvalues are non-positive,
+  $\lambda_i \leq 0$ for all $i$.
+
+!!! info "Note"
+    If $\boldsymbol{A}$ has both positive and negative eigenvalues, it is **indefinite**.
+
+
+Let us see why this classification is central to the equations we see in continuum mechanics and FEM. For a symmetric matrix $\boldsymbol{A}$, definiteness is characterized through the **quadratic form** defined as $\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x}$, where $\boldsymbol{x}$ is any nonzero vector in the space on which $\boldsymbol{A}$ acts. Notice that this matrix product yields a scalar quantity. The value and, in particular, the sign of this scalar **for all possible nonzero choices of $\boldsymbol{x}$** determine the definiteness of $\boldsymbol{A}$.
+
+$$
+\begin{aligned}
+\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x} &> 0
+&&\quad \forall\,\boldsymbol{x}\neq\boldsymbol{0}
+&&\Rightarrow&& \boldsymbol{A}\text{ is positive definite},\\
+\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x} &\geq 0
+&&\quad \forall\,\boldsymbol{x}\neq\boldsymbol{0}
+&&\Rightarrow&& \boldsymbol{A}\text{ is positive semi-definite},\\
+\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x} &< 0
+&&\quad \forall\,\boldsymbol{x}\neq\boldsymbol{0}
+&&\Rightarrow&& \boldsymbol{A}\text{ is negative definite},\\
+\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x} &\leq 0
+&&\quad \forall\,\boldsymbol{x}\neq\boldsymbol{0}
+&&\Rightarrow&& \boldsymbol{A}\text{ is negative semi-definite}.
+\end{aligned}
+$$
+
+Just by looking at the definition of the quadratic form, it becomes clear that it is closely related to energy calculations. Recall that the strain energy and kinetic energy of a discretized mechanical system can be written as:
+
+$$
+\frac{1}{2}\left(\mathbf{u}^{T}\mathbf{K}\mathbf{u}\right), \quad \text{and} \quad 
+\frac{1}{2}\left(\dot{\mathbf{u}}^{T}\mathbf{M}\dot{\mathbf{u}}\right), \quad \text{respectively.}
+$$
+
+Naturally, we require the strain energy to be non-negative for any admissible nonzero displacement $\mathbf{u}$. Similarly, we require the kinetic energy to be non-negative for any admissible nonzero velocity $\dot{\mathbf{u}}$. In other words, we need the stiffness matrix $\mathbf{K}$ and mass matrix $\mathbf{M}$ to be positive definite.
+
+In particular, the mass matrix is positive definite, while the stiffness matrix can be positive semi-definite also. Alternatively, the scalar value of the quadratic form or our strain energy can be zero also for a non zero displacement field. This is generally the case when Dirichlet boundary conditions are not imposed. 
+
+In the absence of sufficient constraints, the system can have rigid-body modes, for which the strain energy is zero and, consequently, $\mathbf{u}^{T}\mathbf{K}\mathbf{u}=0.$ The stiffness matrix becomes positive definite when the imposed Dirichlet boundary conditions eliminate all rigid-body modes. For most practical problems, sufficient Dirichlet boundary conditions are imposed to eliminate these rigid-body modes, so we rarely need to worry about this subtle detail. However, it is worth keeping in mind when discussing the definiteness of the stiffness matrix.
+
+!!! warning "Work in Progress:"
+
+    More explanation on the positive definiteness of the stretch tensor and other quantities to be added.
+
 ### Function Spaces in FEM: A Plain-English Hierarchy
 
 Before jumping onto the notations, let us see how the broader families of mathematical spaces nest inside one another. Here are some top-level, good-to-know, working definitions. Best to remember all three, but the third one is the key space associated with FEM most of the time.
@@ -34,8 +90,6 @@ Before jumping onto the notations, let us see how the broader families of mathem
     - $V_h^0 \subset H^1_0(\Omega)$ — same but with zero boundary trace enforced as explained above
     - The subscript $h$ always signals discretisation at mesh scale $h$
     - Elements of $V_h$ are often written $u_h$, $v_h$ to distinguish them from the true solution $u \in H^1$
-
----
 
 !!! info "NOTE: The Central Approximation of FEM"
     The jump from $u \in H^1(\Omega)$ to $u_h \in V_h$ is the central approximation of FEM — and the whole error analysis of FEM is essentially asking: how large is $\|u - u_h\|_{H^1}$, and how fast does it shrink as $h \to 0$?

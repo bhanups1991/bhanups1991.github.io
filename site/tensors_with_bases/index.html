@@ -479,6 +479,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#visualizing-the-various-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing the various operations
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -597,6 +608,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#visualizing-the-various-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizing the various operations
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -671,6 +693,286 @@
 <p>Thus,</p>
 <div class="arithmatex">\[\mathbf{F}^{-T} = (\mathbf{F}^{-1})^T = (\mathbf{F}^T)^{-1}\]</div>
 <p>Unlike <span class="arithmatex">\(\mathbf{F}^{-1}\)</span>, which maps spatial vectors to material vectors, <span class="arithmatex">\(\mathbf{F}^{-T}\)</span> maps material vectors to spatial vectors. It is particularly important for transforming normals between the reference and current configurations.</p>
+<h3 id="visualizing-the-various-operations">Visualizing the various operations</h3>
+<p>For a clear visualization of the above operations, let us take a look at the following plots. These show in a geometric sense, how the vector transforms under various operations. Note that for the purpose of the followign illustrations, I have used an overlapping bases vectors (both <span class="arithmatex">\(\mathbf{e_i}\)</span> and <span class="arithmatex">\(\mathbf{E_i}\)</span> sit at the origin <span class="arithmatex">\((0,0)\)</span> and are aligned perfectly). In each plot, the title shows the domain <span class="arithmatex">\(\rightarrow\)</span> co-domain pair. </p>
+<p><img alt="Deformation Gradient Transformation" src="../vector_transform_F.svg" />
+<img alt="Transpose Transformation" src="../vector_transform_FT.svg" />
+<img alt="Inverse Transformation" src="../vector_transform_Finv.svg" />
+<img alt="Inverse Transpose Transformation" src="../vector_transform_FinvT.svg" /></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">f_vis.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-0-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-0-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-0-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-0-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-0-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-0-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-0-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-0-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-0-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-0-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-0-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-0-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-0-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-0-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-0-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-0-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-0-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-0-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-0-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-0-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-0-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-0-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-0-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-0-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-0-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-0-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-0-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-0-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-0-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-0-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-0-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-0-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-0-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-0-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-0-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-0-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-0-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-0-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-0-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-0-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-0-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-0-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-0-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-0-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-0-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-0-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-0-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-0-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-0-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-0-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-0-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-0-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-0-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-0-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-0-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-0-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-0-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-0-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-0-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-0-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-0-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-0-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-0-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-0-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-0-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-0-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-0-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-0-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-0-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-0-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-0-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-0-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-0-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-0-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-0-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-0-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-0-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-0-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-0-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-0-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-0-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-0-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-0-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-0-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-0-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-0-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-0-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-0-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-0-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-0-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-0-100">100</a></span>
+<span class="normal"><a href="#__codelineno-0-101">101</a></span>
+<span class="normal"><a href="#__codelineno-0-102">102</a></span>
+<span class="normal"><a href="#__codelineno-0-103">103</a></span>
+<span class="normal"><a href="#__codelineno-0-104">104</a></span>
+<span class="normal"><a href="#__codelineno-0-105">105</a></span>
+<span class="normal"><a href="#__codelineno-0-106">106</a></span>
+<span class="normal"><a href="#__codelineno-0-107">107</a></span>
+<span class="normal"><a href="#__codelineno-0-108">108</a></span>
+<span class="normal"><a href="#__codelineno-0-109">109</a></span>
+<span class="normal"><a href="#__codelineno-0-110">110</a></span>
+<span class="normal"><a href="#__codelineno-0-111">111</a></span>
+<span class="normal"><a href="#__codelineno-0-112">112</a></span>
+<span class="normal"><a href="#__codelineno-0-113">113</a></span>
+<span class="normal"><a href="#__codelineno-0-114">114</a></span>
+<span class="normal"><a href="#__codelineno-0-115">115</a></span>
+<span class="normal"><a href="#__codelineno-0-116">116</a></span>
+<span class="normal"><a href="#__codelineno-0-117">117</a></span>
+<span class="normal"><a href="#__codelineno-0-118">118</a></span>
+<span class="normal"><a href="#__codelineno-0-119">119</a></span>
+<span class="normal"><a href="#__codelineno-0-120">120</a></span>
+<span class="normal"><a href="#__codelineno-0-121">121</a></span>
+<span class="normal"><a href="#__codelineno-0-122">122</a></span>
+<span class="normal"><a href="#__codelineno-0-123">123</a></span>
+<span class="normal"><a href="#__codelineno-0-124">124</a></span>
+<span class="normal"><a href="#__codelineno-0-125">125</a></span>
+<span class="normal"><a href="#__codelineno-0-126">126</a></span>
+<span class="normal"><a href="#__codelineno-0-127">127</a></span>
+<span class="normal"><a href="#__codelineno-0-128">128</a></span>
+<span class="normal"><a href="#__codelineno-0-129">129</a></span>
+<span class="normal"><a href="#__codelineno-0-130">130</a></span>
+<span class="normal"><a href="#__codelineno-0-131">131</a></span>
+<span class="normal"><a href="#__codelineno-0-132">132</a></span>
+<span class="normal"><a href="#__codelineno-0-133">133</a></span>
+<span class="normal"><a href="#__codelineno-0-134">134</a></span>
+<span class="normal"><a href="#__codelineno-0-135">135</a></span>
+<span class="normal"><a href="#__codelineno-0-136">136</a></span>
+<span class="normal"><a href="#__codelineno-0-137">137</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># NOTE: This code was generated entirely by an AI model (Gemini), in several iterations, based on the initial prompt and subsequent refinements.</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">#       I have reviewed the code and made necessary adjustments to ensure it is consistent with our current discussion.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">#       If you find any issues or have suggestions for improvement, please let me know.</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">FancyArrowPatch</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1"># Set LaTeX-style Computer Modern fonts and dark background</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;serif&#39;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.fontset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;dark_background&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1"># Define F with a significant rotation (40 degrees) combined with stretch</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">c</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">c</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span><span class="p">],</span> <span class="p">[</span><span class="n">s</span><span class="p">,</span> <span class="n">c</span><span class="p">]])</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]])</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="n">F</span> <span class="o">=</span> <span class="n">R</span> <span class="o">@</span> <span class="n">S</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="c1"># Compute tensor transformations and their inverses/transposes</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="n">F_T</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">T</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="n">F_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="n">F_inv_T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="c1"># Initial reference vector v_0 (Tail A at origin, Head B_0)</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="n">v_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">])</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="c1"># Transformations &amp; intermediate argument vectors</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="n">v_F</span> <span class="o">=</span> <span class="n">F</span> <span class="o">@</span> <span class="n">v_0</span>                 
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="n">v_FT_Fv</span> <span class="o">=</span> <span class="n">F_T</span> <span class="o">@</span> <span class="n">v_F</span>         
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="n">v_Finv_Fv</span> <span class="o">=</span> <span class="n">F_inv</span> <span class="o">@</span> <span class="n">v_F</span>     
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="n">v_FinvT_v</span> <span class="o">=</span> <span class="n">F_inv_T</span> <span class="o">@</span> <span class="n">v_0</span>     
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="n">operations</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a>    <span class="c1"># 1. F v_0 -&gt; v</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>    <span class="p">(</span><span class="s2">&quot;vector_transform_F.svg&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">v_0</span><span class="p">,</span> <span class="n">v_F</span><span class="p">,</span> 
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a>     <span class="sa">r</span><span class="s1">&#39;$\mathbf</span><span class="si">{v}</span><span class="s1"> = \mathbf</span><span class="si">{F}</span><span class="s1">\mathbf</span><span class="si">{v}</span><span class="s1">_0$&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>     <span class="sa">r</span><span class="s1">&#39;Reference Basis ($\mathbf</span><span class="si">{E}</span><span class="s1">_i$) $\rightarrow$ Current Basis ($\mathbf</span><span class="si">{e}</span><span class="s1">_i$)&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>     <span class="sa">r</span><span class="s1">&#39;$v_i \mathbf</span><span class="si">{e}</span><span class="s1">_i = (F_</span><span class="si">{ij}</span><span class="s1"> \mathbf</span><span class="si">{e}</span><span class="s1">_i \otimes \mathbf</span><span class="si">{E}</span><span class="s1">_j) \cdot (v_</span><span class="si">{0k}</span><span class="s1"> \mathbf</span><span class="si">{E}</span><span class="s1">_k)$&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>     <span class="sa">r</span><span class="s1">&#39;$v_i \mathbf</span><span class="si">{e}</span><span class="s1">_i = F_</span><span class="si">{ij}</span><span class="s1"> v_</span><span class="si">{0j}</span><span class="s1"> \mathbf</span><span class="si">{e}</span><span class="s1">_i$&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>     <span class="s1">&#39;#00f3ff&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">)),</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>    <span class="c1"># 2. F^T (F v_0) -&gt; u (Using correct components F_{ij} with flipped bases)</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>    <span class="p">(</span><span class="s2">&quot;vector_transform_FT.svg&quot;</span><span class="p">,</span> <span class="n">v_F</span><span class="p">,</span> <span class="n">v_0</span><span class="p">,</span> <span class="n">v_FT_Fv</span><span class="p">,</span> 
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>     <span class="sa">r</span><span class="s1">&#39;$\mathbf</span><span class="si">{u}</span><span class="s1"> = \mathbf</span><span class="si">{F}</span><span class="s1">^T(\mathbf</span><span class="si">{F}</span><span class="s1">\mathbf</span><span class="si">{v}</span><span class="s1">_0)$&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>     <span class="sa">r</span><span class="s1">&#39;Current Basis ($\mathbf</span><span class="si">{e}</span><span class="s1">_i$) $\rightarrow$ Reference Basis ($\mathbf</span><span class="si">{E}</span><span class="s1">_i$)&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>     <span class="sa">r</span><span class="s1">&#39;$U_j \mathbf</span><span class="si">{E}</span><span class="s1">_j = (F_</span><span class="si">{ij}</span><span class="s1"> \mathbf</span><span class="si">{E}</span><span class="s1">_j \otimes \mathbf</span><span class="si">{e}</span><span class="s1">_i) \cdot (v_k \mathbf</span><span class="si">{e}</span><span class="s1">_k)$&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>     <span class="sa">r</span><span class="s1">&#39;$U_j \mathbf</span><span class="si">{E}</span><span class="s1">_j = F_</span><span class="si">{ij}</span><span class="s1"> v_i \mathbf</span><span class="si">{E}</span><span class="s1">_j$&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>     <span class="s1">&#39;#ff007f&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">)),</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a>    <span class="c1"># 3. F^-1 (F v_0) -&gt; v_0</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>    <span class="p">(</span><span class="s2">&quot;vector_transform_Finv.svg&quot;</span><span class="p">,</span> <span class="n">v_F</span><span class="p">,</span> <span class="n">v_0</span><span class="p">,</span> <span class="n">v_Finv_Fv</span><span class="p">,</span> 
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a>     <span class="sa">r</span><span class="s1">&#39;$\mathbf</span><span class="si">{v}</span><span class="s1">_0 = \mathbf</span><span class="si">{F}</span><span class="s1">^{-1}(\mathbf</span><span class="si">{F}</span><span class="s1">\mathbf</span><span class="si">{v}</span><span class="s1">_0)$&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a>     <span class="sa">r</span><span class="s1">&#39;Current Basis ($\mathbf</span><span class="si">{e}</span><span class="s1">_i$) $\rightarrow$ Reference Basis ($\mathbf</span><span class="si">{E}</span><span class="s1">_i$)&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a>     <span class="sa">r</span><span class="s1">&#39;$v_</span><span class="si">{0j}</span><span class="s1"> \mathbf</span><span class="si">{E}</span><span class="s1">_j = (F^{-1}_</span><span class="si">{ji}</span><span class="s1"> \mathbf</span><span class="si">{E}</span><span class="s1">_j \otimes \mathbf</span><span class="si">{e}</span><span class="s1">_i) \cdot (v_k \mathbf</span><span class="si">{e}</span><span class="s1">_k)$&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a>     <span class="sa">r</span><span class="s1">&#39;$v_</span><span class="si">{0j}</span><span class="s1"> \mathbf</span><span class="si">{E}</span><span class="s1">_j = F^{-1}_</span><span class="si">{ji}</span><span class="s1"> v_i \mathbf</span><span class="si">{E}</span><span class="s1">_j$&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a>     <span class="s1">&#39;#00ff66&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">)),</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a>    <span class="c1"># 4. F^-T v_0 -&gt; w</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>    <span class="p">(</span><span class="s2">&quot;vector_transform_FinvT.svg&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">v_0</span><span class="p">,</span> <span class="n">v_FinvT_v</span><span class="p">,</span> 
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>     <span class="sa">r</span><span class="s1">&#39;$\mathbf</span><span class="si">{w}</span><span class="s1"> = \mathbf</span><span class="si">{F}</span><span class="s1">^{-T}\mathbf</span><span class="si">{v}</span><span class="s1">_0$&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>     <span class="sa">r</span><span class="s1">&#39;Reference Basis ($\mathbf</span><span class="si">{E}</span><span class="s1">_i$) $\rightarrow$ Current Basis ($\mathbf</span><span class="si">{e}</span><span class="s1">_i$)&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a>     <span class="sa">r</span><span class="s1">&#39;$w_i \mathbf</span><span class="si">{e}</span><span class="s1">_i = (F^{-T}_</span><span class="si">{ij}</span><span class="s1"> \mathbf</span><span class="si">{e}</span><span class="s1">_i \otimes \mathbf</span><span class="si">{E}</span><span class="s1">_j) \cdot (v_</span><span class="si">{0k}</span><span class="s1"> \mathbf</span><span class="si">{E}</span><span class="s1">_k)$&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a>     <span class="sa">r</span><span class="s1">&#39;$w_i \mathbf</span><span class="si">{e}</span><span class="s1">_i = F^{-T}_</span><span class="si">{ij}</span><span class="s1"> v_</span><span class="si">{0j}</span><span class="s1"> \mathbf</span><span class="si">{e}</span><span class="s1">_i$&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a>     <span class="s1">&#39;#ffe600&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">))</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="p">]</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="k">for</span> <span class="n">filename</span><span class="p">,</span> <span class="n">v_arg</span><span class="p">,</span> <span class="n">v_start</span><span class="p">,</span> <span class="n">v_trans</span><span class="p">,</span> <span class="n">vec_name</span><span class="p">,</span> <span class="n">space_transition</span><span class="p">,</span> <span class="n">derivation_text</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">box_pos</span> <span class="ow">in</span> <span class="n">operations</span><span class="p">:</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">))</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>    <span class="c1"># Trimmed axes limits: x from -1 to 5, y from -1 to 5</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a>    <span class="c1"># Gridlines and axes lines</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#222222&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#444444&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#444444&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a>
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a>    <span class="c1"># Plot primary initial reference vector v_0</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">v_start</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v_start</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a>              <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">headlength</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a>
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a>    <span class="c1"># Plot secondary argument vector if present (e.g., F v_0)</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>    <span class="k">if</span> <span class="n">v_arg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92"></a>        <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">v_arg</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v_arg</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a>                  <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#00f3ff&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">headlength</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a>        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">v_arg</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">v_arg</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#00f3ff&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a>        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">v_arg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">v_arg</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\mathbf</span><span class="si">{F}</span><span class="s1">\mathbf</span><span class="si">{v}</span><span class="s1">_0$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#00f3ff&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mf">16.5</span><span class="p">)</span>
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a>
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a>    <span class="c1"># Plot final transformed vector</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">v_trans</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v_trans</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+<a id="__codelineno-0-99" name="__codelineno-0-99"></a>              <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.007</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">headlength</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a>
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a>    <span class="c1"># Midpoint-to-midpoint serpentine snake-like routing for the curved arrow</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102"></a>    <span class="n">from_vec</span> <span class="o">=</span> <span class="n">v_arg</span> <span class="k">if</span> <span class="n">v_arg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">v_start</span>
+<a id="__codelineno-0-103" name="__codelineno-0-103"></a>    <span class="n">mid_from</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">from_vec</span>
+<a id="__codelineno-0-104" name="__codelineno-0-104"></a>    <span class="n">mid_to</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">v_trans</span>
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a>
+<a id="__codelineno-0-106" name="__codelineno-0-106"></a>    <span class="n">arrow</span> <span class="o">=</span> <span class="n">FancyArrowPatch</span><span class="p">(</span>
+<a id="__codelineno-0-107" name="__codelineno-0-107"></a>        <span class="p">(</span><span class="n">mid_from</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mid_from</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">(</span><span class="n">mid_to</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mid_to</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+<a id="__codelineno-0-108" name="__codelineno-0-108"></a>        <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;angle3,angleA=45,angleB=-45&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+<a id="__codelineno-0-109" name="__codelineno-0-109"></a>        <span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;simple,head_length=8,head_width=6&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">6</span>
+<a id="__codelineno-0-110" name="__codelineno-0-110"></a>    <span class="p">)</span>
+<a id="__codelineno-0-111" name="__codelineno-0-111"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">arrow</span><span class="p">)</span>
+<a id="__codelineno-0-112" name="__codelineno-0-112"></a>
+<a id="__codelineno-0-113" name="__codelineno-0-113"></a>    <span class="c1"># Markers and labels</span>
+<a id="__codelineno-0-114" name="__codelineno-0-114"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#888888&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-0-115" name="__codelineno-0-115"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">v_start</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">v_start</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-0-116" name="__codelineno-0-116"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">v_trans</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">v_trans</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-0-117" name="__codelineno-0-117"></a>
+<a id="__codelineno-0-118" name="__codelineno-0-118"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.3</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$O\ (0,0)$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#aaaaaa&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-0-119" name="__codelineno-0-119"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">v_start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">v_start</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\mathbf</span><span class="si">{v}</span><span class="s1">_0$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mf">16.5</span><span class="p">)</span>
+<a id="__codelineno-0-120" name="__codelineno-0-120"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">v_trans</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">v_trans</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">vec_name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mf">16.5</span><span class="p">)</span>
+<a id="__codelineno-0-121" name="__codelineno-0-121"></a>
+<a id="__codelineno-0-122" name="__codelineno-0-122"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-123" name="__codelineno-0-123"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">space_transition</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mf">19.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-0-124" name="__codelineno-0-124"></a>
+<a id="__codelineno-0-125" name="__codelineno-0-125"></a>    <span class="c1"># Overlay mathematical derivation box with bright white text</span>
+<a id="__codelineno-0-126" name="__codelineno-0-126"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">box_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">box_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">derivation_text</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> 
+<a id="__codelineno-0-127" name="__codelineno-0-127"></a>             <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round,pad=0.8&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;#111111&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">),</span>
+<a id="__codelineno-0-128" name="__codelineno-0-128"></a>             <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-0-129" name="__codelineno-0-129"></a>
+<a id="__codelineno-0-130" name="__codelineno-0-130"></a>    <span class="k">for</span> <span class="n">spine</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+<a id="__codelineno-0-131" name="__codelineno-0-131"></a>        <span class="n">spine</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s1">&#39;#444444&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-132" name="__codelineno-0-132"></a>
+<a id="__codelineno-0-133" name="__codelineno-0-133"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<a id="__codelineno-0-134" name="__codelineno-0-134"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">get_facecolor</span><span class="p">(),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">pad_inches</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<a id="__codelineno-0-135" name="__codelineno-0-135"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-0-136" name="__codelineno-0-136"></a>
+<a id="__codelineno-0-137" name="__codelineno-0-137"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Successfully generated and saved final SVG figures with corrected F^T index notation.&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <div class="admonition warning">
 <p class="admonition-title">Work in progress: Clarification on <span class="arithmatex">\(\mathbf{F}^T\)</span>, <span class="arithmatex">\(\mathbf{F}^{-1}\)</span>, and <span class="arithmatex">\(\mathbf{F}^{-T}\)</span>.</p>
 <p>First things first. Notice that both <span class="arithmatex">\(\mathbf{F}^T\)</span> and <span class="arithmatex">\(\mathbf{F}^{-1}\)</span> reverse the direction of the associated mapping, and clearly they are <strong>not the same operation</strong>, i.e., <span class="arithmatex">\(\mathbf{F}^T \ne \mathbf{F}^{-1}\)</span>.</p>
