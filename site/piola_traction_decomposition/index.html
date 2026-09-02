@@ -10,11 +10,13 @@
         <meta name="author" content="Bhanu Pratap Sharma">
       
       
-        <link rel="canonical" href="https://bhanups1991.github.io/glossary/">
+        <link rel="canonical" href="https://bhanups1991.github.io/piola_traction_decomposition/">
       
       
-        <link rel="prev" href="../piola_traction_decomposition/">
+        <link rel="prev" href="../tensors_with_bases/">
       
+      
+        <link rel="next" href="../glossary/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Consistent Reminders - Bhanu Pratap Sharma, PhD</title>
+        <title>Piola Traction Decomposition - Bhanu Pratap Sharma, PhD</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-skip">
+        <a href="#reference-and-current-normals-in-the-piola-traction-decomposition" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Consistent Reminders
+              Piola Traction Decomposition
             
           </span>
         </div>
@@ -425,34 +427,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../piola_traction_decomposition/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Piola Traction Decomposition
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -470,7 +444,7 @@
   <span class="md-ellipsis">
     
   
-    Consistent Reminders
+    Piola Traction Decomposition
   
 
     
@@ -488,7 +462,7 @@
   <span class="md-ellipsis">
     
   
-    Consistent Reminders
+    Piola Traction Decomposition
   
 
     
@@ -512,10 +486,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-nav__link">
+  <a href="#reference-and-current-normals-in-the-piola-traction-decomposition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Function Spaces in FEM: A Plain-English Hierarchy
+        Reference and Current Normals in the Piola Traction Decomposition
       
     </span>
   </a>
@@ -523,21 +497,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dissecting-an-example-notation" class="md-nav__link">
+  <a href="#the-decomposition-of-the-piola-traction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dissecting an example Notation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cheat-sheet-taxonomy-of-mathematical-symbols" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat Sheet: Taxonomy of Mathematical Symbols
+        The decomposition of the Piola traction
       
     </span>
   </a>
@@ -548,6 +511,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consistent Reminders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -585,10 +576,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-nav__link">
+  <a href="#reference-and-current-normals-in-the-piola-traction-decomposition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Function Spaces in FEM: A Plain-English Hierarchy
+        Reference and Current Normals in the Piola Traction Decomposition
       
     </span>
   </a>
@@ -596,21 +587,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dissecting-an-example-notation" class="md-nav__link">
+  <a href="#the-decomposition-of-the-piola-traction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dissecting an example Notation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cheat-sheet-taxonomy-of-mathematical-symbols" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat Sheet: Taxonomy of Mathematical Symbols
+        The decomposition of the Piola traction
       
     </span>
   </a>
@@ -634,148 +614,51 @@
 
 
 
-  <h1>Consistent Reminders</h1>
+  <h1>Piola Traction Decomposition</h1>
 
-<p>Let us revisit some key definitions and recall the symbols used. This page should be visited often and treated as a sacred space. This provides the language on which the equations in the main part are written.</p>
+<h3 id="reference-and-current-normals-in-the-piola-traction-decomposition">Reference and Current Normals in the Piola Traction Decomposition</h3>
+<p>The following section discusses a small clarification of the use of normal vectors while decomposing the traction into a normal and tangential component.
+This centers around the <a href="https://www.sciencedirect.com/science/article/pii/S0045782516318448">first equation under section 1.3 of this paper</a> by Mlika et. al..
+In finite-deformation contact mechanics, we need to distinguish carefully between the reference configuration and the current configuration.</p>
+<p>Let</p>
+<ul>
+<li><span class="arithmatex">\(\boldsymbol{N}\)</span> be the unit normal to the material surface in the <strong>reference configuration</strong>,</li>
+<li><span class="arithmatex">\(\boldsymbol{n}_x\)</span> be the unit normal to the corresponding surface in the <strong>current configuration</strong>.</li>
+</ul>
+<p>The first Piola–Kirchhoff stress is a two-point tensor. It maps a reference vector to a current vector:</p>
+<div class="arithmatex">\[\underline{\underline{\boldsymbol{\hat{\sigma}}}}:\text{reference vector}\longrightarrow\text{current vector}.\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[\boxed{\boldsymbol{q}=\underline{\underline{\boldsymbol{\hat{\sigma}}}}\cdot\boldsymbol{N}}\]</div>
+<p>is a <strong>current/spatial vector</strong>, even though it is obtained by operating on the reference normal <span class="arithmatex">\(\boldsymbol{N}\)</span>. This <span class="arithmatex">\(\boldsymbol{q}\)</span> is what we call as the Piola traction vector.</p>
 <hr />
-<h3 id="function-spaces-in-fem-a-plain-english-hierarchy">Function Spaces in FEM: A Plain-English Hierarchy</h3>
-<p>Before jumping onto the notations, let us see how the broader families of mathematical spaces nest inside one another. Here are some top-level, good-to-know, working definitions. Best to remember all three, but the third one is the key space associated with FEM most of the time.</p>
-<ul>
-<li>
-<p><strong>Banach Spaces:</strong> A <em>Banach space</em> is any complete vector space equipped with a norm — a way to measure the "size" of a function or vector. Think of a norm as a ruler: it tells us how big something is. "Complete" simply means the space has no holes in it; if a sequence of functions keeps getting closer and closer to each other, the thing they are converging to is also inside the space. No missing limits, no surprises. Usually represented by the letterS <span class="arithmatex">\(X, Y, B\)</span>.</p>
-</li>
-<li>
-<p><strong>Hilbert Spaces:</strong> A <em>Hilbert space</em> is a Banach space with one extra gift: an <strong>inner product</strong> — a generalisation of the familiar dot product from vector calculus. Because we now have an inner product, we can talk about <em>angles</em> between functions, what it means for two functions to be <em>orthogonal</em>, and how to <em>project</em> one function onto another. This geometric intuition is exactly what makes weak forms and variational problems so natural to work with. Most linear PDE theory lives here.</p>
-<ul>
-<li>Generic Hilbert space: <span class="arithmatex">\(H\)</span>, <span class="arithmatex">\(V\)</span></li>
-<li>Inner product: <span class="arithmatex">\((\cdot,\cdot)\)</span> or <span class="arithmatex">\(\langle \cdot, \cdot \rangle\)</span></li>
-<li>The induced norm: <span class="arithmatex">\(\|u\| = \sqrt{(u,u)}\)</span></li>
-</ul>
-</li>
-<li>
-<p><strong>Sobolev Spaces:</strong> A <em>Sobolev space</em> is a particular type of Hilbert space made for functions whose derivatives (up to some chosen order) are also square-integrable. In structural mechanics, displacement fields live in Sobolev spaces like <span class="arithmatex">\(H^1(\Omega)\)</span> because we need the solution to carry finite energy. Usually represented by the letters <span class="arithmatex">\(L, H\)</span>. Most of the times, H has a superscript denoting the order upto and including which the derivates are also square integrable. </p>
-<ul>
-<li>
-<p>What exactly is square-integrability? It means that if we take a function <span class="arithmatex">\(f\)</span>, square it to get <span class="arithmatex">\(f^2\)</span>, and integrate over the domain, the result must be finite — not blow up, not be infinite. Recall the energy stored in a uniaxial bar: <span class="arithmatex">\(\frac{1}{2} E \varepsilon^2\)</span>. In 3D, the same idea holds — the integral of the squared strain field over the body gives us the total stored elastic energy. A real, finite body made of a real material can only store a finite amount of energy. So square-integrability is not an abstract mathematical demand; it is simply the mathematical way of saying that our strain field must be physically reasonable. If the strains (derivatives of displacements) blow up somewhere in a non-integrable way, we are describing an object with infinite stored energy — which is not physical.</p>
-</li>
-<li>
-<p>This is why we need derivatives to also be square-integrable, not just the displacements themselves. Displacements tell us where points moved; strains tell us how the material deformed; energy depends on the strains. All three must be well-behaved and finite.</p>
-</li>
-<li>
-<p>Here are some sample definitions:</p>
-<ul>
-<li><span class="arithmatex">\(L^2(\Omega)\)</span> — Square-integrable functions on <span class="arithmatex">\(\Omega\)</span> (the base case, zero derivatives needed)</li>
-<li><span class="arithmatex">\(H^1(\Omega)\)</span> — Functions in <span class="arithmatex">\(L^2\)</span> whose first derivatives are also in <span class="arithmatex">\(L^2\)</span></li>
-<li><span class="arithmatex">\(H^k(\Omega)\)</span> — Functions whose derivatives up to order <span class="arithmatex">\(k\)</span> are in <span class="arithmatex">\(L^2\)</span></li>
-<li><span class="arithmatex">\(H^1_0(\Omega)\)</span> — Subspace of <span class="arithmatex">\(H^1\)</span> with zero trace on <span class="arithmatex">\(\partial\Omega\)</span> (strong Dirichlet BC built-in)</li>
-</ul>
-</li>
-<li>
-<p>What does zero trace or strong Dirichlet BC built-in mean? This means that the space definition itself says that the functions vanish on the boundary. In other words it is a collection of all <span class="arithmatex">\(H^1\)</span> functions whose boundary footprint is exactly zero. When we pick the test functions from <span class="arithmatex">\(H^1_0\)</span>, it comes pre-loaded with the condition <span class="arithmatex">\(v|_{\partial\Omega}=0\)</span>. No extra condition needs to be imposed. An example of saying so much by using just a 0 in the subscript.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Finite-Dimensional Subspaces (<span class="arithmatex">\(V_h\)</span>):</strong> Sobolev spaces contain infinitely many functions — a computer cannot work with that directly. So we shrink the problem down to a <em>finite-dimensional subspace</em> <span class="arithmatex">\(V_h \subset H^1(\Omega)\)</span>: a carefully chosen collection of simple, piecewise polynomial functions defined on a mesh of element size <span class="arithmatex">\(h\)</span>. Instead of searching over all possible displacement fields in <span class="arithmatex">\(H^1(\Omega)\)</span>, we search only within <span class="arithmatex">\(V_h\)</span>. This is the step that turns a continuous variational problem into a finite matrix equation that a computer can actually solve. The mesh size <span class="arithmatex">\(h\)</span> controls how fine this approximation is — as <span class="arithmatex">\(h \to 0\)</span>, <span class="arithmatex">\(V_h\)</span> grows and the FEM solution converges back toward the true Sobolev-space solution. Here are some sample definitions:</p>
-<ul>
-<li><span class="arithmatex">\(V_h \subset H^1(\Omega)\)</span> — the FEM trial/test space</li>
-<li><span class="arithmatex">\(V_h^0 \subset H^1_0(\Omega)\)</span> — same but with zero boundary trace enforced as explained above</li>
-<li>The subscript <span class="arithmatex">\(h\)</span> always signals discretisation at mesh scale <span class="arithmatex">\(h\)</span></li>
-<li>Elements of <span class="arithmatex">\(V_h\)</span> are often written <span class="arithmatex">\(u_h\)</span>, <span class="arithmatex">\(v_h\)</span> to distinguish them from the true solution <span class="arithmatex">\(u \in H^1\)</span></li>
-</ul>
-</li>
-</ul>
-<hr />
-<div class="admonition info">
-<p class="admonition-title">NOTE: The Central Approximation of FEM</p>
-<p>The jump from <span class="arithmatex">\(u \in H^1(\Omega)\)</span> to <span class="arithmatex">\(u_h \in V_h\)</span> is the central approximation of FEM — and the whole error analysis of FEM is essentially asking: how large is <span class="arithmatex">\(\|u - u_h\|_{H^1}\)</span>, and how fast does it shrink as <span class="arithmatex">\(h \to 0\)</span>?</p>
+<h3 id="the-decomposition-of-the-piola-traction">The decomposition of the Piola traction</h3>
+<p>Let us see how it is decomposed in the normal and tangent components. Following is the equation cited above that we will focus on:</p>
+<div class="arithmatex">\[\underline{\underline{\boldsymbol{\hat{\sigma}}}}\cdot\boldsymbol{N}=\hat{\sigma}_n\boldsymbol{n}_x+\boldsymbol{T}_{\boldsymbol{n}_x}\cdot\left(\underline{\underline{\boldsymbol{\hat{\sigma}}}}\cdot\boldsymbol{N}\right)\]</div>
+<p>At first sight, <span class="arithmatex">\(\boldsymbol{N}\)</span> and <span class="arithmatex">\(\boldsymbol{n}_x\)</span> appear to be mixed. The key insight is that they perform <strong>different operations</strong>. The reference normal vector, <span class="arithmatex">\(\boldsymbol{N}\)</span>, is used to obtain the Piola traction as shown above. To repeat, a two point tensor that is <span class="arithmatex">\(\underline{\underline{\boldsymbol{\hat{\sigma}}}}\)</span> operates on a vector in the reference configuration that is <span class="arithmatex">\(\mathbf{N}\)</span> to yield a vector in the current configuration that is <span class="arithmatex">\(\boldsymbol{q}\)</span>, the Piola traction vector. Since <span class="arithmatex">\(\boldsymbol{q}\)</span> is a current configuration/spatial vector, we can therefore decompose it using the current normal <span class="arithmatex">\(\boldsymbol{n}_x\)</span>. Before we do that, let us revisit the tangent projection operator.</p>
+<div class="admonition tip">
+<p class="admonition-title">The tangent projection operator (<span class="arithmatex">\(\boldsymbol{T}_\boldsymbol{n}\)</span>)</p>
+<p>The operator <span class="arithmatex">\(\boldsymbol{T}_\boldsymbol{n}\)</span> refers to the projection of a vector on a tangent plane whose normal vector is <span class="arithmatex">\(\boldsymbol{n}\)</span>. It is defined as:</p>
+<div class="arithmatex">\[\boldsymbol{T}_{\boldsymbol{n}_x}=\underline{\underline{\boldsymbol{I}}}-\boldsymbol{n}_x\otimes\boldsymbol{n}_x\]</div>
+<p>Notice that the corresponding decomposition of the identity can be written using the above equation as:</p>
+<div class="arithmatex">\[\underline{\underline{\boldsymbol{I}}}=\boldsymbol{n}_x\otimes\boldsymbol{n}_x+\boldsymbol{T}_{\boldsymbol{n}_x}.\]</div>
 </div>
-<hr />
-<h3 id="dissecting-an-example-notation">Dissecting an example Notation</h3>
-<p>Let us say, we have this definition of <span class="arithmatex">\(V_h\)</span>. This is taken from section 1.5 of <a href="https://link.springer.com/article/10.1007/s00211-018-0950-x">this</a> paper by Chouly et. al..</p>
-<div class="arithmatex">\[\mathbf{V}_h = (\mathbf{V}_h^1 \times \mathbf{V}_h^2), \quad \text{with } \mathbf{V}_h^i = \left\{ \mathbf{v}_h^i \in \mathscr{C}^0(\overline{\Omega^i}) : \mathbf{v}_h^i\vert{}_T \in (\mathbb{P}_k(T))^d, \forall T \in \mathcal{T}_h^i, \mathbf{v}_h^i = 0 \text{ on } \Gamma_D^i \right\}\]</div>
-<p>Let's break down every single component piece-by-piece:</p>
-<ul>
-<li><span class="arithmatex">\(\mathcal{T}_h^i\)</span>: The finite element mesh (triangulation) of domain <span class="arithmatex">\(\Omega^i\)</span> with mesh size parameter <span class="arithmatex">\(h\)</span>.</li>
-<li><span class="arithmatex">\(\mathbf{V}_h\)</span>: The total global trial/test space for <em>both</em> bodies combined (the Cartesian product of the spaces for Body 1 and Body 2).</li>
-<li><span class="arithmatex">\(\mathbf{V}_h^i\)</span>: The finite-dimensional vector space of discrete functions belonging to body <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(i \in \{1, 2\}\)</span>).</li>
-<li><span class="arithmatex">\(\mathscr{C}^0(\overline{\Omega^i})\)</span>: The space of <strong>continuous functions</strong> over the closed domain <span class="arithmatex">\(\overline{\Omega^i}\)</span> (meaning no gaps or tears between elements; standard <span class="arithmatex">\(C^0\)</span> continuity used in Lagrangian finite elements).</li>
-<li><span class="arithmatex">\(\mathbf{v}_h^i\vert{}_T\)</span>: The restriction of the vector field <span class="arithmatex">\(\mathbf{v}_h^i\)</span> to a single element <span class="arithmatex">\(T\)</span> (e.g., a specific triangle in the mesh).</li>
-<li><span class="arithmatex">\((\mathbb{P}_k(T))^d\)</span>: Polynomials of degree up to <span class="arithmatex">\(k\)</span> defined on element <span class="arithmatex">\(T\)</span>, raised to the power <span class="arithmatex">\(d\)</span> (where <span class="arithmatex">\(d\)</span> is the spatial dimension, e.g., <span class="arithmatex">\(d=2\)</span> for 2D vectors <span class="arithmatex">\((u_x, u_y)\)</span>).</li>
-<li><span class="arithmatex">\(\forall T \in \mathcal{T}_h^i\)</span>: <strong>"For all"</strong> elements <span class="arithmatex">\(T\)</span> inside the mesh <span class="arithmatex">\(\mathcal{T}_h^i\)</span>. This means the function is a piecewise polynomial element-by-element.</li>
-<li><span class="arithmatex">\(\mathbf{v}_h^i = 0 \text{ on } \Gamma_D^i\)</span>: The essential boundary condition. The trial/test functions must <strong>vanish (equal zero)</strong> on the Dirichlet boundary <span class="arithmatex">\(\Gamma_D^i\)</span> where displacements are locked.</li>
-</ul>
-<hr />
-<h3 id="cheat-sheet-taxonomy-of-mathematical-symbols">Cheat Sheet: Taxonomy of Mathematical Symbols</h3>
-<table>
-<thead>
-<tr>
-<th>Symbol / Notation</th>
-<th>Meaning in Plain English</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="arithmatex">\(\Omega\)</span></td>
-<td>A spatial domain (the geometry of the body).</td>
-<td><span class="arithmatex">\(\Omega \subset \mathbb{R}^2\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\partial\Omega\)</span> or <span class="arithmatex">\(\Gamma\)</span></td>
-<td>The boundary of the domain.</td>
-<td><span class="arithmatex">\(\Gamma_C\)</span> (contact boundary), <span class="arithmatex">\(\Gamma_D\)</span> (Dirichlet boundary)</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\mathcal{T}_h\)</span></td>
-<td>A triangulation or mesh of the domain parameterized by mesh size <span class="arithmatex">\(h\)</span>.</td>
-<td><span class="arithmatex">\(T \in \mathcal{T}_h\)</span> (a single element)</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\mathscr{C}^k(\Omega)\)</span></td>
-<td>Space of <span class="arithmatex">\(k\)</span>-times continuously differentiable functions.</td>
-<td><span class="arithmatex">\(\mathscr{C}^0\)</span> is continuous; <span class="arithmatex">\(\mathscr{C}^1\)</span> has continuous first derivatives.</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\mathbb{P}_k(T)\)</span></td>
-<td>Polynomial space of degree <span class="arithmatex">\(k\)</span> defined on element <span class="arithmatex">\(T\)</span>.</td>
-<td><span class="arithmatex">\(\mathbb{P}_1\)</span> is linear; <span class="arithmatex">\(\mathbb{P}_2\)</span> is quadratic.</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\((\cdot)^d\)</span></td>
-<td>Cartesian product power <span class="arithmatex">\(d\)</span>, indicating a vector-valued function of dimension <span class="arithmatex">\(d\)</span>.</td>
-<td><span class="arithmatex">\((\mathbb{P}_k)^2\)</span> means a 2D vector where each component is a degree-<span class="arithmatex">\(k\)</span> polynomial.</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\in\)</span></td>
-<td>"Belongs to" or "is an element of".</td>
-<td><span class="arithmatex">\(x \in \Omega\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\subset\)</span></td>
-<td>"Is a subset of" (contained within).</td>
-<td><span class="arithmatex">\(\mathbf{V}_h \subset H^1(\Omega)\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\forall\)</span></td>
-<td><strong>"For all"</strong> (universal quantifier).</td>
-<td><span class="arithmatex">\(\forall T \in \mathcal{T}_h\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\times\)</span></td>
-<td>Cartesian product (combining sets or spaces).</td>
-<td><span class="arithmatex">\(\mathbf{V}_h^1 \times \mathbf{V}_h^2\)</span> combines the spaces of both bodies into a joint system.</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\mid_T\)</span></td>
-<td><strong>Restriction</strong> of a function to a specific subdomain or element <span class="arithmatex">\(T\)</span>.</td>
-<td><span class="arithmatex">\(v\vert{}_T\)</span> is the function evaluated strictly inside element <span class="arithmatex">\(T\)</span>.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Work in Progress</p>
-<p>More symbols to be added as needed.</p>
+<p>Using the above operator and the decomposition of the identity, we manipulate the Piola traction vector as follows:</p>
+<div class="arithmatex">\[
+\begin{align*}
+\boldsymbol{q}
+&amp;= \underline{\underline{\boldsymbol{I}}}\cdot\boldsymbol{q} \\
+&amp;= \left(\boldsymbol{n}_x\otimes\boldsymbol{n}_x\right)\cdot\boldsymbol{q}+\boldsymbol{T}_{\boldsymbol{n}_x}\cdot\boldsymbol{q} \\
+&amp;= \boldsymbol{n}_x\left(\boldsymbol{n}_x\cdot\boldsymbol{q}\right)+\boldsymbol{T}_{\boldsymbol{n}_x}\cdot\boldsymbol{q}\\
+&amp;= \left(\boldsymbol{q}\cdot\boldsymbol{n}_x\right)\boldsymbol{n}_x+\boldsymbol{T}_{\boldsymbol{n}_x}\cdot\boldsymbol{q}
+\end{align*}
+\]</div>
+<p>or,</p>
+<div class="arithmatex">\[\underline{\underline{\boldsymbol{\hat{\sigma}}}}\cdot\boldsymbol{N} = \hat{\sigma}_n\boldsymbol{n}_x+\boldsymbol{T}_{\boldsymbol{n}_x}\cdot\left(\underline{\underline{\boldsymbol{\hat{\sigma}}}}\cdot\boldsymbol{N}\right)\]</div>
+<p>which is the same as the equation we saw initially. The first term is the component normal to the <strong>current</strong> surface, while the second term is tangent to the <strong>current</strong> surface. Notice that we have defined the <strong>scalar</strong> normal component as:</p>
+<div class="arithmatex">\[\hat{\sigma}_n=\left(\boldsymbol{q}\cdot\boldsymbol{n}_x\right)=\left(\underline{\underline{\boldsymbol{\hat{\sigma}}}}\cdot\boldsymbol{N}\right)\cdot\boldsymbol{n}_x\]</div>
+<div class="admonition tip">
+<p class="admonition-title">The whole operation can be viewed as</p>
+<div class="arithmatex">\[\boxed{\boldsymbol{N}\xrightarrow{\;\underline{\underline{\boldsymbol{\hat{\sigma}}}}\;}\underbrace{\underline{\underline{\boldsymbol{\hat{\sigma}}}}\cdot\boldsymbol{N}}_{\text{spatial Piola traction}}\xrightarrow{\;\boldsymbol{n}_x\;}\underbrace{\hat{\sigma}_n\boldsymbol{n}_x}_{\text{normal}}+\underbrace{\boldsymbol{T}_{\boldsymbol{n}_x}\cdot\left(\underline{\underline{\boldsymbol{\hat{\sigma}}}}\cdot\boldsymbol{N}\right)}_{\text{tangential}}.}\]</div>
 </div>
 
 

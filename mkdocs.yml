@@ -36,7 +36,9 @@ nav:
   - Research Log:
     - Weak Form: weak_form.md
     - Signorini Conditions in Contact Mechanics: signorini_conditions.md
-  - Glossary: glossary.md
+    - Tensors with Bases: tensors_with_bases.md
+    - Piola Traction Decomposition: piola_traction_decomposition.md
+    - Consistent Reminders: glossary.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -49,7 +51,9 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: docs
+  - attr_list
   
 plugins:
   - search

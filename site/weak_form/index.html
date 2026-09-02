@@ -10,13 +10,13 @@
         <meta name="author" content="Bhanu Pratap Sharma">
       
       
-        <link rel="canonical" href="https://bhanups1991.github.io/signorini_conditions/">
+        <link rel="canonical" href="https://bhanups1991.github.io/weak_form/">
       
       
-        <link rel="prev" href="../weak_form/">
+        <link rel="prev" href="../about/">
       
       
-        <link rel="next" href="../tensors_with_bases/">
+        <link rel="next" href="../signorini_conditions/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Signorini Conditions in Contact Mechanics - Bhanu Pratap Sharma, PhD</title>
+        <title>Weak Form - Bhanu Pratap Sharma, PhD</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-skip">
+        <a href="#the-key-pre-requisite" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Signorini Conditions in Contact Mechanics
+              Weak Form
             
           </span>
         </div>
@@ -343,34 +343,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../weak_form/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Weak Form
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -388,7 +360,7 @@
   <span class="md-ellipsis">
     
   
-    Signorini Conditions in Contact Mechanics
+    Weak Form
   
 
     
@@ -406,7 +378,7 @@
   <span class="md-ellipsis">
     
   
-    Signorini Conditions in Contact Mechanics
+    Weak Form
   
 
     
@@ -430,10 +402,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-nav__link">
+  <a href="#the-key-pre-requisite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reformulating Signorini Contact Conditions via the Positive Part Operator
+        The key pre-requisite
       
     </span>
   </a>
@@ -441,10 +413,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
+  <a href="#strong-form-of-the-momentum-balance-equation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algebraic Reformulation with the Positive Part Operator
+        Strong form of the momentum balance equation
       
     </span>
   </a>
@@ -452,10 +424,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualization-of-the-projection-operator" class="md-nav__link">
+  <a href="#weak-form-of-the-momentum-balance-equation-principle-of-virtual-work" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visualization of the Projection Operator
+        Weak form of the momentum balance equation / Principle of Virtual Work
       
     </span>
   </a>
@@ -466,6 +438,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signorini_conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signorini Conditions in Contact Mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -587,10 +587,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reformulating-signorini-contact-conditions-via-the-positive-part-operator" class="md-nav__link">
+  <a href="#the-key-pre-requisite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reformulating Signorini Contact Conditions via the Positive Part Operator
+        The key pre-requisite
       
     </span>
   </a>
@@ -598,10 +598,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#algebraic-reformulation-with-the-positive-part-operator" class="md-nav__link">
+  <a href="#strong-form-of-the-momentum-balance-equation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algebraic Reformulation with the Positive Part Operator
+        Strong form of the momentum balance equation
       
     </span>
   </a>
@@ -609,10 +609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualization-of-the-projection-operator" class="md-nav__link">
+  <a href="#weak-form-of-the-momentum-balance-equation-principle-of-virtual-work" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visualization of the Projection Operator
+        Weak form of the momentum balance equation / Principle of Virtual Work
       
     </span>
   </a>
@@ -636,21 +636,110 @@
 
 
 
-  <h1>Signorini Conditions in Contact Mechanics</h1>
+  <h1>Weak Form</h1>
 
-<h3 id="reformulating-signorini-contact-conditions-via-the-positive-part-operator">Reformulating Signorini Contact Conditions via the Positive Part Operator</h3>
-<p>In Signorini contact mechanics, unilateral contact constraints on the boundary <span class="arithmatex">\(\Gamma_c\)</span> are typically expressed through the classical complementarity conditions:</p>
-<div class="arithmatex">\[u_N \le g_N, \quad \sigma_N \le 0, \quad \sigma_N (u_N - g_N) = 0\]</div>
-<p>where <span class="arithmatex">\(g_N\)</span> is the normal gap function and <span class="arithmatex">\(\sigma_N\)</span> is the normal contact pressure (defined negative in compression).</p>
-<h3 id="algebraic-reformulation-with-the-positive-part-operator">Algebraic Reformulation with the Positive Part Operator</h3>
-<p>To implement these non-smooth constraints efficiently in computational frameworks (such as Nitsche-based formulations in FEniCS), the complementarity system can be equivalently rewritten using the positive part operator <span class="arithmatex">\((\cdot)_+ = \max(0, \cdot)\)</span>. </p>
-<p>For a given penalty parameter <span class="arithmatex">\(\kappa &gt; 0\)</span>, the contact condition is compactly satisfied when:</p>
-<div class="arithmatex">\[\sigma_N = - \left( \kappa (u_N - g_N) - \sigma_N \right)_+\]</div>
-<div class="arithmatex">\[\sigma_N = - \max\left( 0, \kappa (u_N - g_N) - \sigma_N \right)\]</div>
-<p>This projection formulation maps the trial contact pressure onto the admissible region, avoiding explicit active-set search loops while ensuring thermodynamic and mechanical consistency.</p>
-<h3 id="visualization-of-the-projection-operator">Visualization of the Projection Operator</h3>
-<p>To build intuition around how the positive part operator enforces the Signorini complementarity subset, we can refer to the following image.</p>
-<p><img alt="Signorini Conditions and Positive Part Operator" src="/images/signorini_conditions.png" /></p>
+<h3 id="the-key-pre-requisite">The key pre-requisite</h3>
+<div class="arithmatex">\[\nabla\cdot(\boldsymbol{\sigma}\cdot\boldsymbol{v}) = (\nabla\cdot\boldsymbol{\sigma})\cdot\boldsymbol{v} + \boldsymbol{\sigma}\colon(\nabla\boldsymbol{v})\]</div>
+<div class="arithmatex">\[(\nabla\cdot\boldsymbol{\sigma})\cdot\boldsymbol{v} = \nabla\cdot(\boldsymbol{\sigma}\cdot\boldsymbol{v}) - \boldsymbol{\sigma}\colon(\nabla\boldsymbol{v})\]</div>
+<h3 id="strong-form-of-the-momentum-balance-equation">Strong form of the momentum balance equation</h3>
+<p>For this example, let us first consider the simplest version of the momentum balance equation where an elastic body (<span class="arithmatex">\(\Omega\)</span>) is under a body force <span class="arithmatex">\(\boldsymbol{f}\)</span>. The momentum balance in 3D is written as:</p>
+<div class="arithmatex">\[\begin{equation}\label{strong_form}
+-\nabla\boldsymbol{\sigma}(\mathbf{u}) = \boldsymbol{f}
+\end{equation}\]</div>
+<p>But why is it called as the strong form? That's because there is a strong requirement that <span class="arithmatex">\(\mathbf{u}\)</span> must be at least of degree 2. Let us focus on the LHS of this equation and see why is that.</p>
+<div class="arithmatex">\[\begin{equation}\label{sigma}
+\boldsymbol{\sigma}(\mathbf{u}) = \lambda \operatorname{tr}(\boldsymbol{\epsilon}(\mathbf{u})) \boldsymbol{I} + 2 \mu \boldsymbol{\epsilon}(\mathbf{u}) 
+\end{equation}\]</div>
+<div class="arithmatex">\[\begin{equation}\label{epsilon}
+\boldsymbol{\epsilon}(\mathbf{u}) = \frac{1}{2} \Big[(\nabla \mathbf{u}) + (\nabla \mathbf{u})^T\Big]
+\end{equation}\]</div>
+<div class="arithmatex">\[\begin{equation}\label{nabla}
+\nabla = \frac{\partial}{\partial x_1} \boldsymbol{e}_1  + \frac{\partial}{\partial x_2} \boldsymbol{e}_2 + \frac{\partial}{\partial x_3} \boldsymbol{e}_3
+\end{equation}\]</div>
+<p>If we follow backwards from Eq. <span class="arithmatex">\(\eqref{nabla}\)</span> to <span class="arithmatex">\(\eqref{strong_form}\)</span>, it becomes evident that the LHS contains terms where the operator <span class="arithmatex">\(\nabla^2\)</span> or <span class="arithmatex">\(\frac{\partial^2}{\partial x_i^2}\)</span> acts on <span class="arithmatex">\(\boldsymbol{u}\)</span>. Thus, for the strong form to hold, the displacement field <span class="arithmatex">\(\boldsymbol{u}\)</span> must possess at least second-order spatial derivatives. In the next section, we will relax this strong requirement by reformulating the strong form of the momentum balance equation in its weak (aka variational) form. The goal is to arrive at an equation where <span class="arithmatex">\(\boldsymbol{u}\)</span> needs to be just once differentiable instead of twice. In other words, the displacement field is then required to belong only to a first order Sobolov space, typically written as <span class="arithmatex">\(\boldsymbol{u}\in [H^1(\Omega)]^d\)</span>. This reduced requirement allows us to use piecewise linear Lagrange elements (<span class="arithmatex">\(\mathbb{P}_1\)</span>), which have first order derivatives within each element.</p>
+<div class="admonition note">
+<p class="admonition-title">NOTE:</p>
+<p>More discussion on the use of different spaces and shape functions to be added in a separate note.</p>
+</div>
+<h3 id="weak-form-of-the-momentum-balance-equation-principle-of-virtual-work">Weak form of the momentum balance equation / Principle of Virtual Work</h3>
+<p>To derive the weak form, we multiply the strong form by a test function <span class="arithmatex">\(\boldsymbol{v}\)</span> and use integration by parts. But why mutliply? What is <span class="arithmatex">\(\boldsymbol{v}\)</span>?. We do this to transform the equation from a force balance to a balance of virtual work. The test function is actually a infinitisimal, and kinematically admissible virtual displacement field. We read the new equation as work done by the external forces is equal to the work done by the internal forces (this expression will gradually take the shape of strain energy). Two key things that we should focus on during this derivation are the following:</p>
+<ul>
+<li>how to perform integration by parts (I say this because it is a but different from the conventional integration by parts understanding we carry over from <span class="arithmatex">\(1D\)</span> calculus), and</li>
+<li>how do different vector and tensor quantities operate on one another (is there a vector product, dot product, double dot product, or just a scalar multiplication between any two quantities).</li>
+</ul>
+<p>Multiplying with <span class="arithmatex">\(\boldsymbol{v}\)</span> and integrating over the domain of the body (<span class="arithmatex">\(\Omega)\)</span>:</p>
+<div class="arithmatex">\[-\int_\Omega\nabla\boldsymbol{\sigma}(\mathbf{u})\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} = \int_\Omega\boldsymbol{f}\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} \]</div>
+<p>Let us re-write the same equation without the arguments and with proper operations between different quantities, so that we know what operates on what and in what sequence:</p>
+<div class="arithmatex">\[-\int_\Omega(\nabla\cdot\boldsymbol{\sigma})\cdot \boldsymbol{v} \, \mathrm{d}\boldsymbol{x} = \int_\Omega\boldsymbol{f}\cdot\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} \]</div>
+<p>Now, we recall the key pre-requisite at the top of this page. Using that is what actually implements the integration by parts here. Replacing the LHS above using the pre-requisite we saw earlier, the equation becomes:</p>
+<div class="arithmatex">\[-\int_\Omega \Big[\nabla\cdot(\boldsymbol{\sigma}\cdot\boldsymbol{v}) - \boldsymbol{\sigma}\colon(\nabla\boldsymbol{v})\Big] \, \mathrm{d}\boldsymbol{x} = \int_\Omega\boldsymbol{f}\cdot\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} \]</div>
+<div class="arithmatex">\[-\int_\Omega \nabla\cdot(\boldsymbol{\sigma}\cdot\boldsymbol{v}) \, \mathrm{d}\boldsymbol{x} + \int_\Omega \boldsymbol{\sigma}\colon(\nabla\boldsymbol{v}) \, \mathrm{d}\boldsymbol{x} = \int_\Omega\boldsymbol{f}\cdot\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} \]</div>
+<p>At this point, we revisit the Gauss divergence theorem in 3D.</p>
+<div class="admonition info">
+<p class="admonition-title">Gauss' Divergence Theorem (3D)</p>
+<p>Let <span class="arithmatex">\(\Omega \subset \mathbb{R}^3\)</span> be a sufficiently smooth volume with boundary <span class="arithmatex">\(\partial\Omega\)</span> and outward unit normal <span class="arithmatex">\(\boldsymbol{n}\)</span>. For a sufficiently smooth vector field <span class="arithmatex">\(\mathbf{F}: \bar{\Omega} \to \mathbb{R}^3\)</span>, where <span class="arithmatex">\(\boldsymbol{F} = (F_1,F_2,F_3)\)</span>, and <span class="arithmatex">\(\bar{\Omega} = \Omega\cup\partial\Omega\)</span> (up to and including the boundary), Gauss' divergence theorem states that:</p>
+<div class="arithmatex">\[\int_{\Omega} \nabla \cdot \boldsymbol{F}\,d\Omega = \int_{\partial\Omega} \boldsymbol{F}\cdot\boldsymbol{n}\,d\Gamma \]</div>
+<p>where the divergence of <span class="arithmatex">\(\boldsymbol{F}\)</span> is</p>
+<div class="arithmatex">\[\nabla\cdot\boldsymbol{F}=\frac{\partial F_1}{\partial x_1}+\frac{\partial F_2}{\partial x_2}+\frac{\partial F_3}{\partial x_3}.\]</div>
+<p>In component form,</p>
+<div class="arithmatex">\[\int_{\Omega}\left(\frac{\partial F_1}{\partial x_1}+\frac{\partial F_2}{\partial x_2}+\frac{\partial F_3}{\partial x_3}\right)d\Omega=\int_{\partial\Omega}\left(F_1 n_1 + F_2 n_2 + F_3 n_3\right)d\Gamma.\]</div>
+<p><strong>Interpretation</strong>: The volume integral of the divergence of a vector field is equal to the net flux of that field through the boundary of the volume.</p>
+</div>
+<p>Using the Gauss divergence theorem in the first term on the LHS, we get the following:</p>
+<div class="arithmatex">\[-\int_{\partial\Omega} (\boldsymbol{\sigma}\cdot\boldsymbol{v}) \cdot \boldsymbol{n} \, \mathrm{d}\boldsymbol{x} + \int_\Omega \boldsymbol{\sigma}\colon(\nabla\boldsymbol{v}) \, \mathrm{d}\boldsymbol{x} = \int_\Omega\boldsymbol{f}\cdot\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} \]</div>
+<div class="arithmatex">\[\color{red}{ \int_\Omega \boldsymbol{\sigma}\colon(\nabla\boldsymbol{v}) \, \mathrm{d}\boldsymbol{x} } = \color{green}{ \int_\Omega\boldsymbol{f}\cdot\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} } + \color{blue}{ \int_{\partial\Omega} (\boldsymbol{\sigma}\cdot\boldsymbol{v}) \cdot \boldsymbol{n} \, \mathrm{d}\boldsymbol{x} } \]</div>
+<p>Notice that the initial force balance equation has now taken the form of an energy or work balance equation, where we have <span class="arithmatex">\(\color{red}{\text{internal virtual work}}\)</span> on the LHS and the <span class="arithmatex">\(\color{green}{\text{work of body forces}}\)</span> and <span class="arithmatex">\(\color{blue}{\text{boundary/traction forces}}\)</span> on the right. We only need to update the integrand of the second term on the RHS. Let us take a look at the following equivalence.</p>
+<div class="admonition info">
+<p class="admonition-title">Equivalence of the Boundary Work Terms</p>
+<p>The boundary term can be written in either of the following forms:</p>
+<div class="arithmatex">\[ (\boldsymbol{\sigma}\cdot\boldsymbol{v})\cdot\boldsymbol{n} \qquad \text{or} \qquad (\boldsymbol{\sigma}\cdot\boldsymbol{n})\cdot\boldsymbol{v}. \]</div>
+<p>Using the index notation <span class="arithmatex">\(\boldsymbol{\sigma}=\sigma_{ij}\boldsymbol{e}_i\otimes\boldsymbol{e}_j\)</span>, <span class="arithmatex">\(\boldsymbol{v}=v_k\boldsymbol{e}_k\)</span>, and <span class="arithmatex">\(\boldsymbol{n}=n_l\boldsymbol{e}_l\)</span>, the first expression becomes</p>
+<div class="arithmatex">\[
+\begin{aligned}
+(\boldsymbol{\sigma}\cdot\boldsymbol{v})\cdot\boldsymbol{n}
+&amp;= \left(\sigma_{ij}\,\boldsymbol{e}_i\otimes\boldsymbol{e}_j
+\cdot v_k\boldsymbol{e}_k\right)\cdot n_l\boldsymbol{e}_l \\[2mm]
+&amp;= \left(\sigma_{ij}v_k\boldsymbol{e}_i\,\delta_{jk}\right)
+\cdot n_l\boldsymbol{e}_l \\[2mm]
+&amp;= \sigma_{ij}v_j\boldsymbol{e}_i\cdot n_l\boldsymbol{e}_l \\[2mm]
+&amp;= \sigma_{ij}v_j n_l\delta_{il} \\[2mm]
+&amp;= \boxed{\sigma_{ij}v_j n_i}.
+\end{aligned}
+\]</div>
+<p>Similarly, the second expression becomes</p>
+<div class="arithmatex">\[
+\begin{aligned}
+(\boldsymbol{\sigma}\cdot\boldsymbol{n})\cdot\boldsymbol{v}
+&amp;= \left(\sigma_{ij}\,\boldsymbol{e}_i\otimes\boldsymbol{e}_j
+\cdot n_k\boldsymbol{e}_k\right)\cdot v_l\boldsymbol{e}_l \\[2mm]
+&amp;= \left(\sigma_{ij}n_k\boldsymbol{e}_i\,\delta_{jk}\right)
+\cdot v_l\boldsymbol{e}_l \\[2mm]
+&amp;= \sigma_{ij}n_j\boldsymbol{e}_i\cdot v_l\boldsymbol{e}_l \\[2mm]
+&amp;= \sigma_{ij}n_jv_l\delta_{il} \\[2mm]
+&amp;= \boxed{\sigma_{ij}n_jv_i}.
+\end{aligned}
+\]</div>
+<p>For a symmetric Cauchy stress tensor, <span class="arithmatex">\(\sigma_{ij}=\sigma_{ji}\)</span>. Therefore,</p>
+<div class="arithmatex">\[
+(\boldsymbol{\sigma}\cdot\boldsymbol{n})\cdot\boldsymbol{v}
+=\sigma_{ij}n_jv_i
+=\sigma_{ji}n_jv_i
+=\sigma_{ij}n_iv_j
+=\sigma_{ij}v_jn_i
+=(\boldsymbol{\sigma}\cdot\boldsymbol{v})\cdot\boldsymbol{n}.
+\]</div>
+<p>Hence, when <span class="arithmatex">\(\boldsymbol{\sigma}\)</span> is <strong>symmetric</strong>:</p>
+<div class="arithmatex">\[\boxed{ (\boldsymbol{\sigma}\cdot\boldsymbol{v})\cdot\boldsymbol{n} = (\boldsymbol{\sigma}\cdot\boldsymbol{n})\cdot\boldsymbol{v} }. \]</div>
+<p><strong>Important:</strong> The two expressions are <strong>not equivalent</strong> for a <strong>nonsymmetric</strong> stress tensor. In classical continuum mechanics, the Cauchy stress tensor is symmetric.</p>
+</div>
+<p>Therefore, we can re-write the weak form as:</p>
+<div class="arithmatex">\[\int_\Omega \boldsymbol{\sigma}\colon(\nabla\boldsymbol{v}) \, \mathrm{d}\boldsymbol{x} = \int_\Omega\boldsymbol{f}\cdot\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} + \int_{\partial\Omega} (\boldsymbol{\sigma}\cdot\boldsymbol{n}) \cdot \boldsymbol{v} \, \mathrm{d}\boldsymbol{x}\]</div>
+<div class="arithmatex">\[\begin{equation}
+\boxed{
+\int_\Omega \boldsymbol{\sigma}\colon(\nabla\boldsymbol{v}) \, \mathrm{d}\boldsymbol{x} = \int_\Omega\boldsymbol{f}\cdot\boldsymbol{v} \, \mathrm{d}\boldsymbol{x} + \int_{\partial\Omega_T} \boldsymbol{t} \cdot \boldsymbol{v} \, \mathrm{d}\boldsymbol{x}
+}
+\end{equation}\]</div>
+<p>Notice that there is one subtle but very important update in the last term, the integration domain. Recall that <span class="arithmatex">\(\partial\Omega = \partial\Omega_T \cup \partial\Omega_D\)</span>. Since the virtual displacement field (<span class="arithmatex">\(\boldsymbol{v}\)</span>) is exactly zero on the Dirichilet boundary (<span class="arithmatex">\(\partial\Omega_D\)</span>), only the <span class="arithmatex">\(\partial\Omega_T\)</span> part of the integral survives in the final weak (variational) form.</p>
 
 
 

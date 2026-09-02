@@ -10,11 +10,13 @@
         <meta name="author" content="Bhanu Pratap Sharma">
       
       
-        <link rel="canonical" href="https://bhanups1991.github.io/glossary/">
+        <link rel="canonical" href="https://bhanups1991.github.io/tensors_with_bases/">
       
       
-        <link rel="prev" href="../piola_traction_decomposition/">
+        <link rel="prev" href="../signorini_conditions/">
       
+      
+        <link rel="next" href="../piola_traction_decomposition/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Consistent Reminders - Bhanu Pratap Sharma, PhD</title>
+        <title>Tensors with Bases - Bhanu Pratap Sharma, PhD</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-skip">
+        <a href="#tensor-expressions-in-terms-of-basis-vectors" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Consistent Reminders
+              Tensors with Bases
             
           </span>
         </div>
@@ -397,10 +399,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tensors_with_bases/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensors with Bases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -416,6 +443,46 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-expressions-in-terms-of-basis-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensor Expressions in Terms of Basis Vectors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transpose-and-inverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transpose and Inverse
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -453,35 +520,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Consistent Reminders
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
         
   
   
@@ -497,57 +539,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Function Spaces in FEM: A Plain-English Hierarchy
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dissecting-an-example-notation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dissecting an example Notation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cheat-sheet-taxonomy-of-mathematical-symbols" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat Sheet: Taxonomy of Mathematical Symbols
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -585,10 +576,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-nav__link">
+  <a href="#tensor-expressions-in-terms-of-basis-vectors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Function Spaces in FEM: A Plain-English Hierarchy
+        Tensor Expressions in Terms of Basis Vectors
       
     </span>
   </a>
@@ -596,21 +587,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dissecting-an-example-notation" class="md-nav__link">
+  <a href="#transpose-and-inverse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dissecting an example Notation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cheat-sheet-taxonomy-of-mathematical-symbols" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat Sheet: Taxonomy of Mathematical Symbols
+        Transpose and Inverse
       
     </span>
   </a>
@@ -634,148 +614,73 @@
 
 
 
-  <h1>Consistent Reminders</h1>
+  <h1>Tensors with Bases</h1>
 
-<p>Let us revisit some key definitions and recall the symbols used. This page should be visited often and treated as a sacred space. This provides the language on which the equations in the main part are written.</p>
+<h3 id="tensor-expressions-in-terms-of-basis-vectors">Tensor Expressions in Terms of Basis Vectors</h3>
+<p>Following are the quantities of interest written with their proper basis vectors. Recall that basis vectors are the key indicators as to in which space a vector or a tensor lives. Also recall that a vector can be represented using different bases without changing the vector itself. </p>
+<p>For example, the same vector may be written as <span class="arithmatex">\(\mathbf{v}=V_i\mathbf{E}_i\)</span> in the reference basis or as <span class="arithmatex">\(\mathbf{v}=v_i\mathbf{e}_i\)</span> in another basis, with generally <span class="arithmatex">\(V_i\ne v_i\)</span>. The vector is unchanged (provided the vector is not undergoing any transformation); only its scalar components and basis-vector representation change such that their combination represents the same geometric vector. </p>
+<p>For now, let <span class="arithmatex">\(\mathbf{E}_i\)</span> (<span class="arithmatex">\(i=1,2,3\)</span>) represent the reference (material) coordinate basis vectors and <span class="arithmatex">\(\mathbf{e}_i\)</span> (<span class="arithmatex">\(i=1,2,3\)</span>) represent the current (spatial) coordinate basis vectors.</p>
+<ul>
+<li><strong>Deformation Gradient</strong> (<span class="arithmatex">\(\mathbf{F}\)</span>): A two-point tensor mapping material (reference configuration) vectors to spatial (current configuration) vectors.</li>
+</ul>
+<div class="arithmatex">\[\mathbf{F} = F_{ij} \mathbf{e}_i \otimes \mathbf{E}_j\]</div>
+<ul>
+<li><strong>Cauchy Stress</strong> (<span class="arithmatex">\(\boldsymbol{\sigma}\)</span>): A spatial tensor defined entirely on the current configuration.</li>
+</ul>
+<div class="arithmatex">\[\boldsymbol{\sigma} = \sigma_{ij} \mathbf{e}_i \otimes \mathbf{e}_j\]</div>
+<ul>
+<li><strong>First Piola-Kirchhoff Stress</strong> (<span class="arithmatex">\(\mathbf{P}\)</span>): A two-point tensor mapping reference area vectors to spatial (current configuration) force vectors.</li>
+</ul>
+<div class="arithmatex">\[\mathbf{P} = P_{ij} \mathbf{e}_i \otimes \mathbf{E}_j\]</div>
+<ul>
+<li><strong>Second Piola-Kirchhoff Stress</strong> (<span class="arithmatex">\(\mathbf{S}\)</span>): A material tensor defined entirely on the reference configuration.</li>
+</ul>
+<div class="arithmatex">\[\mathbf{S} = S_{ij} \mathbf{E}_i \otimes \mathbf{E}_j\]</div>
+<ul>
+<li><strong>Green-Lagrange Strain</strong> (<span class="arithmatex">\(\mathbf{E}\)</span>): A material (reference configuration) strain tensor defined on the reference configuration and measuring deformation relative to the reference configuration.</li>
+</ul>
+<div class="arithmatex">\[\mathbf{E} = E_{ij} \mathbf{E}_i \otimes \mathbf{E}_j\]</div>
+<ul>
+<li><strong>Almansi (Euler-Almansi) Strain</strong> (<span class="arithmatex">\(\mathbf{e}\)</span>): A spatial (current configuration) strain tensor defined on the current configuration and measuring deformation relative to the current configuration.</li>
+</ul>
+<div class="arithmatex">\[\mathbf{e} = e_{ij} \mathbf{e}_i \otimes \mathbf{e}_j\]</div>
 <hr />
-<h3 id="function-spaces-in-fem-a-plain-english-hierarchy">Function Spaces in FEM: A Plain-English Hierarchy</h3>
-<p>Before jumping onto the notations, let us see how the broader families of mathematical spaces nest inside one another. Here are some top-level, good-to-know, working definitions. Best to remember all three, but the third one is the key space associated with FEM most of the time.</p>
+<h3 id="transpose-and-inverse">Transpose and Inverse</h3>
 <ul>
-<li>
-<p><strong>Banach Spaces:</strong> A <em>Banach space</em> is any complete vector space equipped with a norm — a way to measure the "size" of a function or vector. Think of a norm as a ruler: it tells us how big something is. "Complete" simply means the space has no holes in it; if a sequence of functions keeps getting closer and closer to each other, the thing they are converging to is also inside the space. No missing limits, no surprises. Usually represented by the letterS <span class="arithmatex">\(X, Y, B\)</span>.</p>
-</li>
-<li>
-<p><strong>Hilbert Spaces:</strong> A <em>Hilbert space</em> is a Banach space with one extra gift: an <strong>inner product</strong> — a generalisation of the familiar dot product from vector calculus. Because we now have an inner product, we can talk about <em>angles</em> between functions, what it means for two functions to be <em>orthogonal</em>, and how to <em>project</em> one function onto another. This geometric intuition is exactly what makes weak forms and variational problems so natural to work with. Most linear PDE theory lives here.</p>
+<li><strong>Transpose of the Deformation Gradient</strong> (<span class="arithmatex">\(\mathbf{F}^T\)</span>):</li>
+</ul>
+<p>The transpose of a two-point tensor is its adjoint, which <strong>reverses the direction of the associated mapping</strong>. In terms of the basis vectors, the tensor-product order is reversed. Note that <span class="arithmatex">\(\mathbf{F}\)</span> operating on a vector in the reference configuration will yield a vector in the current configuration. On the other hand, <span class="arithmatex">\(\mathbf{F}^T\)</span> acting on a vector in the current configuration will yield a vector in the reference configuration. Essentially, the domain/co-domains of the two tensors are opposite to each other.  </p>
+<div class="arithmatex">\[\mathbf{F} = F_{ij} \mathbf{e}_i \otimes \mathbf{E}_j \quad \implies \quad \mathbf{F}^T = F_{ij} \mathbf{E}_j \otimes \mathbf{e}_i\]</div>
+<p>The scalar components <span class="arithmatex">\(F_{ij}\)</span> remain unchanged; only their association with the basis vectors changes because the tensor-product order has been reversed.</p>
 <ul>
-<li>Generic Hilbert space: <span class="arithmatex">\(H\)</span>, <span class="arithmatex">\(V\)</span></li>
-<li>Inner product: <span class="arithmatex">\((\cdot,\cdot)\)</span> or <span class="arithmatex">\(\langle \cdot, \cdot \rangle\)</span></li>
-<li>The induced norm: <span class="arithmatex">\(\|u\| = \sqrt{(u,u)}\)</span></li>
+<li><strong>Inverse of the Deformation Gradient</strong> (<span class="arithmatex">\(\mathbf{F}^{-1}\)</span>):</li>
 </ul>
-</li>
-<li>
-<p><strong>Sobolev Spaces:</strong> A <em>Sobolev space</em> is a particular type of Hilbert space made for functions whose derivatives (up to some chosen order) are also square-integrable. In structural mechanics, displacement fields live in Sobolev spaces like <span class="arithmatex">\(H^1(\Omega)\)</span> because we need the solution to carry finite energy. Usually represented by the letters <span class="arithmatex">\(L, H\)</span>. Most of the times, H has a superscript denoting the order upto and including which the derivates are also square integrable. </p>
-<ul>
-<li>
-<p>What exactly is square-integrability? It means that if we take a function <span class="arithmatex">\(f\)</span>, square it to get <span class="arithmatex">\(f^2\)</span>, and integrate over the domain, the result must be finite — not blow up, not be infinite. Recall the energy stored in a uniaxial bar: <span class="arithmatex">\(\frac{1}{2} E \varepsilon^2\)</span>. In 3D, the same idea holds — the integral of the squared strain field over the body gives us the total stored elastic energy. A real, finite body made of a real material can only store a finite amount of energy. So square-integrability is not an abstract mathematical demand; it is simply the mathematical way of saying that our strain field must be physically reasonable. If the strains (derivatives of displacements) blow up somewhere in a non-integrable way, we are describing an object with infinite stored energy — which is not physical.</p>
-</li>
-<li>
-<p>This is why we need derivatives to also be square-integrable, not just the displacements themselves. Displacements tell us where points moved; strains tell us how the material deformed; energy depends on the strains. All three must be well-behaved and finite.</p>
-</li>
-<li>
-<p>Here are some sample definitions:</p>
-<ul>
-<li><span class="arithmatex">\(L^2(\Omega)\)</span> — Square-integrable functions on <span class="arithmatex">\(\Omega\)</span> (the base case, zero derivatives needed)</li>
-<li><span class="arithmatex">\(H^1(\Omega)\)</span> — Functions in <span class="arithmatex">\(L^2\)</span> whose first derivatives are also in <span class="arithmatex">\(L^2\)</span></li>
-<li><span class="arithmatex">\(H^k(\Omega)\)</span> — Functions whose derivatives up to order <span class="arithmatex">\(k\)</span> are in <span class="arithmatex">\(L^2\)</span></li>
-<li><span class="arithmatex">\(H^1_0(\Omega)\)</span> — Subspace of <span class="arithmatex">\(H^1\)</span> with zero trace on <span class="arithmatex">\(\partial\Omega\)</span> (strong Dirichlet BC built-in)</li>
-</ul>
-</li>
-<li>
-<p>What does zero trace or strong Dirichlet BC built-in mean? This means that the space definition itself says that the functions vanish on the boundary. In other words it is a collection of all <span class="arithmatex">\(H^1\)</span> functions whose boundary footprint is exactly zero. When we pick the test functions from <span class="arithmatex">\(H^1_0\)</span>, it comes pre-loaded with the condition <span class="arithmatex">\(v|_{\partial\Omega}=0\)</span>. No extra condition needs to be imposed. An example of saying so much by using just a 0 in the subscript.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Finite-Dimensional Subspaces (<span class="arithmatex">\(V_h\)</span>):</strong> Sobolev spaces contain infinitely many functions — a computer cannot work with that directly. So we shrink the problem down to a <em>finite-dimensional subspace</em> <span class="arithmatex">\(V_h \subset H^1(\Omega)\)</span>: a carefully chosen collection of simple, piecewise polynomial functions defined on a mesh of element size <span class="arithmatex">\(h\)</span>. Instead of searching over all possible displacement fields in <span class="arithmatex">\(H^1(\Omega)\)</span>, we search only within <span class="arithmatex">\(V_h\)</span>. This is the step that turns a continuous variational problem into a finite matrix equation that a computer can actually solve. The mesh size <span class="arithmatex">\(h\)</span> controls how fine this approximation is — as <span class="arithmatex">\(h \to 0\)</span>, <span class="arithmatex">\(V_h\)</span> grows and the FEM solution converges back toward the true Sobolev-space solution. Here are some sample definitions:</p>
-<ul>
-<li><span class="arithmatex">\(V_h \subset H^1(\Omega)\)</span> — the FEM trial/test space</li>
-<li><span class="arithmatex">\(V_h^0 \subset H^1_0(\Omega)\)</span> — same but with zero boundary trace enforced as explained above</li>
-<li>The subscript <span class="arithmatex">\(h\)</span> always signals discretisation at mesh scale <span class="arithmatex">\(h\)</span></li>
-<li>Elements of <span class="arithmatex">\(V_h\)</span> are often written <span class="arithmatex">\(u_h\)</span>, <span class="arithmatex">\(v_h\)</span> to distinguish them from the true solution <span class="arithmatex">\(u \in H^1\)</span></li>
-</ul>
-</li>
-</ul>
-<hr />
-<div class="admonition info">
-<p class="admonition-title">NOTE: The Central Approximation of FEM</p>
-<p>The jump from <span class="arithmatex">\(u \in H^1(\Omega)\)</span> to <span class="arithmatex">\(u_h \in V_h\)</span> is the central approximation of FEM — and the whole error analysis of FEM is essentially asking: how large is <span class="arithmatex">\(\|u - u_h\|_{H^1}\)</span>, and how fast does it shrink as <span class="arithmatex">\(h \to 0\)</span>?</p>
-</div>
-<hr />
-<h3 id="dissecting-an-example-notation">Dissecting an example Notation</h3>
-<p>Let us say, we have this definition of <span class="arithmatex">\(V_h\)</span>. This is taken from section 1.5 of <a href="https://link.springer.com/article/10.1007/s00211-018-0950-x">this</a> paper by Chouly et. al..</p>
-<div class="arithmatex">\[\mathbf{V}_h = (\mathbf{V}_h^1 \times \mathbf{V}_h^2), \quad \text{with } \mathbf{V}_h^i = \left\{ \mathbf{v}_h^i \in \mathscr{C}^0(\overline{\Omega^i}) : \mathbf{v}_h^i\vert{}_T \in (\mathbb{P}_k(T))^d, \forall T \in \mathcal{T}_h^i, \mathbf{v}_h^i = 0 \text{ on } \Gamma_D^i \right\}\]</div>
-<p>Let's break down every single component piece-by-piece:</p>
-<ul>
-<li><span class="arithmatex">\(\mathcal{T}_h^i\)</span>: The finite element mesh (triangulation) of domain <span class="arithmatex">\(\Omega^i\)</span> with mesh size parameter <span class="arithmatex">\(h\)</span>.</li>
-<li><span class="arithmatex">\(\mathbf{V}_h\)</span>: The total global trial/test space for <em>both</em> bodies combined (the Cartesian product of the spaces for Body 1 and Body 2).</li>
-<li><span class="arithmatex">\(\mathbf{V}_h^i\)</span>: The finite-dimensional vector space of discrete functions belonging to body <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(i \in \{1, 2\}\)</span>).</li>
-<li><span class="arithmatex">\(\mathscr{C}^0(\overline{\Omega^i})\)</span>: The space of <strong>continuous functions</strong> over the closed domain <span class="arithmatex">\(\overline{\Omega^i}\)</span> (meaning no gaps or tears between elements; standard <span class="arithmatex">\(C^0\)</span> continuity used in Lagrangian finite elements).</li>
-<li><span class="arithmatex">\(\mathbf{v}_h^i\vert{}_T\)</span>: The restriction of the vector field <span class="arithmatex">\(\mathbf{v}_h^i\)</span> to a single element <span class="arithmatex">\(T\)</span> (e.g., a specific triangle in the mesh).</li>
-<li><span class="arithmatex">\((\mathbb{P}_k(T))^d\)</span>: Polynomials of degree up to <span class="arithmatex">\(k\)</span> defined on element <span class="arithmatex">\(T\)</span>, raised to the power <span class="arithmatex">\(d\)</span> (where <span class="arithmatex">\(d\)</span> is the spatial dimension, e.g., <span class="arithmatex">\(d=2\)</span> for 2D vectors <span class="arithmatex">\((u_x, u_y)\)</span>).</li>
-<li><span class="arithmatex">\(\forall T \in \mathcal{T}_h^i\)</span>: <strong>"For all"</strong> elements <span class="arithmatex">\(T\)</span> inside the mesh <span class="arithmatex">\(\mathcal{T}_h^i\)</span>. This means the function is a piecewise polynomial element-by-element.</li>
-<li><span class="arithmatex">\(\mathbf{v}_h^i = 0 \text{ on } \Gamma_D^i\)</span>: The essential boundary condition. The trial/test functions must <strong>vanish (equal zero)</strong> on the Dirichlet boundary <span class="arithmatex">\(\Gamma_D^i\)</span> where displacements are locked.</li>
-</ul>
-<hr />
-<h3 id="cheat-sheet-taxonomy-of-mathematical-symbols">Cheat Sheet: Taxonomy of Mathematical Symbols</h3>
-<table>
-<thead>
-<tr>
-<th>Symbol / Notation</th>
-<th>Meaning in Plain English</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="arithmatex">\(\Omega\)</span></td>
-<td>A spatial domain (the geometry of the body).</td>
-<td><span class="arithmatex">\(\Omega \subset \mathbb{R}^2\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\partial\Omega\)</span> or <span class="arithmatex">\(\Gamma\)</span></td>
-<td>The boundary of the domain.</td>
-<td><span class="arithmatex">\(\Gamma_C\)</span> (contact boundary), <span class="arithmatex">\(\Gamma_D\)</span> (Dirichlet boundary)</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\mathcal{T}_h\)</span></td>
-<td>A triangulation or mesh of the domain parameterized by mesh size <span class="arithmatex">\(h\)</span>.</td>
-<td><span class="arithmatex">\(T \in \mathcal{T}_h\)</span> (a single element)</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\mathscr{C}^k(\Omega)\)</span></td>
-<td>Space of <span class="arithmatex">\(k\)</span>-times continuously differentiable functions.</td>
-<td><span class="arithmatex">\(\mathscr{C}^0\)</span> is continuous; <span class="arithmatex">\(\mathscr{C}^1\)</span> has continuous first derivatives.</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\mathbb{P}_k(T)\)</span></td>
-<td>Polynomial space of degree <span class="arithmatex">\(k\)</span> defined on element <span class="arithmatex">\(T\)</span>.</td>
-<td><span class="arithmatex">\(\mathbb{P}_1\)</span> is linear; <span class="arithmatex">\(\mathbb{P}_2\)</span> is quadratic.</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\((\cdot)^d\)</span></td>
-<td>Cartesian product power <span class="arithmatex">\(d\)</span>, indicating a vector-valued function of dimension <span class="arithmatex">\(d\)</span>.</td>
-<td><span class="arithmatex">\((\mathbb{P}_k)^2\)</span> means a 2D vector where each component is a degree-<span class="arithmatex">\(k\)</span> polynomial.</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\in\)</span></td>
-<td>"Belongs to" or "is an element of".</td>
-<td><span class="arithmatex">\(x \in \Omega\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\subset\)</span></td>
-<td>"Is a subset of" (contained within).</td>
-<td><span class="arithmatex">\(\mathbf{V}_h \subset H^1(\Omega)\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\forall\)</span></td>
-<td><strong>"For all"</strong> (universal quantifier).</td>
-<td><span class="arithmatex">\(\forall T \in \mathcal{T}_h\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\times\)</span></td>
-<td>Cartesian product (combining sets or spaces).</td>
-<td><span class="arithmatex">\(\mathbf{V}_h^1 \times \mathbf{V}_h^2\)</span> combines the spaces of both bodies into a joint system.</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\mid_T\)</span></td>
-<td><strong>Restriction</strong> of a function to a specific subdomain or element <span class="arithmatex">\(T\)</span>.</td>
-<td><span class="arithmatex">\(v\vert{}_T\)</span> is the function evaluated strictly inside element <span class="arithmatex">\(T\)</span>.</td>
-</tr>
-</tbody>
-</table>
+<p>The inverse of <span class="arithmatex">\(\mathbf{F}\)</span> reverses the deformation mapping, taking spatial vectors back to material (reference configuration) vectors. Its basis representation is therefore</p>
+<div class="arithmatex">\[\mathbf{F}^{-1} = (F^{-1})_{ij} \mathbf{E}_i \otimes \mathbf{e}_j\]</div>
+<p>where <span class="arithmatex">\((F^{-1})_{ij}\)</span> are the components of the inverse mapping, with the first index associated with the reference basis and the second index associated with the current basis.</p>
+<p><strong>Inverse Transpose of the Deformation Gradient</strong> (<span class="arithmatex">\(\mathbf{F}^{-T}\)</span>):</p>
+<p>The inverse transpose can be constructed starting from <span class="arithmatex">\(\mathbf{F}\)</span> by first taking its transpose and then taking the inverse or vice versa.</p>
+<div class="arithmatex">\[\mathbf{F}^{-T} = (\mathbf{F}^{-1})^T = (\mathbf{F}^T)^{-1}\]</div>
+<p>Using the basis representation of <span class="arithmatex">\(\mathbf{F}\)</span>, we start with:</p>
+<div class="arithmatex">\[\mathbf{F} = F_{ij} \mathbf{e}_i \otimes \mathbf{E}_j\]</div>
+<p>Here, <span class="arithmatex">\(\mathbf{F}\)</span> maps a vector from the reference configuration to the current configuration. The first basis vector <span class="arithmatex">\(\mathbf{e}_i\)</span> belongs to the current configuration, while the second basis vector <span class="arithmatex">\(\mathbf{E}_j\)</span> belongs to the reference configuration. After taking the transpose, it becomes:</p>
+<div class="arithmatex">\[\mathbf{F}^T = F_{ij} \mathbf{E}_j \otimes \mathbf{e}_i\]</div>
+<p>The tensor-product order has now been reversed. Consequently, the associated mapping is reversed: <span class="arithmatex">\(\mathbf{F}^T\)</span> maps a spatial or current configuration vector to a material or reference configuration vector. Notice that the scalar components <span class="arithmatex">\(F_{ij}\)</span> themselves have not changed. Now, we take the inverse of <span class="arithmatex">\(\mathbf{F}^T\)</span>:</p>
+<div class="arithmatex">\[\mathbf{F}^{-T} = (\mathbf{F}^T)^{-1} = (F^{-1})_{ij} \mathbf{e}_j \otimes \mathbf{E}_i\]</div>
+<p>Here, the components are now those of the <strong>inverse matrix</strong> rather than those of <span class="arithmatex">\(\mathbf{F}\)</span>. At the same time, the basis order is reversed again because we are taking the inverse of <span class="arithmatex">\(\mathbf{F}^T\)</span>. Therefore, <span class="arithmatex">\(\mathbf{F}^{-T}\)</span> has the same mapping direction as <span class="arithmatex">\(\mathbf{F}\)</span>: it maps material vectors to spatial vectors, but using the inverse-transposed components.</p>
+<p>Thus,</p>
+<div class="arithmatex">\[\mathbf{F}^{-T} = (\mathbf{F}^{-1})^T = (\mathbf{F}^T)^{-1}\]</div>
+<p>Unlike <span class="arithmatex">\(\mathbf{F}^{-1}\)</span>, which maps spatial vectors to material vectors, <span class="arithmatex">\(\mathbf{F}^{-T}\)</span> maps material vectors to spatial vectors. It is particularly important for transforming normals between the reference and current configurations.</p>
 <div class="admonition warning">
-<p class="admonition-title">Work in Progress</p>
-<p>More symbols to be added as needed.</p>
+<p class="admonition-title">Work in progress: Clarification on <span class="arithmatex">\(\mathbf{F}^T\)</span>, <span class="arithmatex">\(\mathbf{F}^{-1}\)</span>, and <span class="arithmatex">\(\mathbf{F}^{-T}\)</span>.</p>
+<p>First things first. Notice that both <span class="arithmatex">\(\mathbf{F}^T\)</span> and <span class="arithmatex">\(\mathbf{F}^{-1}\)</span> reverse the direction of the associated mapping, and clearly they are <strong>not the same operation</strong>, i.e., <span class="arithmatex">\(\mathbf{F}^T \ne \mathbf{F}^{-1}\)</span>.</p>
+<p>The transpose i.e., <span class="arithmatex">\(\mathbf{F}^T\)</span> reverses the domain/co-domain of the mapping, but it does <strong>NOT</strong> undo the deformation.</p>
+<p>The inverse i.e., <span class="arithmatex">\(\mathbf{F}^{-1}\)</span> is the operator that <strong>actually reverses the deformation mapping</strong> as shown here:</p>
+<div class="arithmatex">\[\mathbf{X} = \mathbf{F}^{-1}\cdot\mathbf{x}\]</div>
+<p>The inverse transpose <span class="arithmatex">\(\mathbf{F}^{-T}\)</span> is the adjoint of the inverse and is used particularly for to transform surface normals between the reference and current configurations. Recall the Nanson's formula, where <span class="arithmatex">\(\mathbf{F}^{-T}\)</span> is at play:</p>
+<div class="arithmatex">\[J\mathbf{F}^{-T}\cdot\boldsymbol{N} = \frac{da}{dA}\boldsymbol{n}_x\]</div>
+<p>Thus, <span class="arithmatex">\(\mathbf{F}^{-1}\)</span> reverses the deformation itself, whereas <span class="arithmatex">\(\mathbf{F}^{-T}\)</span> appears in the transformation of normals and in pull-back/push-forward relations involving dual quantities.</p>
+<p><em>More explanation on dual quantities, covectors and examples of pull back and push forward to be added.</em></p>
 </div>
 
 

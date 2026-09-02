@@ -77,5 +77,5 @@ Let's break down every single component piece-by-piece:
 | $\times$ | Cartesian product (combining sets or spaces). | $\mathbf{V}_h^1 \times \mathbf{V}_h^2$ combines the spaces of both bodies into a joint system. |
 | $\mid_T$ | **Restriction** of a function to a specific subdomain or element $T$. | $v\vert{}_T$ is the function evaluated strictly inside element $T$. |
 
-!!! info "Work in Progress"
+!!! warning "Work in Progress"
     More symbols to be added as needed.
