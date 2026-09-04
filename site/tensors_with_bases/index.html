@@ -666,6 +666,44 @@
 <li><strong>Almansi (Euler-Almansi) Strain</strong> (<span class="arithmatex">\(\mathbf{e}\)</span>): A spatial (current configuration) strain tensor defined on the current configuration and measuring deformation relative to the current configuration.</li>
 </ul>
 <div class="arithmatex">\[\mathbf{e} = e_{ij} \mathbf{e}_i \otimes \mathbf{e}_j\]</div>
+<!-- ### Polar Decomposition of the Deformation Gradient
+
+The deformation gradient $\mathbf{F}$, being a two-point tensor, can be uniquely decomposed into a pure local rotation tensor $\mathbf{R}$ and a pure local stretch tensor ($\mathbf{U}$ or $\mathbf{V}$). This isolates the rigid-body rotational part from the deformation part at any material point.
+
+* **Right Polar Decomposition:** Stretches the material first in its reference configuration, followed by a rigid rotation into the current configuration.
+
+$$ \mathbf{F} = \mathbf{R} \cdot \mathbf{U} $$
+
+  * **$\mathbf{U}$ (Right Stretch Tensor):** A material tensor defined entirely on the reference configuration ($\mathbf{E}_i \otimes \mathbf{E}_j$), symmetric ($\mathbf{U} = \mathbf{U}^T$), and positive-definite. It satisfies $\mathbf{U} = \sqrt{\mathbf{F}^T \cdot \mathbf{F}}$.
+  * **$\mathbf{R}$ (Rotation Tensor):** A proper orthogonal two-point tensor ($\mathbf{R} \cdot \mathbf{R}^T = \mathbf{I}$, $\det\mathbf{R} = +1$) mapping reference bases to spatial bases.
+
+* **Left Polar Decomposition:** Applies a rigid rotation first, followed by a pure stretch in the current configuration.
+
+$$ \mathbf{F} = \mathbf{V} \cdot \mathbf{R} $$
+
+  * **$\mathbf{V}$ (Left Stretch Tensor):** A spatial tensor defined entirely on the current configuration ($\mathbf{e}_i \otimes \mathbf{e}_j$), symmetric ($\mathbf{V} = \mathbf{V}^T$), satisfying $\mathbf{V} = \sqrt{\mathbf{F} \cdot \mathbf{F}^T}$. 
+  * The rotation tensor $\mathbf{R}$ remains identical in both decompositions, though the stretch tensors are related via $\mathbf{V} = \mathbf{R} \cdot \mathbf{U} \cdot \mathbf{R}^T$.
+
+### Kinematic Decompositions: Velocity Gradient, Rate of Deformation, and Spin
+
+While finite strains use deformation gradients, rate-form descriptions (ideal for Eulerian frameworks, fluid flow, or rate-dependent plasticity) rely on the spatial velocity gradient tensor $\mathbf{L}$.
+
+* **Velocity Gradient ($\mathbf{L}$):** Defined as the spatial gradient of the velocity field $\mathbf{v}$, acting as the Eulerian counterpart to $\mathbf{F}$. It connects the time derivative of the deformation gradient via $\dot{\mathbf{F}} = \mathbf{L} \cdot \mathbf{F}$.
+
+$$ \mathbf{L} = \nabla_{\boldsymbol{x}} \mathbf{v} \quad \implies \quad L_{ij} = \frac{\partial v_i}{\partial x_j} = \mathbf{e}_i \otimes \mathbf{e}_j $$
+
+Like any second-order tensor, $\mathbf{L}$ can be additively decomposed into its symmetric and skew-symmetric parts:
+
+$$ \mathbf{L} = \mathbf{D} + \mathbf{W} $$
+
+* **$\mathbf{D}$ (Rate of Deformation / Stretching Tensor):** The symmetric part of the velocity gradient, representing the rate at which lengths and angles are changing in the current configuration.
+
+$$ \mathbf{D} = \frac{1}{2} \left( \mathbf{L} + \mathbf{L}^T \right) \quad \implies \quad D_{ij} = \frac{1}{2}\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right) $$
+
+* **$\mathbf{W}$ (Spin / Vorticity Tensor):** The skew-symmetric part of the velocity gradient, representing the local rigid-body rotation rate (vorticity) of spatial volume elements.
+
+$$ \mathbf{W} = \frac{1}{2} \left( \mathbf{L} - \mathbf{L}^T \right) \quad \implies \quad W_{ij} = \frac{1}{2}\left(\frac{\partial v_i}{\partial x_j} - \frac{\partial v_j}{\partial x_i}\right) $$ -->
+
 <hr />
 <h3 id="transpose-and-inverse">Transpose and Inverse</h3>
 <ul>

@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-skip">
+        <a href="#definiteness-of-a-matrix" class="md-skip">
           Skip to content
         </a>
       
@@ -512,6 +512,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#definiteness-of-a-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definiteness of a Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -585,6 +596,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#definiteness-of-a-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definiteness of a Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#function-spaces-in-fem-a-plain-english-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -638,6 +660,59 @@
 
 <p>Let us revisit some key definitions and recall the symbols used. This page should be visited often and treated as a sacred space. This provides the language on which the equations in the main part are written.</p>
 <hr />
+<h3 id="definiteness-of-a-matrix">Definiteness of a Matrix</h3>
+<p>For a <strong>symmetric</strong> matrix (or second-order tensor), definiteness can be classified based on the signs of its eigenvalues <span class="arithmatex">\(\lambda_i\)</span>:</p>
+<ul>
+<li>
+<p><strong>Positive Definite:</strong> All eigenvalues are strictly positive,
+  <span class="arithmatex">\(\lambda_i &gt; 0\)</span> for all <span class="arithmatex">\(i\)</span>.</p>
+</li>
+<li>
+<p><strong>Positive Semi-Definite:</strong> All eigenvalues are non-negative,
+  <span class="arithmatex">\(\lambda_i \geq 0\)</span> for all <span class="arithmatex">\(i\)</span>.</p>
+</li>
+<li>
+<p><strong>Negative Definite:</strong> All eigenvalues are strictly negative,
+  <span class="arithmatex">\(\lambda_i &lt; 0\)</span> for all <span class="arithmatex">\(i\)</span>.</p>
+</li>
+<li>
+<p><strong>Negative Semi-Definite:</strong> All eigenvalues are non-positive,
+  <span class="arithmatex">\(\lambda_i \leq 0\)</span> for all <span class="arithmatex">\(i\)</span>.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>If <span class="arithmatex">\(\boldsymbol{A}\)</span> has both positive and negative eigenvalues, it is <strong>indefinite</strong>.</p>
+</div>
+<p>Let us see why this classification is central to the equations we see in continuum mechanics and FEM. For a symmetric matrix <span class="arithmatex">\(\boldsymbol{A}\)</span>, definiteness is characterized through the <strong>quadratic form</strong> defined as <span class="arithmatex">\(\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x}\)</span>, where <span class="arithmatex">\(\boldsymbol{x}\)</span> is any nonzero vector in the space on which <span class="arithmatex">\(\boldsymbol{A}\)</span> acts. Notice that this matrix product yields a scalar quantity. The value and, in particular, the sign of this scalar <strong>for all possible nonzero choices of <span class="arithmatex">\(\boldsymbol{x}\)</span></strong> determine the definiteness of <span class="arithmatex">\(\boldsymbol{A}\)</span>.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x} &amp;&gt; 0
+&amp;&amp;\quad \forall\,\boldsymbol{x}\neq\boldsymbol{0}
+&amp;&amp;\Rightarrow&amp;&amp; \boldsymbol{A}\text{ is positive definite},\\
+\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x} &amp;\geq 0
+&amp;&amp;\quad \forall\,\boldsymbol{x}\neq\boldsymbol{0}
+&amp;&amp;\Rightarrow&amp;&amp; \boldsymbol{A}\text{ is positive semi-definite},\\
+\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x} &amp;&lt; 0
+&amp;&amp;\quad \forall\,\boldsymbol{x}\neq\boldsymbol{0}
+&amp;&amp;\Rightarrow&amp;&amp; \boldsymbol{A}\text{ is negative definite},\\
+\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x} &amp;\leq 0
+&amp;&amp;\quad \forall\,\boldsymbol{x}\neq\boldsymbol{0}
+&amp;&amp;\Rightarrow&amp;&amp; \boldsymbol{A}\text{ is negative semi-definite}.
+\end{aligned}
+\]</div>
+<p>Just by looking at the definition of the quadratic form, it becomes clear that it is closely related to energy calculations. Recall that the strain energy and kinetic energy of a discretized mechanical system can be written as:</p>
+<div class="arithmatex">\[
+\frac{1}{2}\left(\mathbf{u}^{T}\mathbf{K}\mathbf{u}\right), \quad \text{and} \quad 
+\frac{1}{2}\left(\dot{\mathbf{u}}^{T}\mathbf{M}\dot{\mathbf{u}}\right), \quad \text{respectively.}
+\]</div>
+<p>Naturally, we require the strain energy to be non-negative for any admissible nonzero displacement <span class="arithmatex">\(\mathbf{u}\)</span>. Similarly, we require the kinetic energy to be non-negative for any admissible nonzero velocity <span class="arithmatex">\(\dot{\mathbf{u}}\)</span>. In other words, we need the stiffness matrix <span class="arithmatex">\(\mathbf{K}\)</span> and mass matrix <span class="arithmatex">\(\mathbf{M}\)</span> to be positive definite.</p>
+<p>In particular, the mass matrix is positive definite, while the stiffness matrix can be positive semi-definite also. Alternatively, the scalar value of the quadratic form or our strain energy can be zero also for a non zero displacement field. This is generally the case when Dirichlet boundary conditions are not imposed. </p>
+<p>In the absence of sufficient constraints, the system can have rigid-body modes, for which the strain energy is zero and, consequently, <span class="arithmatex">\(\mathbf{u}^{T}\mathbf{K}\mathbf{u}=0.\)</span> The stiffness matrix becomes positive definite when the imposed Dirichlet boundary conditions eliminate all rigid-body modes. For most practical problems, sufficient Dirichlet boundary conditions are imposed to eliminate these rigid-body modes, so we rarely need to worry about this subtle detail. However, it is worth keeping in mind when discussing the definiteness of the stiffness matrix.</p>
+<div class="admonition warning">
+<p class="admonition-title">Work in Progress:</p>
+<p>More explanation on the positive definiteness of the stretch tensor and other quantities to be added.</p>
+</div>
 <h3 id="function-spaces-in-fem-a-plain-english-hierarchy">Function Spaces in FEM: A Plain-English Hierarchy</h3>
 <p>Before jumping onto the notations, let us see how the broader families of mathematical spaces nest inside one another. Here are some top-level, good-to-know, working definitions. Best to remember all three, but the third one is the key space associated with FEM most of the time.</p>
 <ul>
@@ -685,7 +760,6 @@
 </ul>
 </li>
 </ul>
-<hr />
 <div class="admonition info">
 <p class="admonition-title">NOTE: The Central Approximation of FEM</p>
 <p>The jump from <span class="arithmatex">\(u \in H^1(\Omega)\)</span> to <span class="arithmatex">\(u_h \in V_h\)</span> is the central approximation of FEM — and the whole error analysis of FEM is essentially asking: how large is <span class="arithmatex">\(\|u - u_h\|_{H^1}\)</span>, and how fast does it shrink as <span class="arithmatex">\(h \to 0\)</span>?</p>

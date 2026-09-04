@@ -35,8 +35,11 @@ nav:
   - About Me: about.md
   - Research Log:
     - Weak Form: weak_form.md
-    - Signorini Conditions in Contact Mechanics: signorini_conditions.md
     - Tensors with Bases: tensors_with_bases.md
+    - Finite Element Method:
+      - Isoparametric Elements: isoparametric_elements.md
+      - Geometric Nonlinearity: geometric_nonlinearity.md
+    - Signorini Conditions in Contact Mechanics: signorini_conditions.md
     - Piola Traction Decomposition: piola_traction_decomposition.md
     - Consistent Reminders: glossary.md
 
