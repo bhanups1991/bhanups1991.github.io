@@ -1,4 +1,5 @@
-<img src="images/website_photo_small.jpeg" alt="Bhanu Pratap Sharma" width="170" style="float: left; border-radius: 5px; margin-left: 0px; margin-right: 20px; margin-bottom: 10px; border: 0px solid #ccc;">
+<img src="/images/website_photo_small.png#only-light" alt="Bhanu Pratap Sharma" width="170" style="float: left; border-radius: 5px; margin-left: 0px; margin-right: 20px; margin-bottom: 10px; border: 0px solid #ccc;" class="only-light">
+<img src="/images/website_photo_small_dark.png#only-dark" alt="Bhanu Pratap Sharma" width="170" style="float: left; border-radius: 5px; margin-left: 0px; margin-right: 20px; margin-bottom: 10px; border: 0px solid #ccc;" class="only-dark">
 
 ### Welcome to My Research Website
 
