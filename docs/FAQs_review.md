@@ -1,6 +1,6 @@
 # FAQs for Review
 
-!!! info "Under Construction"
+!!! info "Under Revision"
     Page under heavy revision.
 
 ![Page under construction](/images/under_revision.png#only-light){ width="400" .center }

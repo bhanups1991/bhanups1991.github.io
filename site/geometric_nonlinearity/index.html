@@ -1,0 +1,1362 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bhanu Pratap Sharma">
+      
+      
+        <link rel="canonical" href="https://bhanups1991.github.io/geometric_nonlinearity/">
+      
+      
+        <link rel="prev" href="../isoparametric_elements/">
+      
+      
+        <link rel="next" href="../signorini_conditions/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Geometric Nonlinearity - Bhanu Pratap Sharma, PhD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../javascripts/extra.css">
+    
+      <link rel="stylesheet" href="../css/open_in_new_tab.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#geometric-nonlinearity-in-finite-element-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bhanu Pratap Sharma, PhD" class="md-header__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bhanu Pratap Sharma, PhD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Geometric Nonlinearity
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="custom-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bhanu Pratap Sharma, PhD" class="md-nav__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bhanu Pratap Sharma, PhD
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Log
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research Log
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weak_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weak Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tensors_with_bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensors with Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element Method
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finite Element Method
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isoparametric_elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Isoparametric Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometric Nonlinearity
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometric Nonlinearity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-nonlinearity-in-finite-element-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Nonlinearity in Finite Element Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-failure-of-linear-strain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Failure of Linear Strain
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signorini_conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signorini Conditions in Contact Mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../piola_traction_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piola Traction Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consistent Reminders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQs_review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQs for Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivations and Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-nonlinearity-in-finite-element-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Nonlinearity in Finite Element Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-failure-of-linear-strain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Failure of Linear Strain
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Geometric Nonlinearity</h1>
+
+<h3 id="geometric-nonlinearity-in-finite-element-analysis">Geometric Nonlinearity in Finite Element Analysis</h3>
+<p>Geometric nonlinearity arises when the deformation and rotation of a structure become sufficiently large that the linearized kinematic assumptions are no longer adequate. Importantly, the material itself may still behave strictly linearly (Hookean). Under these conditions, the relationship between deformation and strain must be described using finite-deformation kinematics. Consequently another layer of nonlinearity is introduced into the equilibrium equations.</p>
+<h3 id="the-failure-of-linear-strain">The Failure of Linear Strain</h3>
+<p>In linear elasticity, the infinitesimal strain tensor is defined as:</p>
+<div class="arithmatex">\[\boldsymbol{\epsilon} = \frac{1}{2} \left( \nabla_{\boldsymbol{X}} \mathbf{u} + (\nabla_{\boldsymbol{X}} \mathbf{u})^T \right)\]</div>
+<p>This linear formulation assumes that displacement gradients (<span class="arithmatex">\(\nabla_{\boldsymbol{X}} \mathbf{u}\)</span>) are infinitesimally small, allowing quadratic terms like <span class="arithmatex">\((\nabla_{\boldsymbol{X}} \mathbf{u})^T \cdot (\nabla_{\boldsymbol{X}} \mathbf{u})\)</span> to be neglected.</p>
+<p>However, when a body undergoes a large deformation or rotation, these quadratic terms can no longer be neglected. In particular, a pure rigid-body rotation produces non-zero strain when described using the infinitesimal strain tensor, even though the body has undergone no actual deformation. A finite-deformation strain measure, such as the Green-Lagrange strain tensor, resolves this issue by retaining the nonlinear terms required to distinguish deformation from rigid-body rotation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Decoupling rigid body rotation</p>
+<p>Let us quickly revisit the equations to see how this separation between deformation and rigid-body rotation arises. Recall the definition of the Green-Lagrange strain tensor:</p>
+<div class="arithmatex">\[
+\mathbf{E} = \frac{1}{2} \left( \mathbf{C} - \mathbf{I} \right) = \frac{1}{2} \left( \mathbf{F}^T \cdot \mathbf{F} - \mathbf{I} \right)
+\]</div>
+<p>Also, recall that the polar decomposition of the deformation gradient <span class="arithmatex">\(\mathbf{F}\)</span> yields the following:</p>
+<div class="arithmatex">\[
+\mathbf{F}=\mathbf{R}\mathbf{U}
+\]</div>
+<p>Using this in the right Cauchy-Green tensor <span class="arithmatex">\(\mathbf{C}\)</span>, we get:</p>
+<div class="arithmatex">\[ 
+\mathbf{C} = \mathbf{F}^T\mathbf{F} = (\mathbf{R}\mathbf{U})^T(\mathbf{R}\mathbf{U}) = \mathbf{U}^T\mathbf{R}^T\mathbf{R}\mathbf{U} 
+\]</div>
+<p>Since <span class="arithmatex">\(\mathbf{R}\)</span> is orthogonal (<span class="arithmatex">\(\mathbf{R}^T\mathbf{R} = \mathbf{I}\)</span>) and <span class="arithmatex">\(\mathbf{U}\)</span> is symmetric, that is <span class="arithmatex">\(\mathbf{U}^T = \mathbf{U}\)</span>, therefore,</p>
+<div class="arithmatex">\[
+\mathbf{C} = \mathbf{U}^T \mathbf{U} = \mathbf{U}^2 \quad \text{and} \quad
+\mathbf{E} = \frac{1}{2}(\mathbf{U}^2 - \mathbf{I})
+\]</div>
+<p>Hence, the rigid-body rotation does not contribute to the right Cauchy-Green tensor or the Green-Lagrange strain. The Green-Lagrange strain therefore measures deformation independently of the rigid-body rotation.</p>
+</div>
+<p>Let us now see why using the Green-Lagrange strain, <span class="arithmatex">\(\mathbf{E}\)</span>, is equivalent to retaining the quadratic displacement-gradient terms. In other words, let us revisit the derivation of Green-Lagrange Strain in terms of the displacement gradients. Starting again from the definition of the Green-Lagrange strain tensor in terms of the right Cauchy-Green deformation tensor <span class="arithmatex">\(\mathbf{C}\)</span>:</p>
+<div class="arithmatex">\[\mathbf{E} = \frac{1}{2} (\mathbf{C} - \mathbf{I})\]</div>
+<p>We also know that the current position vector <span class="arithmatex">\(\mathbf{x}\)</span> and the reference position vector <span class="arithmatex">\(\mathbf{X}\)</span> are related via the displacement vector <span class="arithmatex">\(\mathbf{u}(\mathbf{X})\)</span>:</p>
+<div class="arithmatex">\[\mathbf{x}(\mathbf{X}) = \mathbf{X} + \mathbf{u}(\mathbf{X})\]</div>
+<p>The deformation gradient <span class="arithmatex">\(\mathbf{F}\)</span> is defined as the material gradient (that is gradient taken with respect to reference configuration coordinates) of the spatial or current position (<span class="arithmatex">\(\mathbf{x}\)</span>):</p>
+<div class="arithmatex">\[\mathbf{F} = \nabla_{\boldsymbol{X}} \mathbf{x} = \nabla_{\boldsymbol{X}} (\mathbf{X} + \mathbf{u})\]</div>
+<p>which becomes,</p>
+<div class="arithmatex">\[\mathbf{F} = \mathbf{I} + \nabla_{\boldsymbol{X}} \mathbf{u}\]</div>
+<p>By definition, <span class="arithmatex">\(\mathbf{C} = \mathbf{F}^T \cdot \mathbf{F}\)</span>. Substituting our expression for <span class="arithmatex">\(\mathbf{F}\)</span>, we get:</p>
+<div class="arithmatex">\[\mathbf{C} = (\mathbf{I} + (\nabla_{\boldsymbol{X}} \mathbf{u})^T) \cdot (\mathbf{I} + \nabla_{\boldsymbol{X}} \mathbf{u})\]</div>
+<p>which we can simply expand to get,</p>
+<div class="arithmatex">\[\mathbf{C} = \mathbf{I} \cdot \mathbf{I} + \mathbf{I} \cdot (\nabla_{\boldsymbol{X}} \mathbf{u}) + (\nabla_{\boldsymbol{X}} \mathbf{u})^T \cdot \mathbf{I} + (\nabla_{\boldsymbol{X}} \mathbf{u})^T \cdot (\nabla_{\boldsymbol{X}} \mathbf{u})\]</div>
+<p>or,</p>
+<div class="arithmatex">\[\mathbf{C} = \mathbf{I} + \nabla_{\boldsymbol{X}} \mathbf{u} + (\nabla_{\boldsymbol{X}} \mathbf{u})^T + (\nabla_{\boldsymbol{X}} \mathbf{u})^T \cdot (\nabla_{\boldsymbol{X}} \mathbf{u})\]</div>
+<p>Now, substituting <span class="arithmatex">\(\mathbf{C}\)</span> back into the Green-Lagrange strain formula, we get:</p>
+<div class="arithmatex">\[\mathbf{E} = \frac{1}{2} \left[ \mathbf{I} + \nabla_{\boldsymbol{X}} \mathbf{u} + (\nabla_{\boldsymbol{X}} \mathbf{u})^T + (\nabla_{\boldsymbol{X}} \mathbf{u})^T \cdot (\nabla_{\boldsymbol{X}} \mathbf{u}) - \mathbf{I} \right]\]</div>
+<div class="arithmatex">\[\mathbf{E} = \frac{1}{2} \left[ \nabla_{\boldsymbol{X}} \mathbf{u} + (\nabla_{\boldsymbol{X}} \mathbf{u})^T + (\nabla_{\boldsymbol{X}} \mathbf{u})^T \cdot (\nabla_{\boldsymbol{X}} \mathbf{u}) \right]\]</div>
+<p>We can now split this as the linear part and the nonlinear part:</p>
+<div class="arithmatex">\[\mathbf{E} = \boldsymbol{\epsilon} + \frac{1}{2} (\nabla_{\boldsymbol{X}} \mathbf{u})^T \cdot (\nabla_{\boldsymbol{X}} \mathbf{u})\]</div>
+<p>where, </p>
+<div class="arithmatex">\[\boldsymbol{\epsilon} = \frac{1}{2} \left( \nabla_{\boldsymbol{X}} \mathbf{u} + (\nabla_{\boldsymbol{X}} \mathbf{u})^T \right)\]</div>
+<p>This additional quadratic term ensures that during a pure rigid-body rotation, the Green-Lagrange strain evaluates identically to zero (<span class="arithmatex">\(\mathbf{E} = \mathbf{0}\)</span>), as it should.</p>
+<div class="admonition success">
+<p class="admonition-title">Recap</p>
+<ul>
+<li>So far, we have seen that neglecting the nonlinear (quadratic) terms in the strain-displacement relationship can produce artificial strains during rigid-body rotations. </li>
+<li>Therefore  the need to invoke geometrically nonlinear kinematics (or the need to use quadratic terms in the strain definition) arises  because the linearized kinematic relationships are no longer adequate to describe the deformation and rotation of the body.</li>
+<li>Note that geometric nonlinearity does not necessarily mean that the body has undergone large strains. A body can undergo a large rigid-body rotation while experiencing zero actual strain.</li>
+<li>This is very easily demonstrated by the help of an example shown in the python code below. A 2D quadrilateral is rotated by 45 degrees resulting in <span class="arithmatex">\(\mathbf{\epsilon}\neq\mathbf{0}\)</span> and <span class="arithmatex">\(\mathbf{E}=\mathbf{0}\)</span>. </li>
+<li>Next, we take a look at what happens to stress.</li>
+</ul>
+</div>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">geometric_nonlinearity.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span>
+<span class="normal"><a href="#__codelineno-0-58">58</a></span>
+<span class="normal"><a href="#__codelineno-0-59">59</a></span>
+<span class="normal"><a href="#__codelineno-0-60">60</a></span>
+<span class="normal"><a href="#__codelineno-0-61">61</a></span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span>
+<span class="normal"><a href="#__codelineno-0-66">66</a></span>
+<span class="normal"><a href="#__codelineno-0-67">67</a></span>
+<span class="normal"><a href="#__codelineno-0-68">68</a></span>
+<span class="normal"><a href="#__codelineno-0-69">69</a></span>
+<span class="normal"><a href="#__codelineno-0-70">70</a></span>
+<span class="normal"><a href="#__codelineno-0-71">71</a></span>
+<span class="normal"><a href="#__codelineno-0-72">72</a></span>
+<span class="normal"><a href="#__codelineno-0-73">73</a></span>
+<span class="normal"><a href="#__codelineno-0-74">74</a></span>
+<span class="normal"><a href="#__codelineno-0-75">75</a></span>
+<span class="normal"><a href="#__codelineno-0-76">76</a></span>
+<span class="normal"><a href="#__codelineno-0-77">77</a></span>
+<span class="normal"><a href="#__codelineno-0-78">78</a></span>
+<span class="normal"><a href="#__codelineno-0-79">79</a></span>
+<span class="normal"><a href="#__codelineno-0-80">80</a></span>
+<span class="normal"><a href="#__codelineno-0-81">81</a></span>
+<span class="normal"><a href="#__codelineno-0-82">82</a></span>
+<span class="normal"><a href="#__codelineno-0-83">83</a></span>
+<span class="normal"><a href="#__codelineno-0-84">84</a></span>
+<span class="normal"><a href="#__codelineno-0-85">85</a></span>
+<span class="normal"><a href="#__codelineno-0-86">86</a></span>
+<span class="normal"><a href="#__codelineno-0-87">87</a></span>
+<span class="normal"><a href="#__codelineno-0-88">88</a></span>
+<span class="normal"><a href="#__codelineno-0-89">89</a></span>
+<span class="normal"><a href="#__codelineno-0-90">90</a></span>
+<span class="normal"><a href="#__codelineno-0-91">91</a></span>
+<span class="normal"><a href="#__codelineno-0-92">92</a></span>
+<span class="normal"><a href="#__codelineno-0-93">93</a></span>
+<span class="normal"><a href="#__codelineno-0-94">94</a></span>
+<span class="normal"><a href="#__codelineno-0-95">95</a></span>
+<span class="normal"><a href="#__codelineno-0-96">96</a></span>
+<span class="normal"><a href="#__codelineno-0-97">97</a></span>
+<span class="normal"><a href="#__codelineno-0-98">98</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># NOTE: This code was generated entirely by an AI model (ChatGPT), in 2 iterations, based on the initial prompt and subsequent refinement.</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">#       I have reviewed the code and made necessary adjustments to ensure it is consistent with our current discussion.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">#       If you find any issues or have suggestions for improvement, please let me know.</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># Rotation angle</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># Rotation matrix</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>            <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)],</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>            <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span>  <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)]</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>            <span class="p">])</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c1"># Reference coordinates of a square</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>            <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>            <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>            <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>            <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>            <span class="p">])</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="c1"># Pure rigid-body rotation: x = R X</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="n">x</span> <span class="o">=</span> <span class="n">X</span> <span class="o">@</span> <span class="n">R</span><span class="o">.</span><span class="n">T</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="c1"># Displacement: u = x - X</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="n">u</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">X</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="c1"># Displacement gradient (constant for rigid rotation)</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="c1"># since u = x - X = RX - X = (R - I) X, </span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="c1"># therefore we have Grad(u) = (R - I)Grad(X) = R - I, </span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="c1"># because Grad(X) = I (identity matrix), and R - I is constant.</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="n">H</span> <span class="o">=</span> <span class="n">R</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="c1"># Infinitesimal strain</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">H</span> <span class="o">+</span> <span class="n">H</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="c1"># Deformation gradient, F = Grad(x) = Grad(RX) = R Grad(X) = R I = R</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="n">F</span> <span class="o">=</span> <span class="n">R</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="c1"># Green-Lagrange strain</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="n">C</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">F</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="n">E</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">C</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rotation matrix R:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Displacement gradient H:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Infinitesimal strain epsilon:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">)</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Green-Lagrange strain E:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="c1"># -------------------------------------------------------------------------</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="c1"># Plot reference and rotated configurations</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="c1"># -------------------------------------------------------------------------</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="c1"># Match the plotting style used on the tensors_with_bases page</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;serif&#39;</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.fontset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;cm&#39;</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;dark_background&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">))</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="n">fig</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="c1"># Reference configuration</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span><span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span><span class="s1">&#39;o-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Reference configuration&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="c1"># Rigid-body rotated configuration</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">x</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span><span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span><span class="s1">&#39;o-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#00f3ff&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Rigid-body rotation&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="c1"># Axes limits</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="c1"># Grid and axes</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#222222&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#444444&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#444444&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="c1"># Labels and title</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$X / x$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$Y / y$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Pure Rigid-Body Rotation ($45^\circ$)&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mf">19.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="n">pad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a>
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="c1"># Legend</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="n">legend</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;#111111&#39;</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;#444444&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a>
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">legend</span><span class="o">.</span><span class="n">get_texts</span><span class="p">():</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a>    <span class="n">text</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>
+<a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="c1"># Spines</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a><span class="k">for</span> <span class="n">spine</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a>    <span class="n">spine</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s1">&#39;#444444&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a>
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<img alt="Pure Rigid Body Rotation" src="../pure_rigid_body_rotation.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Under Construction</p>
+<p>Additional sections are currently being added.</p>
+</div>
+<p><img alt="Page under construction" class="center" src="/images/image_404.png#only-light" width="400" />
+<img alt="Page under construction" class="center" src="/images/image_404_dark.png#only-dark" width="400" /></p>
+<!-- ### What Happens to Stress?
+
+So far, we have seen that invoking geometric nonlinearity changes the strain measure from the infinitesimal strain $\boldsymbol{\epsilon}$ to the Green-Lagrange strain $\mathbf{E}$. Naturally, this also changes how stress enters the formulation.
+
+For the moment, let us assume that the material itself remains strictly linear elastic. In other words, there is no material nonlinearity. The constitutive relationship can then be written in the material description as:
+
+$$\mathbf{S} = \mathbb{C}:\mathbf{E}$$
+
+where $\mathbf{S}$ is the second Piola-Kirchhoff stress tensor and $\mathbb{C}$ is the fourth-order material elasticity tensor.
+
+Notice something important here. The material law is still linear. If we double $\mathbf{E}$, we double $\mathbf{S}$. Therefore, there is no material nonlinearity in this constitutive equation.
+
+However, $\mathbf{E}$ itself is nonlinear in terms of the displacement gradient:
+
+$$\mathbf{E}=\frac{1}{2}\left[\nabla_{\boldsymbol{X}}\mathbf{u}+(\nabla_{\boldsymbol{X}}\mathbf{u})^T+(\nabla_{\boldsymbol{X}}\mathbf{u})^T\cdot\nabla_{\boldsymbol{X}}\mathbf{u}\right]$$
+
+Therefore, even though the material law $\mathbf{S}=\mathbb{C}:\mathbf{E}$ is linear, the overall relationship between stress and displacement is nonlinear.
+
+This is the essential point:
+
+!!! tip "Material vs. Geometric Nonlinearity"
+
+    Material nonlinearity means that the constitutive relationship itself is nonlinear. For example,
+
+    $$\boldsymbol{\sigma}=\mathcal{F}(\boldsymbol{\epsilon})$$
+
+    may no longer be a linear relationship.
+
+    Geometric nonlinearity, on the other hand, can arise even when the constitutive relationship remains linear. The nonlinearity enters through the kinematics:
+
+    $$\mathbf{u}\rightarrow\mathbf{E}\rightarrow\mathbf{S}$$
+
+    Thus, a Hookean material can still lead to a nonlinear finite element problem when finite-deformation kinematics are used.
+
+### Returning to the Weak Form
+
+Let us now see how this geometric nonlinearity enters the weak form.
+
+For simplicity, consider the total Lagrangian formulation, in which the equilibrium equation is expressed with respect to the reference configuration $\Omega_0$.
+
+The internal virtual work is written as:
+
+$$\delta W_{\mathrm{int}}=\int_{\Omega_0}\mathbf{S}:\delta\mathbf{E}\,dV$$
+
+and the weak form of equilibrium can be written as:
+
+$$\int_{\Omega_0}\mathbf{S}:\delta\mathbf{E}\,dV=\delta W_{\mathrm{ext}}$$
+
+where $\delta W_{\mathrm{ext}}$ represents the virtual work of the external forces.
+
+Compare this with the linear formulation. In linear elasticity, the internal virtual work has the form:
+
+$$\delta W_{\mathrm{int}}=\int_{\Omega_0}\boldsymbol{\sigma}:\delta\boldsymbol{\epsilon}\,dV$$
+
+The important difference is therefore:
+
+$$\boldsymbol{\epsilon}\longrightarrow\mathbf{E}$$
+
+and
+
+$$\boldsymbol{\sigma}\longrightarrow\mathbf{S}$$
+
+when using this material description.
+
+But there is something deeper happening here. Since $\mathbf{E}$ depends nonlinearly on $\mathbf{u}$, its variation $\delta\mathbf{E}$ also depends on the current deformation.
+
+Recall that
+
+$$\mathbf{E}=\frac{1}{2}\left(\mathbf{F}^T\mathbf{F}-\mathbf{I}\right)$$
+
+Taking its variation gives:
+
+$$\delta\mathbf{E}=\frac{1}{2}\left(\delta\mathbf{F}^T\mathbf{F}+\mathbf{F}^T\delta\mathbf{F}\right)$$
+
+Therefore, even with a linear elastic material, the internal virtual work is nonlinear in the displacement.
+
+### From Weak Form to the Nonlinear Equilibrium Equation
+
+Let us denote the internal and external virtual work by:
+
+$$\delta W_{\mathrm{int}}(\mathbf{u})\qquad\text{and}\qquad\delta W_{\mathrm{ext}}$$
+
+The equilibrium condition is:
+
+$$\delta W_{\mathrm{int}}(\mathbf{u})-\delta W_{\mathrm{ext}}=0$$
+
+for every admissible virtual displacement.
+
+In a linear problem, the internal virtual work is a linear function of the displacement, and we can directly obtain a system such as:
+
+$$\mathbf{K}\mathbf{u}=\mathbf{f}$$
+
+With geometric nonlinearity, however, the internal force depends nonlinearly on the displacement:
+
+$$\mathbf{f}_{\mathrm{int}}(\mathbf{u})=\mathbf{f}_{\mathrm{ext}}$$
+
+Therefore, we can no longer construct one constant stiffness matrix and solve the problem in a single step.
+
+We instead need to linearize the nonlinear equilibrium equation and solve it iteratively.
+
+This brings us naturally to the concept of **geometric stiffness**.
+
+### Where Does Geometric Stiffness Come From?
+
+The nonlinear internal force can be written schematically as:
+
+$$\mathbf{f}_{\mathrm{int}}(\mathbf{u})=\int_{\Omega_0}\mathbf{B}^T(\mathbf{u})\mathbf{S}\,dV$$
+
+where $\mathbf{B}$ is now dependent on the deformation because the strain-displacement relationship is nonlinear.
+
+To solve the nonlinear equilibrium equation, we linearize the internal force:
+
+$$\mathbf{f}_{\mathrm{int}}(\mathbf{u}+\Delta\mathbf{u})\approx\mathbf{f}_{\mathrm{int}}(\mathbf{u})+\mathbf{K}_T\Delta\mathbf{u}$$
+
+where $\mathbf{K}_T$ is the tangent stiffness matrix.
+
+For geometrically nonlinear problems, this tangent stiffness naturally separates into two contributions:
+
+$$\mathbf{K}_T=\mathbf{K}_{\mathrm{material}}+\mathbf{K}_{\mathrm{geometric}}$$
+
+The first contribution comes from the constitutive relationship. For a linear elastic material, this part is associated with the material elasticity tensor $\mathbb{C}$.
+
+The second contribution arises because the strain-displacement relationship itself is nonlinear.
+
+In other words, even if the material is perfectly linear, the nonlinear dependence of $\mathbf{E}$ on $\mathbf{u}$ produces an additional stiffness contribution.
+
+!!! tip "The Origin of Geometric Stiffness"
+
+    It is useful to think of the two stiffness contributions as originating from two different sources:
+
+    $$\mathbf{K}_{\mathrm{material}}\leftarrow\text{material constitutive response}$$
+
+    whereas
+
+    $$\mathbf{K}_{\mathrm{geometric}}\leftarrow\text{nonlinear kinematics}$$
+
+    Thus, geometric stiffness does not imply material nonlinearity. It appears because the internal forces change as the geometry and stress state change.
+
+### The Final Picture
+
+We can now connect everything together.
+
+In linear elasticity:
+
+$$\mathbf{u}\rightarrow\boldsymbol{\epsilon}\rightarrow\boldsymbol{\sigma}\rightarrow\mathbf{K}\mathbf{u}=\mathbf{f}$$
+
+The strain-displacement relationship is linear, and for a linear elastic material the constitutive relationship is also linear.
+
+With geometric nonlinearity:
+
+$$\mathbf{u}\rightarrow\mathbf{E}(\mathbf{u})\rightarrow\mathbf{S}(\mathbf{u})\rightarrow\mathbf{f}_{\mathrm{int}}(\mathbf{u})=\mathbf{f}_{\mathrm{ext}}$$
+
+The material can still remain perfectly linear:
+
+$$\mathbf{S}=\mathbb{C}:\mathbf{E}$$
+
+but the overall finite element problem is nonlinear because $\mathbf{E}$ depends nonlinearly on $\mathbf{u}$.
+
+Consequently, the linear stiffness matrix is replaced by a tangent stiffness matrix:
+
+$$\mathbf{K}_T=\mathbf{K}_{\mathrm{material}}+\mathbf{K}_{\mathrm{geometric}}$$
+
+and the resulting nonlinear equilibrium equations are solved iteratively, typically using the Newton-Raphson method.
+
+!!! success "Recap"
+
+    - Geometric nonlinearity changes the strain measure from the infinitesimal strain $\boldsymbol{\epsilon}$ to a finite-deformation measure such as the Green-Lagrange strain $\mathbf{E}$.
+    - Even when the material remains Hookean, the constitutive relationship becomes nonlinear with respect to displacement because $\mathbf{E}$ is nonlinear in $\mathbf{u}$.
+    - In a total Lagrangian formulation, this naturally leads to the use of the second Piola-Kirchhoff stress $\mathbf{S}$ and Green-Lagrange strain $\mathbf{E}$.
+    - The nonlinear strain-displacement relationship makes the internal force dependent nonlinearly on displacement.
+    - Linearization of the nonlinear equilibrium equation produces a tangent stiffness matrix containing both material and geometric contributions.
+    - Therefore, geometric nonlinearity ultimately leads not only to a nonlinear strain measure, but also to a nonlinear weak form and an additional geometric stiffness contribution.
+    - Next, we take a look at how this nonlinear equilibrium equation is solved using Newton-Raphson iterations.
+
+
+
+
+
+
+
+### The Need for Objective Stress Measures
+
+Just as linear strain fails under large rotations, spatial stress descriptions encounter severe limitations when geometry deforms significantly. The standard Cauchy stress tensor ($\boldsymbol{\sigma}$) is defined entirely on the current, deformed configuration ($\Omega$).
+
+While Cauchy stress is an objective tensor (it transforms correctly under rigid-body rotations via $\boldsymbol{\sigma}^* = \mathbf{Q} \boldsymbol{\sigma} \mathbf{Q}^T$), formulating constitutive laws directly on the current configuration requires tracking the continuously changing spatial geometry. Furthermore, standard time derivatives of Cauchy stress are not objective because the frame itself is spinning.
+
+To bypass these complexities in a Total Lagrangian framework, we pull everything back to the fixed reference configuration ($\Omega_0$). This introduces the **Second Piola-Kirchhoff stress tensor ($\mathbf{S}$)**, defined via the pull-back operation:
+
+$$\mathbf{S} = J \mathbf{F}^{-1} \cdot \boldsymbol{\sigma} \cdot \mathbf{F}^{-T}$$
+
+Unlike Cauchy stress, $\mathbf{S}$ is a material tensor defined entirely on reference coordinates ($\mathbf{E}_i \otimes \mathbf{E}_j$). Because the reference configuration is fixed and does not rotate with the body, $\mathbf{S}$ is inherently invariant under rigid-body rotations of the spatial frame. Crucially, $\mathbf{S}$ is work-conjugate to the Green-Lagrange strain tensor ($\mathbf{E}$).
+
+### Manifestation in the Weak Form (Total Lagrangian Formulation)
+
+When we transform the weak form of the momentum balance equation from the current spatial domain ($\Omega$) to the reference domain ($\Omega_0$) using the Jacobian ($J = \det\mathbf{F}$) and pull-back operators, the internal virtual work integral changes fundamentally.
+
+In linear elasticity, the internal work uses infinitesimal strain ($\boldsymbol{\epsilon}$) and Cauchy stress ($\boldsymbol{\sigma}$). Under geometric nonlinearity, the Total Lagrangian weak form becomes:
+
+$$\int_{\Omega_0} \mathbf{S} : \delta\mathbf{E} \, \mathrm{d}\mathbf{X} = \int_{\Omega_0} \mathbf{b}_0 \cdot \mathbf{v} \, \mathrm{d}\mathbf{X} + \int_{\partial\Omega_{0T}} \mathbf{T}_0 \cdot \mathbf{v} \, \mathrm{d}\Gamma_0$$
+
+Notice the direct consequence of geometric nonlinearity here: the internal virtual work integrand is now the contraction of the Second Piola-Kirchhoff stress ($\mathbf{S}$) with the variation of the Green-Lagrange strain ($\delta\mathbf{E}$). Because both $\mathbf{S}$ and $\delta\mathbf{E}$ depend nonlinearly on the displacement field $\mathbf{u}$, the internal work functional is nonlinear with respect to displacements.
+
+### Linearization: Material and Geometric Stiffness Matrices
+
+Because the governing equilibrium equations are now nonlinear, direct solvers cannot be used. We must employ an incremental-iterative procedure such as the **Newton-Raphson method**, which requires linearizing the internal virtual work with respect to an incremental displacement ($\Delta\mathbf{u}$).
+
+Taking the directional derivative (increment $\Delta$) of the internal virtual work gives:
+
+$$\Delta G_{\text{int}} = \int_{\Omega_0} \Delta \left( \mathbf{S} : \delta\mathbf{E} \right) \, \mathrm{d}\mathbf{X}$$
+
+Using the product rule for tensor contractions, the integrand expands into two distinct terms:
+
+$$\Delta \left( \mathbf{S} : \delta\mathbf{E} \right) = (\Delta\mathbf{S}) : \delta\mathbf{E} + \mathbf{S} : (\Delta \delta\mathbf{E})$$
+
+This expansion splits the total tangent stiffness operator into two separate physical contributions:
+
+1. **The Material Stiffness Contribution ($(\Delta\mathbf{S}) : \delta\mathbf{E}$):**
+Using the constitutive relation $\Delta\mathbf{S} = \mathbb{C} : \Delta\mathbf{E}$ (where $\mathbb{C}$ is the fourth-order tangent moduli tensor), this term accounts for changes in internal forces driven by material elasticity and straining. When discretized in finite elements, it forms the **Material Stiffness Matrix ($\mathbf{K}_m$)**.
+2. **The Geometric Stiffness Contribution ($\mathbf{S} : (\Delta \delta\mathbf{E})$):**
+This term arises because the strain variation $\delta\mathbf{E}$ contains the deformation gradient $\mathbf{F}$, meaning $\delta\mathbf{E}$ changes as the structure rotates. Taking the increment of $\delta\mathbf{E}$ yields:
+$$\Delta(\delta\mathbf{E}) = (\nabla_{\boldsymbol{X}} \mathbf{v})^T \cdot (\nabla_{\boldsymbol{X}} \Delta\mathbf{u})$$
+
+
+Substituting this into the integral yields:
+$$\int_{\Omega_0} \mathbf{S} : \left[ (\nabla_{\boldsymbol{X}} \mathbf{v})^T \cdot (\nabla_{\boldsymbol{X}} \Delta\mathbf{u}) \right] \, \mathrm{d}\mathbf{X}$$
+
+
+This term explicitly couples the existing pre-stress state ($\mathbf{S}$) with second-order gradients of the incremental displacement ($\Delta\mathbf{u}$). In finite element analysis, this evaluates to the **Geometric Stiffness Matrix (or Initial Stress Matrix, $\mathbf{K}_\sigma$)**.
+
+### Summary of Tangent Stiffness
+
+Combining both parts, the total tangent stiffness matrix assembled for Newton-Raphson iterations is the sum of these two distinct components:
+
+$$\mathbf{K}_{\text{total}} = \mathbf{K}_m + \mathbf{K}_\sigma$$
+
+* **$\mathbf{K}_m$:** Captures material resistance to deformation.
+* **$\mathbf{K}_\sigma$:** Captures how existing internal stresses stabilize or destabilize the structure during large rotations and deformations (such as the stiffening effect of a stretched cable). -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.top", "content.code.copy", "content.action.edit", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
