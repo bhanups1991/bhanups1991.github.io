@@ -67,14 +67,13 @@ This is the essential meaning of **isoparametric**. The word *iso-parametric* me
 
 $$\mathbf{x}(\xi,\eta)=\sum_a{\color{red}{N_a}}\mathbf{x}_a,\qquad\mathbf{u}(\xi,\eta)=\sum_a{\color{red}{N_a}}\mathbf{u}_a.$$
 
-!!! info "Note"
+!!! tip "Note"
     Notice that strain and stress are not independently required to use the same shape functions. Strain is obtained by differentiating the displacement field, while stress is subsequently obtained from the constitutive relation.
 
-!!! warning "Work in Progress"
-    Expanded and matrix forms of all summation terms to be added later.
-    Refined till here, rest to be worked.
+!!! info "Under Construction"
+    Additional sections are currently being added.
 
-
+<!-- 
 
 ### The Jacobian
 
@@ -395,4 +394,4 @@ This gives us a systematic way to:
 3. transform physical integrals to a standard domain, and
 4. evaluate those integrals using the same Gaussian quadrature procedure for every element.
 
-The important conceptual point is that **isoparametric does not mean "reference configuration."** It means that the geometry and the primary field are represented using the same shape functions in terms of the same parent coordinates.
+The important conceptual point is that **isoparametric does not mean "reference configuration."** It means that the geometry and the primary field are represented using the same shape functions in terms of the same parent coordinates. -->

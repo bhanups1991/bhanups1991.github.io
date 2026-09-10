@@ -27,3 +27,10 @@
 [data-md-color-scheme="custom-dark"] strong {
   color: #ffffff !important;
 }
+
+[data-md-color-scheme="default"] img[src$="#only-dark"] {
+  display: none;
+}
+[data-md-color-scheme="custom-dark"] img[src$="#only-light"] {
+  display: none;
+}

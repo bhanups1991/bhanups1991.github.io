@@ -38,10 +38,12 @@ nav:
     - Tensors with Bases: tensors_with_bases.md
     - Finite Element Method:
       - Isoparametric Elements: isoparametric_elements.md
-      - Geometric Nonlinearity: geometric_nonlinearity.md
+      - Geometric Nonlinearity: geometric_nonlinearity.md 
     - Signorini Conditions in Contact Mechanics: signorini_conditions.md
     - Piola Traction Decomposition: piola_traction_decomposition.md
     - Consistent Reminders: glossary.md
+    - FAQs for Review: FAQs_review.md
+    - Derivations and Proofs: derivations.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -60,6 +62,8 @@ markdown_extensions:
   
 plugins:
   - search
+  - open-in-new-tab:
+      add_icon: true
 
 extra_javascript:
   - javascripts/mathjax.js

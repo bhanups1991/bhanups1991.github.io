@@ -98,9 +98,11 @@ This additional quadratic term ensures that during a pure rigid-body rotation, t
 ![Pure Rigid Body Rotation](./pure_rigid_body_rotation.png)
 
 
+!!! info "Under Construction"
+    Additional sections are currently being added.
 
 
-### What Happens to Stress?
+<!-- ### What Happens to Stress?
 
 So far, we have seen that invoking geometric nonlinearity changes the strain measure from the infinitesimal strain $\boldsymbol{\epsilon}$ to the Green-Lagrange strain $\mathbf{E}$. Naturally, this also changes how stress enters the formulation.
 
@@ -336,4 +338,4 @@ Combining both parts, the total tangent stiffness matrix assembled for Newton-Ra
 $$\mathbf{K}_{\text{total}} = \mathbf{K}_m + \mathbf{K}_\sigma$$
 
 * **$\mathbf{K}_m$:** Captures material resistance to deformation.
-* **$\mathbf{K}_\sigma$:** Captures how existing internal stresses stabilize or destabilize the structure during large rotations and deformations (such as the stiffening effect of a stretched cable).
+* **$\mathbf{K}_\sigma$:** Captures how existing internal stresses stabilize or destabilize the structure during large rotations and deformations (such as the stiffening effect of a stretched cable). -->
