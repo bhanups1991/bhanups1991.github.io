@@ -1,0 +1,1886 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bhanu Pratap Sharma">
+      
+      
+        <link rel="canonical" href="https://bhanups1991.github.io/derivations/">
+      
+      
+        <link rel="prev" href="../FAQs_review/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Derivations and Proofs - Bhanu Pratap Sharma, PhD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../javascripts/extra.css">
+    
+      <link rel="stylesheet" href="../css/open_in_new_tab.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#equation-and-derivation-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bhanu Pratap Sharma, PhD" class="md-header__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bhanu Pratap Sharma, PhD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Derivations and Proofs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="custom-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bhanu Pratap Sharma, PhD" class="md-nav__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bhanu Pratap Sharma, PhD
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Log
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research Log
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weak_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weak Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tensors_with_bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensors with Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element Method
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finite Element Method
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isoparametric_elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Isoparametric Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometric_nonlinearity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometric Nonlinearity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signorini_conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signorini Conditions in Contact Mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../piola_traction_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piola Traction Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consistent Reminders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQs_review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQs for Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivations and Proofs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivations and Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-continuum-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1 — Continuum Mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-fem-and-nonlinear-linearization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2 — FEM and Nonlinear Linearization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-contact-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3 — Contact Mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-linear-algebra-and-nonlinear-solvers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4 — Linear Algebra and Nonlinear Solvers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-continuum-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1 — Continuum Mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-fem-and-nonlinear-linearization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2 — FEM and Nonlinear Linearization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-contact-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3 — Contact Mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-linear-algebra-and-nonlinear-solvers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4 — Linear Algebra and Nonlinear Solvers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="equation-and-derivation-reference">Equation and Derivation Reference</h1>
+<div class="admonition info">
+<p class="admonition-title">Under Construction</p>
+<p>Page under heavy revision.</p>
+</div>
+<p><img alt="Page under construction" class="center" src="/images/under_revision.png#only-light" width="400" />
+<img alt="Page under construction" class="center" src="/images/under_revision_dark.png#only-dark" width="400" /></p>
+<p>Color convention: <span style="color:#1565C0">blue</span> = kinematics/geometric quantities; <span style="color:#2E7D32">green</span> = stress/constitutive quantities; <span style="color:#C62828">red</span> = residual/contact quantities; <span style="color:#6A1B9A">purple</span> = FE/solver quantities.</p>
+<h2 id="section-1-continuum-mechanics">Section 1 — Continuum Mechanics</h2>
+<p><strong>Q1:</strong> Derive the deformation gradient starting from the motion and displacement mappings.</p>
+<p>The motion is</p>
+<div class="arithmatex">\[
+\mathbf{x}=\boldsymbol{\chi}(\mathbf{X},t)=\mathbf{X}+\mathbf{u}.
+\tag{1}
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#1565C0}{\mathbf F}=\frac{\partial\mathbf x}{\partial\mathbf X}=\mathbf I+\frac{\partial\mathbf u}{\partial\mathbf X}}
+\tag{2}
+\]</div>
+<p>The deformation gradient is therefore the local reference-to-current configuration map.</p>
+<p><strong>Reference:</strong> Bonet, Gil &amp; Wood, Chapter 4, Sections 4.2–4.4; Holzapfel, Chapter 2, Section 2.4; Bathe, Nonlinear Analysis Lecture 3.</p>
+<hr />
+<p><strong>Q2:</strong> Derive the Green–Lagrange strain starting from the deformation gradient.</p>
+<p>A material line element transforms as</p>
+<div class="arithmatex">\[
+d\mathbf x=\mathbf F\,d\mathbf X.
+\]</div>
+<p>Hence,</p>
+<div class="arithmatex">\[
+d\mathbf x\cdot d\mathbf x=d\mathbf X\cdot\mathbf F^T\mathbf F\,d\mathbf X.
+\]</div>
+<p>Defining</p>
+<div class="arithmatex">\[
+\mathbf C=\mathbf F^T\mathbf F,
+\]</div>
+<p>the change in squared length gives</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#1565C0}{\mathbf E=\frac12(\mathbf C-\mathbf I)=\frac12(\mathbf F^T\mathbf F-\mathbf I)}}
+\tag{3}
+\]</div>
+<p><strong>Reference:</strong> Bonet et al., Chapter 4, Section 4.5; Bathe, Nonlinear Analysis Lecture 3.</p>
+<hr />
+<p><strong>Q3:</strong> Expand the Green–Lagrange strain in terms of the displacement gradient.</p>
+<p>Using</p>
+<div class="arithmatex">\[
+\mathbf F=\mathbf I+\mathbf H,
+\qquad
+\mathbf H=\operatorname{Grad}\mathbf u,
+\]</div>
+<p>in Equation (3),</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#1565C0}{\mathbf E=\frac12(\mathbf H+\mathbf H^T+\mathbf H^T\mathbf H)}}
+\tag{4}
+\]</div>
+<p>The first two terms are linear; <span class="arithmatex">\(\mathbf H^T\mathbf H\)</span> is the geometric nonlinear contribution.</p>
+<hr />
+<p><strong>Q4:</strong> Derive infinitesimal strain as the small-deformation limit of Green–Lagrange strain.</p>
+<p>From Equation (4),</p>
+<div class="arithmatex">\[
+\mathbf E=\frac12(\mathbf H+\mathbf H^T+\mathbf H^T\mathbf H).
+\]</div>
+<p>For <span class="arithmatex">\(\|\mathbf H\|\ll1\)</span>, neglect <span class="arithmatex">\(\mathbf H^T\mathbf H\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\boldsymbol\varepsilon
+=\frac12(\nabla\mathbf u+\nabla\mathbf u^T)}
+\tag{5}
+\]</div>
+<p>Thus infinitesimal strain is the linearized form of the finite-strain measure.</p>
+<p><strong>Reference:</strong> Bonet et al., Chapter 4, Section 4.10.</p>
+<hr />
+<p><strong>Q5:</strong> Derive the polar decomposition of the deformation gradient.</p>
+<p>Define</p>
+<div class="arithmatex">\[
+\mathbf C=\mathbf F^T\mathbf F,
+\qquad
+\mathbf U=\sqrt{\mathbf C}.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#1565C0}{\mathbf F=\mathbf R\mathbf U=\mathbf V\mathbf R}}
+\tag{6}
+\]</div>
+<p>where <span class="arithmatex">\(\mathbf R\)</span> is a proper orthogonal rotation and <span class="arithmatex">\(\mathbf U,\mathbf V\)</span> are the right and left stretch tensors.</p>
+<p><strong>Reference:</strong> Bonet et al., Chapter 4, Section 4.6; Holzapfel, Chapter 2, Section 2.6; Bathe, Nonlinear Analysis Lecture 3.</p>
+<hr />
+<p><strong>Q6:</strong> Derive the volume-change relation from the deformation gradient.</p>
+<p>The differential volume transforms as</p>
+<div class="arithmatex">\[
+\boxed{dv=J\,dV,\qquad J=\det\mathbf F}
+\tag{7}
+\]</div>
+<p>so</p>
+<div class="arithmatex">\[
+\boxed{\frac{dv}{dV}=\det\mathbf F}.
+\tag{8}
+\]</div>
+<p>Thus <span class="arithmatex">\(J\)</span> measures the local volume ratio.</p>
+<p><strong>Reference:</strong> Bonet et al., Chapter 4, Section 4.7.</p>
+<hr />
+<p><strong>Q7:</strong> Derive the velocity gradient from the deformation gradient.</p>
+<p>Starting from</p>
+<div class="arithmatex">\[
+\mathbf F=\frac{\partial\mathbf x}{\partial\mathbf X},
+\]</div>
+<p>differentiate with respect to time:</p>
+<div class="arithmatex">\[
+\dot{\mathbf F}
+=
+\frac{\partial\mathbf v}{\partial\mathbf X}
+=
+\frac{\partial\mathbf v}{\partial\mathbf x}
+\frac{\partial\mathbf x}{\partial\mathbf X}.
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#1565C0}{\mathbf L=\frac{\partial\mathbf v}{\partial\mathbf x}
+=\dot{\mathbf F}\mathbf F^{-1}}}
+\tag{9}
+\]</div>
+<p><strong>Reference:</strong> Bonet et al., Chapter 4, Sections 4.11–4.12.</p>
+<hr />
+<p><strong>Q8:</strong> Derive the rate-of-deformation tensor and spin tensor from the velocity gradient.</p>
+<p>Directly decompose</p>
+<div class="arithmatex">\[
+\boxed{\mathbf L=\mathbf D+\mathbf W}
+\tag{10}
+\]</div>
+<p>with</p>
+<div class="arithmatex">\[
+\boxed{\mathbf D=\frac12(\mathbf L+\mathbf L^T)},
+\qquad
+\boxed{\mathbf W=\frac12(\mathbf L-\mathbf L^T)}.
+\tag{11}
+\]</div>
+<p>Thus <span class="arithmatex">\(\mathbf D\)</span> contains deformation rates and <span class="arithmatex">\(\mathbf W\)</span> contains local spin.</p>
+<p><strong>Reference:</strong> Bonet et al., Chapter 4, Sections 4.12–4.13; Holzapfel, Chapter 2, Section 2.7.</p>
+<hr />
+<p><strong>Q9:</strong> Derive the material derivative in an Eulerian description.</p>
+<p>For <span class="arithmatex">\(f(\mathbf x,t)\)</span>,</p>
+<div class="arithmatex">\[
+\boxed{\frac{Df}{Dt}
+=
+\frac{\partial f}{\partial t}
++
+\mathbf v\cdot\nabla f}
+\tag{12}
+\]</div>
+<p>The first term is local temporal change; the second is the convective contribution due to material transport.</p>
+<p><strong>Reference:</strong> Bonet et al., Chapter 4, Section 4.11.</p>
+<hr />
+<p><strong>Q10:</strong> Derive the pure-bending strain field and show why transverse shear vanishes.</p>
+<p>Take</p>
+<div class="arithmatex">\[
+u_x=-\kappa xy,
+\qquad
+u_y=\frac12\kappa x^2.
+\tag{13}
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\varepsilon_x=\frac{\partial u_x}{\partial x}=-\kappa y,
+\qquad
+\varepsilon_y=0,
+\]</div>
+<p>while</p>
+<div class="arithmatex">\[
+\boxed{\gamma_{xy}
+=
+\frac{\partial u_x}{\partial y}
++
+\frac{\partial u_y}{\partial x}
+=
+-\kappa x+\kappa x=0}.
+\tag{14}
+\]</div>
+<p>This exact cancellation is the condition that a bending element must reproduce.</p>
+<p><strong>Reference:</strong> Bathe, Nonlinear Analysis Lecture 20, discussion of shear and membrane locking.</p>
+<hr />
+<p><strong>Q11:</strong> Derive the spurious shear strain produced by a bilinear Q4 element in pure bending.</p>
+<p>For <span class="arithmatex">\(u_y=\kappa x^2/2\)</span>, a Q4 element whose nodes have <span class="arithmatex">\(x=\pm a\)</span> has identical nodal <span class="arithmatex">\(u_y\)</span> values:</p>
+<div class="arithmatex">\[
+u_y=\frac{\kappa a^2}{2}.
+\]</div>
+<p>Therefore the bilinear interpolation gives</p>
+<div class="arithmatex">\[
+\frac{\partial u_y^h}{\partial x}=0.
+\]</div>
+<p>Meanwhile <span class="arithmatex">\(u_x=-\kappa xy\)</span> gives</p>
+<div class="arithmatex">\[
+\frac{\partial u_x^h}{\partial y}=-\kappa x.
+\]</div>
+<p>Hence</p>
+<div class="arithmatex">\[
+\boxed{\gamma_{xy}^h=-\kappa x\neq0}.
+\tag{15}
+\]</div>
+<p>The FE space cannot reproduce the exact zero-shear bending field, creating artificial shear energy and locking.</p>
+<p><strong>Reference:</strong> Bathe, Nonlinear Analysis Lecture 20.</p>
+<hr />
+<h2 id="section-2-fem-and-nonlinear-linearization">Section 2 — FEM and Nonlinear Linearization</h2>
+<p><strong>Q12:</strong> Derive the weak form starting from the strong equilibrium equation.</p>
+<p>Starting from</p>
+<div class="arithmatex">\[
+-\nabla\cdot\boldsymbol\sigma=\mathbf b,
+\]</div>
+<p>multiply by <span class="arithmatex">\(\delta\mathbf u\)</span> and integrate by parts:</p>
+<div class="arithmatex">\[
+\int_\Omega\boldsymbol\sigma:\nabla\delta\mathbf u\,dV
+=
+\int_\Omega\mathbf b\cdot\delta\mathbf u\,dV
++
+\int_{\Gamma_t}\mathbf t\cdot\delta\mathbf u\,dS.
+\]</div>
+<p>Hence,</p>
+<div class="arithmatex">\[
+\boxed{\delta W_{\mathrm{int}}-\delta W_{\mathrm{ext}}=0}.
+\tag{16}
+\]</div>
+<p><strong>Reference:</strong> Bathe, Linear Analysis Lecture 2; Wriggers, Chapter 4, pp. 31–56.</p>
+<hr />
+<p><strong>Q13:</strong> Derive the finite-deformation virtual-work equation using <span class="arithmatex">\(\mathbf S\)</span> and <span class="arithmatex">\(\mathbf E\)</span>.</p>
+<p>For a total Lagrangian formulation,</p>
+<div class="arithmatex">\[
+\boxed{
+\delta W_{\mathrm{int}}
+=
+\int_{\Omega_0}\textcolor{#2E7D32}{\mathbf S}:\delta\textcolor{#1565C0}{\mathbf E}\,dV_0
+}
+\tag{17}
+\]</div>
+<p>and equilibrium requires</p>
+<div class="arithmatex">\[
+\boxed{\delta W_{\mathrm{int}}-\delta W_{\mathrm{ext}}=0}.
+\tag{18}
+\]</div>
+<p>The important point is that <span class="arithmatex">\(\mathbf S\)</span> and <span class="arithmatex">\(\mathbf E\)</span> form a work-conjugate pair.</p>
+<p><strong>Reference:</strong> Bathe, Nonlinear Analysis Lecture 3.</p>
+<hr />
+<p><strong>Q14:</strong> Derive the isoparametric Jacobian and the parent-to-physical coordinate transformation.</p>
+<p>With</p>
+<div class="arithmatex">\[
+\mathbf x(\boldsymbol\xi)=\sum_aN_a(\boldsymbol\xi)\mathbf x_a,
+\]</div>
+<p>the Jacobian is</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#6A1B9A}{\mathbf J=\frac{\partial\mathbf x}{\partial\boldsymbol\xi}}}.
+\tag{19}
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{dV=\det\mathbf J\,dV_\xi}.
+\tag{20}
+\]</div>
+<p>The physical derivatives follow from</p>
+<div class="arithmatex">\[
+\nabla_xN_a=\mathbf J^{-T}\nabla_\xi N_a.
+\tag{21}
+\]</div>
+<p><strong>Reference:</strong> Bathe, Linear Analysis Lecture 6, isoparametric formulation and Jacobian transformation.</p>
+<hr />
+<p><strong>Q15:</strong> Derive the relation between parent, reference, and current configurations.</p>
+<p>Define</p>
+<div class="arithmatex">\[
+\mathbf J_0=\frac{\partial\mathbf X}{\partial\boldsymbol\xi},
+\qquad
+\mathbf J_t=\frac{\partial\mathbf x}{\partial\boldsymbol\xi}.
+\]</div>
+<p>Using the chain rule,</p>
+<div class="arithmatex">\[
+\mathbf J_t
+=
+\frac{\partial\mathbf x}{\partial\mathbf X}
+\frac{\partial\mathbf X}{\partial\boldsymbol\xi}
+=
+\mathbf F\mathbf J_0.
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{\mathbf F=\mathbf J_t\mathbf J_0^{-1}}.
+\tag{22}
+\]</div>
+<p>This separates the computational parent-coordinate mapping from the physical deformation mapping.</p>
+<hr />
+<p><strong>Q16:</strong> Derive the FE internal force vector from the virtual-work equation.</p>
+<p>Using</p>
+<div class="arithmatex">\[
+\delta\mathbf E=\mathbf B\,\delta\mathbf d,
+\]</div>
+<p>insert into Equation (17):</p>
+<div class="arithmatex">\[
+\delta W_{\mathrm{int}}
+=
+\delta\mathbf d^T
+\int_{\Omega_0}\mathbf B^T\mathbf S\,dV_0.
+\]</div>
+<p>Hence,</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#6A1B9A}{\mathbf f_{\mathrm{int}}
+=
+\int_{\Omega_0}\mathbf B^T\mathbf S\,dV_0}}.
+\tag{23}
+\]</div>
+<p>For small-strain linear elasticity this reduces to</p>
+<div class="arithmatex">\[
+\boxed{\mathbf K=\int_\Omega\mathbf B^T\mathbf C\mathbf B\,dV}.
+\tag{24}
+\]</div>
+<p><strong>Reference:</strong> Bathe, Linear Analysis Lecture 3 and Nonlinear Analysis Lecture 6.</p>
+<hr />
+<p><strong>Q17:</strong> Derive the nonlinear residual including contact.</p>
+<p>Equilibrium requires</p>
+<div class="arithmatex">\[
+\mathbf f_{\mathrm{int}}+\mathbf f_c=\mathbf f_{\mathrm{ext}}.
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{
+\textcolor{#C62828}{\mathbf R(\mathbf d)}
+=
+\mathbf f_{\mathrm{ext}}
+-
+\mathbf f_{\mathrm{int}}(\mathbf d)
+-
+\mathbf f_c(\mathbf d)
+=
+\mathbf0
+}.
+\tag{25}
+\]</div>
+<p>Material, geometric, and contact nonlinearities enter through the dependence of these terms on <span class="arithmatex">\(\mathbf d\)</span>.</p>
+<hr />
+<p><strong>Q18:</strong> Derive the Newton–Raphson equation by linearizing the nonlinear residual.</p>
+<p>Expand</p>
+<div class="arithmatex">\[
+\mathbf R(\mathbf d+\Delta\mathbf d)
+\approx
+\mathbf R(\mathbf d)
++
+\frac{\partial\mathbf R}{\partial\mathbf d}\Delta\mathbf d.
+\]</div>
+<p>Setting the new residual to zero,</p>
+<div class="arithmatex">\[
+\frac{\partial\mathbf R}{\partial\mathbf d}\Delta\mathbf d
+=
+-\mathbf R.
+\]</div>
+<p>Since</p>
+<div class="arithmatex">\[
+\mathbf K_T
+=
+-\frac{\partial\mathbf R}{\partial\mathbf d},
+\]</div>
+<p>we obtain</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#6A1B9A}{\mathbf K_T\Delta\mathbf d=\mathbf R}}.
+\tag{26}
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\boxed{\mathbf d_{i+1}=\mathbf d_i+\Delta\mathbf d_i}.
+\tag{27}
+\]</div>
+<p><strong>Reference:</strong> Bathe, Nonlinear Analysis Lecture 10.</p>
+<hr />
+<p><strong>Q19:</strong> Derive the material and geometric tangent stiffness from the nonlinear virtual work.</p>
+<p>Starting from</p>
+<div class="arithmatex">\[
+\delta W_{\mathrm{int}}
+=
+\int_{\Omega_0}\mathbf S:\delta\mathbf E\,dV_0,
+\]</div>
+<p>linearization gives</p>
+<div class="arithmatex">\[
+\Delta(\delta W_{\mathrm{int}})
+=
+\int_{\Omega_0}
+\Delta\mathbf S:\delta\mathbf E\,dV_0
++
+\int_{\Omega_0}
+\mathbf S:\Delta(\delta\mathbf E)\,dV_0.
+\tag{28}
+\]</div>
+<p>Using</p>
+<div class="arithmatex">\[
+\Delta\mathbf S=\mathbf C:\Delta\mathbf E,
+\]</div>
+<p>the first term gives the material tangent and the second gives the geometric tangent:</p>
+<div class="arithmatex">\[
+\boxed{\mathbf K_T=\mathbf K_M+\mathbf K_G}.
+\tag{29}
+\]</div>
+<p>The key distinction is therefore constitutive linearization versus geometric linearization.</p>
+<p><strong>Reference:</strong> Bonet et al., Chapter 8; Bathe, Nonlinear Analysis Lectures 6 and 10.</p>
+<hr />
+<p><strong>Q20:</strong> Derive the effective tangent for an implicit dynamic FE step.</p>
+<p>The semi-discrete equation is</p>
+<div class="arithmatex">\[
+\mathbf M\ddot{\mathbf d}
++
+\mathbf C\dot{\mathbf d}
++
+\mathbf f_{\mathrm{int}}(\mathbf d)
+=
+\mathbf f_{\mathrm{ext}}.
+\tag{30}
+\]</div>
+<p>After time discretization,</p>
+<div class="arithmatex">\[
+\Delta\ddot{\mathbf d}=a_0\Delta\mathbf d,
+\qquad
+\Delta\dot{\mathbf d}=a_1\Delta\mathbf d.
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{\mathbf K_{\mathrm{eff}}
+=
+\mathbf K_T+a_1\mathbf C+a_0\mathbf M}.
+\tag{31}
+\]</div>
+<p>The coefficients depend on the selected implicit time-integration scheme.</p>
+<p><strong>Reference:</strong> Bathe, Linear Analysis Lecture 10 and Nonlinear Dynamic Response Lectures 13–14.</p>
+<hr />
+<p><strong>Q21:</strong> Derive the explicit central-difference displacement update.</p>
+<p>Starting from</p>
+<div class="arithmatex">\[
+\mathbf M\ddot{\mathbf d}_n=\mathbf R_n,
+\]</div>
+<p>use</p>
+<div class="arithmatex">\[
+\ddot{\mathbf d}_n
+\approx
+\frac{\mathbf d_{n+1}-2\mathbf d_n+\mathbf d_{n-1}}{\Delta t^2}.
+\]</div>
+<p>Thus,</p>
+<div class="arithmatex">\[
+\boxed{
+\mathbf d_{n+1}
+=
+2\mathbf d_n-\mathbf d_{n-1}
++
+\Delta t^2\mathbf M^{-1}\mathbf R_n
+}.
+\tag{32}
+\]</div>
+<p>No global Newton equilibrium iteration is required.</p>
+<p><strong>Reference:</strong> Bathe, Linear Analysis Lecture 10.</p>
+<hr />
+<p><strong>Q22:</strong> Derive the explicit critical time-step estimate from the highest natural frequency.</p>
+<p>For the undamped system,</p>
+<div class="arithmatex">\[
+\mathbf M\ddot{\mathbf d}+\mathbf K\mathbf d=0,
+\]</div>
+<p>central-difference stability requires approximately</p>
+<div class="arithmatex">\[
+\boxed{\Delta t_{\mathrm{crit}}\approx\frac{2}{\omega_{\max}}}.
+\tag{33}
+\]</div>
+<p>Using the smallest element length and characteristic wave speed gives the engineering estimate</p>
+<div class="arithmatex">\[
+\boxed{\Delta t_{\mathrm{crit}}\sim\frac{L_{\min}}{c}}.
+\tag{34}
+\]</div>
+<p><strong>Reference:</strong> Bathe, Linear Analysis Lecture 10.</p>
+<hr />
+<h2 id="section-3-contact-mechanics">Section 3 — Contact Mechanics</h2>
+<p><strong>Q23:</strong> Derive the normal gap using closest-point projection.</p>
+<p>Let <span class="arithmatex">\(\mathbf x_m(\boldsymbol\xi)\)</span> be the master surface. The closest point minimizes</p>
+<div class="arithmatex">\[
+d^2(\boldsymbol\xi)
+=
+\|\mathbf x_s-\mathbf x_m(\boldsymbol\xi)\|^2.
+\]</div>
+<p>Hence,</p>
+<div class="arithmatex">\[
+(\mathbf x_s-\mathbf x_m)\cdot\mathbf x_{m,\alpha}=0.
+\tag{35}
+\]</div>
+<p>The connecting vector is normal to the surface:</p>
+<div class="arithmatex">\[
+\mathbf x_s-\mathbf x_m=g_n\mathbf n.
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#C62828}{g_n=(\mathbf x_s-\mathbf x_m)\cdot\mathbf n}}.
+\tag{36}
+\]</div>
+<p><strong>Reference:</strong> Wriggers, Chapter 5, “Contact Kinematics”, pp. 57–67.</p>
+<hr />
+<p><strong>Q24:</strong> Derive the unilateral contact complementarity conditions.</p>
+<p>Nonpenetration requires</p>
+<div class="arithmatex">\[
+g_n\ge0.
+\]</div>
+<p>The compressive normal reaction satisfies</p>
+<div class="arithmatex">\[
+\lambda_n\ge0.
+\]</div>
+<p>Reaction exists only when contact is active:</p>
+<div class="arithmatex">\[
+g_n\lambda_n=0.
+\]</div>
+<p>Thus,</p>
+<div class="arithmatex">\[
+\boxed{
+g_n\ge0,\qquad
+\lambda_n\ge0,\qquad
+g_n\lambda_n=0
+}.
+\tag{37}
+\]</div>
+<p><strong>Reference:</strong> Wriggers, Chapter 7, pp. 109–156.</p>
+<hr />
+<p><strong>Q25:</strong> Derive the penalty contact law from a penalty potential.</p>
+<p>Introduce</p>
+<div class="arithmatex">\[
+\Pi_c=\frac12\epsilon\langle-g_n\rangle_+^2.
+\]</div>
+<p>Differentiation gives</p>
+<div class="arithmatex">\[
+\boxed{\lambda_n=\epsilon\langle-g_n\rangle_+}.
+\tag{38}
+\]</div>
+<p>For active contact,</p>
+<div class="arithmatex">\[
+\boxed{-g_n=\frac{\lambda_n}{\epsilon}}.
+\tag{39}
+\]</div>
+<p>Thus increasing <span class="arithmatex">\(\epsilon\)</span> reduces penetration but increases the contact stiffness scale.</p>
+<p><strong>Reference:</strong> Wriggers, Chapters 7 and 9.</p>
+<hr />
+<p><strong>Q26:</strong> Derive the local penalty contact tangent.</p>
+<p>For active contact,</p>
+<div class="arithmatex">\[
+\lambda_n=-\epsilon g_n.
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{k_c=\frac{\partial\lambda_n}{\partial g_n}=-\epsilon}.
+\tag{40}
+\]</div>
+<p>The sign depends on the residual/gap convention; the important point is that the tangent magnitude scales with the penalty parameter.</p>
+<hr />
+<p><strong>Q27:</strong> Derive the Lagrange-multiplier contact constraint from the weak form.</p>
+<p>Introduce <span class="arithmatex">\(\lambda_n\)</span> as the multiplier for</p>
+<div class="arithmatex">\[
+g_n=0.
+\]</div>
+<p>The contact contribution is</p>
+<div class="arithmatex">\[
+\delta W_c
+=
+\int_{\Gamma_c}\lambda_n\,\delta g_n\,dA.
+\]</div>
+<p>Variation with respect to <span class="arithmatex">\(\lambda_n\)</span> gives</p>
+<div class="arithmatex">\[
+\int_{\Gamma_c}g_n\,\delta\lambda_n\,dA=0.
+\]</div>
+<p>Since <span class="arithmatex">\(\delta\lambda_n\)</span> is arbitrary,</p>
+<div class="arithmatex">\[
+\boxed{g_n=0}.
+\tag{41}
+\]</div>
+<p>Thus the constraint is exact, but <span class="arithmatex">\(\lambda_n\)</span> becomes an additional unknown.</p>
+<p><strong>Reference:</strong> Wriggers, Chapter 7; Chapter 9 for FE discretization.</p>
+<hr />
+<p><strong>Q28:</strong> Derive the augmented-Lagrangian contact relation.</p>
+<p>The augmented formulation combines multiplier and penalty contributions:</p>
+<div class="arithmatex">\[
+\boxed{
+\lambda_n^{k+1}
+=
+\lambda_n^k
++
+\epsilon\langle-g_n\rangle_+
+}.
+\tag{42}
+\]</div>
+<p>The multiplier carries the contact reaction while the penalty term controls constraint violation during iteration.</p>
+<p><strong>Reference:</strong> Wriggers, Chapters 7 and 11; Pietrzak &amp; Curnier, 1999, for large-deformation frictional contact and augmented-Lagrangian treatment.</p>
+<hr />
+<p><strong>Q29:</strong> Derive the local contact operator and its tangent.</p>
+<p>At a contact quadrature point,</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#C62828}{\mathbf t_c=\mathcal C(\mathbf g)}}.
+\tag{43}
+\]</div>
+<p>Linearization gives</p>
+<div class="arithmatex">\[
+\boxed{
+\Delta\mathbf t_c
+=
+\mathbf K_c^{\mathrm{loc}}\Delta\mathbf g,
+\qquad
+\mathbf K_c^{\mathrm{loc}}
+=
+\frac{\partial\mathcal C}{\partial\mathbf g}
+}.
+\tag{44}
+\]</div>
+<p>This local operator is the fundamental object used to construct a consistent contact tangent.</p>
+<p><strong>Reference:</strong> Alart &amp; Curnier (1991), mixed penalty-duality formulation and conewise-linear contact operator.</p>
+<hr />
+<p><strong>Q30:</strong> Derive the local-to-global contact stiffness relation.</p>
+<p>Relate the gap increment to nodal displacement:</p>
+<div class="arithmatex">\[
+\Delta\mathbf g=\mathbf G\Delta\mathbf d.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\Delta\mathbf t_c
+=
+\mathbf K_c^{\mathrm{loc}}\mathbf G\Delta\mathbf d.
+\]</div>
+<p>The corresponding global contribution has the form</p>
+<div class="arithmatex">\[
+\boxed{
+\mathbf K_c
+=
+\int_{\Gamma_c}
+\mathbf G^T
+\mathbf K_c^{\mathrm{loc}}
+\mathbf G\,d\Gamma
+}.
+\tag{45}
+\]</div>
+<p>Thus</p>
+<div class="arithmatex">\[
+\boxed{
+\text{contact operator}
+\rightarrow
+\text{local tangent}
+\rightarrow
+\text{global contact tangent}
+}.
+\]</div>
+<p><strong>Reference:</strong> Wriggers, Chapters 7, 10 and 11; Alart &amp; Curnier (1991).</p>
+<hr />
+<p><strong>Q31:</strong> Derive the Coulomb friction condition from normal reaction and tangential traction.</p>
+<p>The admissible tangential traction satisfies</p>
+<div class="arithmatex">\[
+\boxed{\|\mathbf t_t\|\le\mu\lambda_n}.
+\tag{46}
+\]</div>
+<p>Define</p>
+<div class="arithmatex">\[
+\phi_f=\|\mathbf t_t\|-\mu\lambda_n.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\phi_f&lt;0:\text{ stick},
+\qquad
+\phi_f=0:\text{ slip}.
+\tag{47}
+\]</div>
+<p><strong>Reference:</strong> Wriggers, Chapter 6, pp. 69–108; Alart &amp; Curnier (1991).</p>
+<hr />
+<p><strong>Q32:</strong> Derive the closest-point projection condition from minimization of the distance.</p>
+<p>Starting with</p>
+<div class="arithmatex">\[
+d^2(\boldsymbol\xi)
+=
+\|\mathbf x_s-\mathbf x_m(\boldsymbol\xi)\|^2,
+\]</div>
+<p>differentiate:</p>
+<div class="arithmatex">\[
+\frac{\partial d^2}{\partial\xi_\alpha}
+=
+-2(\mathbf x_s-\mathbf x_m)\cdot\mathbf x_{m,\alpha}.
+\]</div>
+<p>At the minimum,</p>
+<div class="arithmatex">\[
+\boxed{
+(\mathbf x_s-\mathbf x_m)\cdot\mathbf x_{m,\alpha}=0
+}.
+\tag{48}
+\]</div>
+<p>For nonlinear surface interpolation this becomes a nonlinear system for <span class="arithmatex">\(\boldsymbol\xi\)</span>.</p>
+<p><strong>Reference:</strong> Wriggers, Chapter 5; Konyukhov &amp; Schweizerhof, Chapter 4, “Closest Point Projection Procedure”.</p>
+<hr />
+<p><strong>Q33:</strong> Derive the distinction between contact mapping and contact enforcement.</p>
+<p>Geometric mapping determines the opposing point:</p>
+<div class="arithmatex">\[
+\mathbf x_s\rightarrow\mathbf x_m(\boldsymbol\xi)
+\rightarrow g_n.
+\]</div>
+<p>Constraint enforcement then maps the gap to a reaction:</p>
+<div class="arithmatex">\[
+g_n\rightarrow\lambda_n
+\]</div>
+<p>through penalty, Lagrange multiplier, augmented Lagrangian, Nitsche, or another formulation.</p>
+<p>Hence,</p>
+<div class="arithmatex">\[
+\boxed{
+\text{mapping}
+\neq
+\text{enforcement}
+}.
+\tag{49}
+\]</div>
+<p>Closest-point projection and ray tracing belong to the first stage; Nitsche and penalty belong to the second.</p>
+<p><strong>Reference:</strong> Wriggers, Chapters 5–7; Konyukhov &amp; Schweizerhof, Chapters 4–7.</p>
+<hr />
+<p><strong>Q34:</strong> Derive the basic structure of a Nitsche boundary term.</p>
+<p>For a constraint <span class="arithmatex">\(u=g\)</span>, the Nitsche formulation adds consistency, symmetry, and stabilization terms schematically as</p>
+<div class="arithmatex">\[
+\boxed{
+-\langle\sigma(u)n,v\rangle_\Gamma
+-\langle\sigma(v)n,u-g\rangle_\Gamma
++\left\langle\frac{\gamma}{h}(u-g),v\right\rangle_\Gamma
+}.
+\tag{50}
+\]</div>
+<p>The first two terms provide consistency/symmetry; the last provides stabilization.</p>
+<p>For contact, <span class="arithmatex">\(u-g\)</span> is replaced by the appropriate unilateral contact residual.</p>
+<p><strong>Reference:</strong> Chouly, Mlika &amp; Renard (2018), <em>Numerische Mathematik</em> 139, 593–631; Wriggers, Chapter 7.</p>
+<hr />
+<h2 id="section-4-linear-algebra-and-nonlinear-solvers">Section 4 — Linear Algebra and Nonlinear Solvers</h2>
+<p><strong>Q35:</strong> Derive the global linear system solved at every Newton iteration.</p>
+<p>Starting from</p>
+<div class="arithmatex">\[
+\mathbf R(\mathbf d)=\mathbf0,
+\]</div>
+<p>linearization gives</p>
+<div class="arithmatex">\[
+\mathbf R+\frac{\partial\mathbf R}{\partial\mathbf d}\Delta\mathbf d=0.
+\]</div>
+<p>Since</p>
+<div class="arithmatex">\[
+\mathbf K_T=-\frac{\partial\mathbf R}{\partial\mathbf d},
+\]</div>
+<p>we obtain</p>
+<div class="arithmatex">\[
+\boxed{\textcolor{#6A1B9A}{\mathbf K_T\Delta\mathbf d=\mathbf R}}.
+\tag{51}
+\]</div>
+<p>Thus Newton converts the nonlinear FE problem into a sequence of linear algebra problems.</p>
+<p><strong>Reference:</strong> Bathe, Nonlinear Analysis Lecture 10.</p>
+<hr />
+<p><strong>Q36:</strong> Derive why the tangent is a Jacobian rather than an explicitly inverted stiffness matrix.</p>
+<p>From</p>
+<div class="arithmatex">\[
+\mathbf R=\mathbf f_{\mathrm{ext}}-\mathbf f_{\mathrm{int}},
+\]</div>
+<p>we obtain</p>
+<div class="arithmatex">\[
+\frac{\partial\mathbf R}{\partial\mathbf d}
+=
+-\frac{\partial\mathbf f_{\mathrm{int}}}{\partial\mathbf d}.
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{
+\mathbf K_T
+=
+\frac{\partial\mathbf f_{\mathrm{int}}}{\partial\mathbf d}
+=
+-\frac{\partial\mathbf R}{\partial\mathbf d}
+}.
+\tag{52}
+\]</div>
+<p>The solver computes <span class="arithmatex">\(\Delta\mathbf d\)</span> from</p>
+<div class="arithmatex">\[
+\mathbf K_T\Delta\mathbf d=\mathbf R,
+\]</div>
+<p>rather than forming <span class="arithmatex">\(\mathbf K_T^{-1}\)</span>.</p>
+<hr />
+<p><strong>Q37:</strong> Derive the direct linear solve through matrix factorization.</p>
+<p>Given</p>
+<div class="arithmatex">\[
+\mathbf K\Delta\mathbf d=\mathbf R,
+\]</div>
+<p>factorize, for example,</p>
+<div class="arithmatex">\[
+\mathbf K=\mathbf L\mathbf U.
+\]</div>
+<p>Then solve sequentially:</p>
+<div class="arithmatex">\[
+\mathbf L\mathbf y=\mathbf R,
+\qquad
+\mathbf U\Delta\mathbf d=\mathbf y.
+\tag{53}
+\]</div>
+<p>The factorization is therefore the computational replacement for explicitly forming <span class="arithmatex">\(\mathbf K^{-1}\)</span>.</p>
+<p><strong>Reference:</strong> Bathe, Linear Analysis Lecture 9.</p>
+<hr />
+<p><strong>Q38:</strong> Derive the Krylov subspace used by GMRES.</p>
+<p>For</p>
+<div class="arithmatex">\[
+\mathbf A\mathbf x=\mathbf b,
+\]</div>
+<p>with initial residual <span class="arithmatex">\(\mathbf r_0\)</span>, GMRES uses</p>
+<div class="arithmatex">\[
+\boxed{
+\mathcal K_m
+=
+\operatorname{span}
+\{\mathbf r_0,\mathbf A\mathbf r_0,\ldots,\mathbf A^{m-1}\mathbf r_0\}
+}.
+\tag{54}
+\]</div>
+<p>The approximate solution is selected to minimize the residual norm over this subspace:</p>
+<div class="arithmatex">\[
+\boxed{
+\mathbf x_m
+=
+\arg\min_{\mathbf x\in\mathbf x_0+\mathcal K_m}
+\|\mathbf b-\mathbf A\mathbf x\|_2
+}.
+\tag{55}
+\]</div>
+<p>Preconditioning transforms the problem to improve the spectral properties relevant to convergence.</p>
+<hr />
+<p><strong>Q39:</strong> Derive the relationship between a nonlinear solver such as SNES and a linear solver such as KSP.</p>
+<p>The nonlinear problem is</p>
+<div class="arithmatex">\[
+\mathbf R(\mathbf d)=0.
+\]</div>
+<p>Newton linearization produces</p>
+<div class="arithmatex">\[
+\mathbf J_R\Delta\mathbf d=-\mathbf R,
+\qquad
+\mathbf J_R=\frac{\partial\mathbf R}{\partial\mathbf d}.
+\tag{56}
+\]</div>
+<p>Thus the hierarchy is</p>
+<div class="arithmatex">\[
+\boxed{
+\text{SNES}
+\rightarrow
+\text{Newton/Jacobian}
+\rightarrow
+\text{KSP}
+\rightarrow
+\text{linear solve}
+}.
+\tag{57}
+\]</div>
+<p>SNES controls the nonlinear iterations; KSP solves the linearized systems.</p>
+<hr />
+<p><strong>Q40:</strong> Derive the line-search modification of the Newton update.</p>
+<p>The full Newton step is <span class="arithmatex">\(\Delta\mathbf d_N\)</span>. Introduce</p>
+<div class="arithmatex">\[
+\boxed{
+\mathbf d_{k+1}
+=
+\mathbf d_k+\alpha\Delta\mathbf d_N,
+\qquad
+0&lt;\alpha\le1
+}.
+\tag{58}
+\]</div>
+<p>A typical merit function is</p>
+<div class="arithmatex">\[
+\Phi(\mathbf d)=\frac12\|\mathbf R(\mathbf d)\|_2^2.
+\tag{59}
+\]</div>
+<p>The line search chooses <span class="arithmatex">\(\alpha\)</span> to obtain sufficient reduction in <span class="arithmatex">\(\Phi\)</span>.</p>
+<p><strong>Reference:</strong> Bathe, Nonlinear Analysis Lecture 10.</p>
+<hr />
+<p><strong>Q41:</strong> Derive the load-stepping formulation using a scalar load parameter.</p>
+<p>Let</p>
+<div class="arithmatex">\[
+\mathbf f_{\mathrm{ext}}=\lambda\mathbf f_0.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\boxed{
+\mathbf R(\mathbf d,\lambda)
+=
+\lambda\mathbf f_0-\mathbf f_{\mathrm{int}}(\mathbf d)
+=
+\mathbf0
+}.
+\tag{60}
+\]</div>
+<p>A sequence of increasing <span class="arithmatex">\(\lambda\)</span> values converts the nonlinear loading path into a sequence of nearby equilibrium problems.</p>
+<hr />
+<p><strong>Q42:</strong> Derive the arc-length constraint used to follow equilibrium paths through limit points.</p>
+<p>The equilibrium equations are</p>
+<div class="arithmatex">\[
+\mathbf R(\mathbf d,\lambda)=0.
+\]</div>
+<p>Introduce an additional constraint, for example,</p>
+<div class="arithmatex">\[
+\boxed{
+\|\Delta\mathbf d\|^2
++
+\alpha^2(\Delta\lambda)^2
+=
+\Delta s^2
+}.
+\tag{61}
+\]</div>
+<p>The unknowns become <span class="arithmatex">\(\Delta\mathbf d\)</span> and <span class="arithmatex">\(\Delta\lambda\)</span>, allowing the algorithm to continue through turning points where ordinary load control may fail.</p>
+<p><strong>Reference:</strong> Bathe, nonlinear solution procedures; Wriggers, Chapter 14, critical points with contact constraints.</p>
+<hr />
+<p><strong>Q43:</strong> Derive the local-to-global tangent hierarchy for a nonlinear constitutive FE problem.</p>
+<p>At a material point,</p>
+<div class="arithmatex">\[
+\Delta\boldsymbol\sigma
+=
+\mathbf C_{\mathrm{tan}}\Delta\boldsymbol\varepsilon.
+\tag{62}
+\]</div>
+<p>The element contribution is schematically</p>
+<div class="arithmatex">\[
+\mathbf K_e
+=
+\int_{\Omega_e}
+\mathbf B^T\mathbf C_{\mathrm{tan}}\mathbf B\,dV
++
+\mathbf K_{G,e}.
+\tag{63}
+\]</div>
+<p>Assembly gives</p>
+<div class="arithmatex">\[
+\boxed{
+\mathbf C_{\mathrm{tan}}
+\rightarrow
+\mathbf K_e
+\rightarrow
+\mathbf K_T
+}.
+\tag{64}
+\]</div>
+<p>Thus the global tangent inherits its constitutive information from the local material tangent.</p>
+<hr />
+<p><strong>Q44:</strong> Derive the complete mathematical chain from continuum mechanics to the linear solver.</p>
+<p>The essential sequence is</p>
+<div class="arithmatex">\[
+\boxed{
+\text{kinematics}
+\rightarrow
+\text{constitutive law}
+\rightarrow
+\text{weak form}
+\rightarrow
+\text{FE discretization}
+\rightarrow
+\text{residual}
+\rightarrow
+\text{linearization}
+\rightarrow
+\text{global tangent}
+\rightarrow
+\text{linear solve}
+}.
+\tag{65}
+\]</div>
+<p>More explicitly,</p>
+<div class="arithmatex">\[
+\mathbf F
+\rightarrow
+\mathbf E
+\rightarrow
+\mathbf S
+\rightarrow
+\mathbf f_{\mathrm{int}}
+\rightarrow
+\mathbf R
+\rightarrow
+\mathbf K_T
+\rightarrow
+\Delta\mathbf d.
+\tag{66}
+\]</div>
+<p>With contact,</p>
+<div class="arithmatex">\[
+\mathbf R
+=
+\mathbf f_{\mathrm{ext}}
+-
+\mathbf f_{\mathrm{int}}
+-
+\mathbf f_c,
+\]</div>
+<p>so the contact operator contributes directly to the global Jacobian.</p>
+<p>This is the mathematical chain connecting continuum mechanics, FEM, contact mechanics, and nonlinear numerical solution.</p>
+<p><strong>References:</strong> Bathe, Nonlinear Analysis Lectures 2, 3, 6 and 10; Bonet et al., Chapters 4, 5 and 8; Wriggers, Chapters 4, 7 and 11.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.top", "content.code.copy", "content.action.edit", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
