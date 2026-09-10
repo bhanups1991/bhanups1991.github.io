@@ -36,7 +36,11 @@ nav:
   - Research Log:
     - Weak Form: weak_form.md
     - Tensors with Bases: tensors_with_bases.md
+    - Linearized Weak Form TL: linearized_weak_form_TL.md
     - Finite Element Method:
+      - Mind Map:
+        - Quasi-Static Analysis: nonlinear_FE_mind_map_qs.md
+        - Dynamic Analysis: nonlinear_FE_mind_map_dyn.md
       - Isoparametric Elements: isoparametric_elements.md
       - Geometric Nonlinearity: geometric_nonlinearity.md 
     - Signorini Conditions in Contact Mechanics: signorini_conditions.md
