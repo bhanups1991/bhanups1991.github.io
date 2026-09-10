@@ -1,7 +1,10 @@
 # FAQs for Review
 
-!!! warning "Under Construction"
-    This section is currently being updated.
+!!! info "Under Construction"
+    Page under heavy revision.
+
+![Page under construction](/images/under_revision.png#only-light){ width="400" .center }
+![Page under construction](/images/under_revision_dark.png#only-dark){ width="400" .center }
 
 ## Section 1 — Continuum Mechanics
 

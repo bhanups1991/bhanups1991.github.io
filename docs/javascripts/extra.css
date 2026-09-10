@@ -34,3 +34,8 @@
 [data-md-color-scheme="custom-dark"] img[src$="#only-light"] {
   display: none;
 }
+
+img.center {
+  display: block;
+  margin: 0 auto;
+}

@@ -73,6 +73,9 @@ $$\mathbf{x}(\xi,\eta)=\sum_a{\color{red}{N_a}}\mathbf{x}_a,\qquad\mathbf{u}(\xi
 !!! info "Under Construction"
     Additional sections are currently being added.
 
+![Page under construction](/images/image_404.png#only-light){ width="400" .center }
+![Page under construction](/images/image_404_dark.png#only-dark){ width="400" .center }
+
 <!-- 
 
 ### The Jacobian

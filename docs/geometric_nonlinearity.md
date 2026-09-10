@@ -101,6 +101,8 @@ This additional quadratic term ensures that during a pure rigid-body rotation, t
 !!! info "Under Construction"
     Additional sections are currently being added.
 
+![Page under construction](/images/image_404.png#only-light){ width="400" .center }
+![Page under construction](/images/image_404_dark.png#only-dark){ width="400" .center }
 
 <!-- ### What Happens to Stress?
 
