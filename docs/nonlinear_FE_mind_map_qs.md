@@ -2,8 +2,6 @@ The simplest way to remove the confusion is to keep just one central question in
 
 > At each load/time step, **what unknowns must be found, and do we solve them directly or iteratively?**
 
-Below is a compact, PhD-level mind map that separates the physics, discretization, nonlinear solve, and linear algebra cleanly.
-
 ```markdown
 # Finite-Element Analysis: From Weak Form to Solution
 

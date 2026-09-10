@@ -76,3 +76,7 @@ extra_javascript:
 
 extra_css:
   - javascripts/extra.css
+
+exclude_docs: |
+  docs/linearized_weak_form_TL.md
+  docs/nonlinear_FE_mind_map_qs.md
