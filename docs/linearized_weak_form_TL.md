@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Linearization of the Principle of Virtual Work
 
 We consider a geometrically nonlinear problem in a **Total Lagrangian formulation**. All volume integrals are therefore evaluated over the fixed reference configuration $\Omega_0$, and the relevant stress and strain measures are the second Piola--Kirchhoff stress $\mathbf{S}$ and Green--Lagrange strain $\mathbf{E}$.

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 The simplest way to remove the confusion is to keep just one central question in mind:
 
 > At each load/time step, **what unknowns must be found, and do we solve them directly or iteratively?**

@@ -62,3 +62,19 @@ a[target="_blank"]::after {
     mask-position: center;
     mask-size: contain;
 }
+
+/* Add "Press F, S or /" inside the search bar */
+.md-search__form::after {
+  content: "Press F, S or /";
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  opacity: 0.55;
+  pointer-events: none;
+}
+/* Hide when search is active */
+.md-search.search-active .md-search__form::after {
+  display: none;
+}

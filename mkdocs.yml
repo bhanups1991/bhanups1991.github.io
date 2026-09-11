@@ -4,6 +4,8 @@ site_author: Bhanu Pratap Sharma
 
 theme:
   name: material
+  logo: images/logo.png
+
   palette:
 
     # Palette toggle for automatic mode
@@ -29,13 +31,17 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+
   features:
     - navigation.sections
     - navigation.instant
+    - navigation.expand
     - navigation.top
     - content.code.copy
     - content.action.edit
     - content.tabs.link
+    - search.highlight
+    - search.suggest
 
 nav:
   - Home: index.md
@@ -79,11 +85,8 @@ plugins:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/extra.js
 
 
 extra_css:
   - javascripts/extra.css
-
-exclude_docs: |
-  docs/linearized_weak_form_TL.md
-  docs/nonlinear_FE_mind_map_qs.md
