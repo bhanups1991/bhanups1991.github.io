@@ -34,3 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// <!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "da1c3a4c443f45d3b08db23aa3d53af7"}'></script>
+// <!-- End Cloudflare Web Analytics -->
