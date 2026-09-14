@@ -21,6 +21,7 @@ My research interests include computational and experimental solid mechanics, wi
 - [Google Scholar](https://scholar.google.com/citations?user=_Rwpa00AAAAJ&hl=en)
 - [ResearchGate](https://www.researchgate.net/profile/Bhanu-Pratap-Sharma)
 - [ORCID](https://orcid.org/0009-0008-6210-651X)
+- [CV](https://bhanups1991.github.io/cv.pdf)
 
 ## Contact
 
