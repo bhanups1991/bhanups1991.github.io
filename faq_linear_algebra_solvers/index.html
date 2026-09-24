@@ -1,0 +1,908 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bhanu Pratap Sharma">
+      
+      
+        <link rel="canonical" href="https://bhanups1991.github.io/faq_linear_algebra_solvers/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Nonlinear Solvers & Linear Algebra — FAQ - Bhanu Pratap Sharma, PhD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../javascripts/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nonlinear-solvers-linear-algebra-faq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bhanu Pratap Sharma, PhD" class="md-header__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bhanu Pratap Sharma, PhD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nonlinear Solvers &amp; Linear Algebra — FAQ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="custom-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bhanu Pratap Sharma, PhD" class="md-nav__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Bhanu Pratap Sharma, PhD
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Log
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research Log
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weak_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weak Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tensors_with_bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensors with Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element Method
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finite Element Method
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isoparametric_elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Isoparametric Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometric_nonlinearity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometric Nonlinearity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signorini_conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signorini Conditions in Contact Mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../piola_traction_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piola Traction Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consistent Reminders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq_fea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FEA Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivations and Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-nonlinear-solution-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Nonlinear Solution Procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-implicit-vs-explicit-time-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Implicit vs. Explicit Time Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-direct-and-iterative-linear-solvers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Direct and Iterative Linear Solvers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-petsc-snes-ksp-and-the-solver-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. PETSc: SNES, KSP, and the Solver Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="nonlinear-solvers-linear-algebra-faq">Nonlinear Solvers &amp; Linear Algebra — FAQ</h1>
+<p>Consolidated from prior technical discussions on Newton-type nonlinear solution procedures, time integration, and the underlying linear-algebra machinery (direct/iterative solvers, Krylov methods, PETSc SNES/KSP). FE discretization and contact-specific kinematics/enforcement are covered in their own companion FAQs; this file focuses on how the resulting nonlinear residual equation is actually driven to zero.</p>
+<hr />
+<h2 id="1-the-nonlinear-solution-procedure">1. The Nonlinear Solution Procedure</h2>
+<p><strong>Q: What's the cleanest mental model for the nonlinear FE solution process?</strong>
+Three nested loops:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>FOR each load/time increment  n → n+1          ← OUTER LOOP (physical steps)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  FOR each Newton–Raphson iteration  k          ← MIDDLE LOOP (nonlinear convergence)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Solve  K_T · Δd = R                         ← INNER LOOP (linear algebra)
+</code></pre></div>
+<p>An "increment" is bookkeeping — how far you've marched in load/time; a "Newton iteration" is how many times you re-linearize and correct the solution within one increment; a "linear-solve iteration" (Krylov methods only) is how many times the <em>linear</em> solver refines its guess of <span class="arithmatex">\(\Delta d\)</span> within one Newton step. All three loops are logically distinct, and confusing them (e.g. calling a Krylov iteration a "Newton iteration") is a common source of miscommunication.</p>
+<p><strong>Q: How is the Newton–Raphson equation derived from the nonlinear residual, and why does it converge quadratically?</strong>
+The discretized equilibrium is <span class="arithmatex">\(\mathbf R(\mathbf d) = \mathbf f_{ext} - \mathbf f_{int}(\mathbf d) - \mathbf f_c(\mathbf d) = \mathbf 0\)</span>. Taylor-expanding about the current iterate:</p>
+<div class="arithmatex">\[\mathbf R(\mathbf d+\Delta\mathbf d) \approx \mathbf R(\mathbf d) + \frac{\partial\mathbf R}{\partial\mathbf d}\Delta\mathbf d\]</div>
+<p>Setting the next residual to zero and defining <span class="arithmatex">\(\mathbf K_T = -\partial\mathbf R/\partial\mathbf d\)</span> gives</p>
+<div class="arithmatex">\[\boxed{\mathbf K_T\,\Delta\mathbf d = \mathbf R}, \qquad \mathbf d_{k+1} = \mathbf d_k + \Delta\mathbf d_k\]</div>
+<p>If <span class="arithmatex">\(\mathbf R\)</span> is sufficiently smooth and its Jacobian nonsingular near the solution, <span class="arithmatex">\(\mathbf R(\mathbf d_k) = J^*e_k + O(\|e_k\|^2)\)</span>, and Newton cancels the first-order error term exactly, leaving</p>
+<div class="arithmatex">\[\boxed{\|e_{k+1}\| \le C\|e_k\|^2}\]</div>
+<p>— <strong>quadratic</strong> convergence, but only <strong>locally</strong>: far from the solution the Taylor-expansion/nonsingularity assumptions can fail, motivating line search, arc-length continuation, or adaptive stepping (below). Newton linearization does <em>not</em> replace the original nonlinear physical problem with a globally linear model — the original geometric, material, and contact nonlinearities remain fully present in <span class="arithmatex">\(\mathbf R\)</span> and <span class="arithmatex">\(\mathbf K_T\)</span> as evaluated at the current state; repeated <em>local</em> linear corrections are what solves the <em>original</em> nonlinear problem.</p>
+<p><strong>Q: What's the difference between full Newton, modified Newton, generalized Newton, and quasi-Newton?</strong>
+- <strong>Full Newton</strong>: recompute (and refactorize) <span class="arithmatex">\(\mathbf K_T\)</span> every iteration → quadratic convergence, but expensive per step.
+- <strong>Modified Newton</strong>: reuse an earlier <span class="arithmatex">\(\mathbf K_T\)</span> for several iterations → cheaper per step, only linear convergence, more iterations needed overall.
+- <strong>Quasi-Newton</strong> (e.g. BFGS): update an approximation to <span class="arithmatex">\(\mathbf K_T\)</span> or <span class="arithmatex">\(\mathbf K_T^{-1}\)</span> from secant information gathered across iterations, avoiding repeated reassembly/refactorization while still improving on modified-Newton's convergence rate.
+- <strong>Generalized Newton</strong>: variants suited to specialized or non-smooth operators (e.g. semismooth Newton for friction's non-smooth stick–slip operator).</p>
+<p>The trade-off throughout is tangent-construction/factorization cost per iteration vs. the number of iterations needed.</p>
+<p><strong>Q: What happens when Newton doesn't converge?</strong>
+- <strong>Adaptive stepping</strong>: shrink the load/time increment <span class="arithmatex">\(\Delta\lambda\)</span> or <span class="arithmatex">\(\Delta t\)</span> and retry.
+- <strong>Line search</strong>: scale the Newton correction, <span class="arithmatex">\(\mathbf d^{k+1} = \mathbf d^k + \alpha\,\Delta\mathbf d_N\)</span>, <span class="arithmatex">\(0&lt;\alpha\le1\)</span>, choosing <span class="arithmatex">\(\alpha\)</span> via a merit function such as <span class="arithmatex">\(\Phi(\mathbf d) = \tfrac12\|\mathbf R(\mathbf d)\|^2\)</span> rather than automatically taking the full step. The <em>direction</em> remains Newton's; only its magnitude is reduced when the full step would overshoot.
+- <strong>Arc-length/continuation</strong>: needed past limit points (snap-through/snap-back), where ordinary load control fails because the load parameter stops being a monotonic continuation variable.
+- <strong>Stabilization/regularization</strong>: numerical damping, viscous regularization, contact stabilization — distinct from <em>physical</em> damping, used purely to help the iteration converge.</p>
+<p><strong>Q: How does load stepping parameterize a nonlinear equilibrium path?</strong>
+Write <span class="arithmatex">\(\mathbf f_{ext} = \lambda\mathbf f_0\)</span> for a fixed reference load <span class="arithmatex">\(\mathbf f_0\)</span> and scalar load factor <span class="arithmatex">\(\lambda\)</span>, so equilibrium reads</p>
+<div class="arithmatex">\[\boxed{\mathbf R(\mathbf d,\lambda) = \lambda\mathbf f_0 - \mathbf f_{int}(\mathbf d) - \mathbf f_c(\mathbf d) = \mathbf 0}\]</div>
+<p>Increasing <span class="arithmatex">\(\lambda\)</span> gradually turns one hard nonlinear problem into a sequence of nearby equilibrium problems, each easier for Newton to solve starting from the previous converged state. Adaptive step reduction (shrinking <span class="arithmatex">\(\Delta\lambda\)</span>) is standard when convergence deteriorates.</p>
+<p><strong>Q: Why can load control fail at a limit point, and how does arc-length continuation help?</strong>
+At a turning point (snap-through), the load–displacement curve becomes locally vertical or reverses — <span class="arithmatex">\(\lambda\)</span> ceases to be a valid monotonic continuation parameter, so no increase in <span class="arithmatex">\(\lambda\)</span> corresponds to the next equilibrium state (there may be zero or two solutions at nearby <span class="arithmatex">\(\lambda\)</span>). Arc-length methods introduce an additional constraint coupling displacement and load increments, e.g.</p>
+<div class="arithmatex">\[\boxed{\|\Delta\mathbf d\|^2 + \alpha^2(\Delta\lambda)^2 = \Delta s^2}\]</div>
+<p>so displacement and load are solved for <strong>simultaneously</strong>, letting the numerical path follow the true equilibrium path through — and past — turning points that ordinary load-controlled Newton cannot traverse.</p>
+<p><strong>Q: How should convergence of a nonlinear FE solve actually be assessed?</strong>
+Multiple criteria should be checked together — a residual (force-equilibrium) criterion, a solution-increment (displacement) criterion, and sometimes an energy/work criterion — since relying on just one can give a false positive. Representative forms:</p>
+<div class="arithmatex">\[\frac{\|\mathbf R_k\|}{\max(\|\mathbf R_0\|, R_{\text{ref}})} &lt; \varepsilon_R, \qquad \frac{\|\Delta\mathbf d_k\|}{\max(\|\mathbf d_k\|, d_{\text{ref}})} &lt; \varepsilon_d\]</div>
+<p>Using several independent measures reduces the risk of declaring convergence from one misleading numerical indicator (e.g. a small residual that's small only because the increment happens to be small too, or vice versa).</p>
+<p><strong>Q: Why is adaptive load/time stepping useful beyond just "convergence failed → shrink the step"?</strong>
+It matches increment size to local problem difficulty: small increments where the response is stiffness-changing rapidly (contact activation, yielding, near an instability), larger increments where the response is smooth — improving robustness without paying the cost of small steps everywhere.</p>
+<hr />
+<h2 id="2-implicit-vs-explicit-time-integration">2. Implicit vs. Explicit Time Integration</h2>
+<p><strong>Q: What's the core difference between implicit and explicit dynamics?</strong>
+Both solve <span class="arithmatex">\(\mathbf M\ddot{\mathbf d} + \mathbf C\dot{\mathbf d} + \mathbf f_{int}(\mathbf d) = \mathbf f_{ext}(t)\)</span>. <strong>Explicit</strong> computes <span class="arithmatex">\(\mathbf d_{n+1}\)</span> directly from known quantities at <span class="arithmatex">\(t_n\)</span> (central difference), needing only a diagonal/lumped-mass solve and no <span class="arithmatex">\(\mathbf K_T\)</span> or global Newton loop:</p>
+<div class="arithmatex">\[\boxed{\mathbf d_{n+1} = 2\mathbf d_n - \mathbf d_{n-1} + \Delta t^2\mathbf M^{-1}(\mathbf f_{ext,n} - \mathbf f_{int,n})}\]</div>
+<p><strong>Implicit</strong> enforces equilibrium at the unknown <span class="arithmatex">\(t_{n+1}\)</span>, requiring a full Newton loop and linear solves per step (Newmark, HHT-<span class="arithmatex">\(\alpha\)</span>, generalized-<span class="arithmatex">\(\alpha\)</span>). There is therefore no <em>global</em> nonlinear equilibrium solve at each explicit step, though local constitutive integration (e.g. return mapping in plasticity) may itself be iterative.</p>
+<p><strong>Q: Why is explicit's <span class="arithmatex">\(\Delta t\)</span> so restrictive?</strong>
+The CFL/stability condition</p>
+<div class="arithmatex">\[\boxed{\Delta t_{\text{crit}} \approx \frac{2}{\omega_{\max}} \sim \frac{L_{\min}}{c}}\]</div>
+<p>(wave speed <span class="arithmatex">\(c\)</span> divided by smallest element dimension <span class="arithmatex">\(L_{\min}\)</span>, equivalently the highest natural frequency <span class="arithmatex">\(\omega_{\max}\)</span> of the discrete system) is governed by the stiffest, smallest element in the <em>entire</em> mesh, regardless of the physics of interest elsewhere. Violating it makes the numerical amplification factor exceed 1, and any small numerical error blows up exponentially step-to-step. Mesh refinement reduces <span class="arithmatex">\(L_{\min}\)</span>, raises <span class="arithmatex">\(\omega_{\max}\)</span>, and therefore <em>reduces</em> the stable explicit time step — a direct coupling between spatial and temporal resolution that implicit schemes don't have.</p>
+<p><strong>Q: Why can implicit integration use a large <span class="arithmatex">\(\Delta t\)</span>?</strong>
+Because the update solves for the state <em>at</em> <span class="arithmatex">\(t_{n+1}\)</span> self-consistently (equilibrium enforced there, not extrapolated from the past), schemes like Newmark average-acceleration (<span class="arithmatex">\(\gamma=1/2\)</span>, <span class="arithmatex">\(\beta=1/4\)</span>) have amplification factor <span class="arithmatex">\(|A|\le1\)</span> for <strong>every</strong> frequency and <strong>every</strong> <span class="arithmatex">\(\Delta t\)</span> — unconditional stability. This comes from built-in algorithmic/numerical damping of high-frequency content, not from resolving it accurately. Caveat: unconditional stability <span class="arithmatex">\(\neq\)</span> accuracy — an overly large <span class="arithmatex">\(\Delta t\)</span> still gives a stable but inaccurate or oscillatory answer, and can itself degrade Newton convergence within the step.</p>
+<p><strong>Q: What is the effective tangent used in implicit dynamics?</strong>
+Starting from <span class="arithmatex">\(\mathbf M\ddot{\mathbf d} + \mathbf C\dot{\mathbf d} + \mathbf f_{int}(\mathbf d) = \mathbf f_{ext}\)</span>, time discretization relates acceleration and velocity increments linearly to the displacement increment, <span class="arithmatex">\(\Delta\ddot{\mathbf d} = a_0\Delta\mathbf d\)</span>, <span class="arithmatex">\(\Delta\dot{\mathbf d} = a_1\Delta\mathbf d\)</span> (coefficients <span class="arithmatex">\(a_0,a_1\)</span> set by the chosen integration scheme), giving</p>
+<div class="arithmatex">\[\boxed{\mathbf K_{\text{eff}} = \mathbf K_T + a_1\mathbf C + a_0\mathbf M}\]</div>
+<p>Newton is then applied to this effective tangent instead of <span class="arithmatex">\(\mathbf K_T\)</span> alone.</p>
+<p><strong>Q: When should you use explicit vs. implicit integration?</strong>
+- <strong>Explicit</strong>: short-duration, highly nonlinear, high-rate events (impact, crash, blast, forming) — no risk of Newton non-convergence, and naturally handles severe contact/plasticity without needing a converged global tangent.
+- <strong>Implicit</strong>: quasi-static problems, low-to-moderate-rate dynamics, and long-duration/low-frequency response (statics, modal analysis, slow forming) — where the <span class="arithmatex">\(\Delta t\)</span> savings from unconditional stability outweigh the per-step cost of Newton iteration and factorization.</p>
+<hr />
+<h2 id="3-direct-and-iterative-linear-solvers">3. Direct and Iterative Linear Solvers</h2>
+<p><strong>Q: Why does nonlinear FE reduce to a sequence of linear algebra problems, and why solve <span class="arithmatex">\(\mathbf K\Delta\mathbf d=\mathbf R\)</span> rather than explicitly form <span class="arithmatex">\(\mathbf K^{-1}\)</span>?</strong>
+Newton linearization turns <span class="arithmatex">\(\mathbf R(\mathbf d)=0\)</span> into a sequence of linear systems <span class="arithmatex">\(\mathbf K_T\Delta\mathbf d = \mathbf R\)</span> (one per Newton iteration); the nonlinear algorithm updates state and tangent, the linear solver computes the correction. Explicitly forming <span class="arithmatex">\(\mathbf K^{-1}\)</span> is unnecessary, more expensive, less numerically stable, and destroys the matrix's sparse structure (the inverse of a sparse matrix is generally dense). Direct factorization or an iterative method computes the required correction vector directly, without ever constructing the inverse — production FE codes implement linear <em>solves</em>, never explicit matrix inversion.</p>
+<p><strong>Q: How do direct and iterative linear solvers differ, and when is each more efficient?</strong>
+<strong>Direct</strong> methods factorize the sparse matrix — <span class="arithmatex">\(\mathbf K = \mathbf{LU}\)</span> (unsymmetric) or <span class="arithmatex">\(\mathbf{LDL}^T\)</span>/Cholesky (symmetric/SPD) — then solve via forward/back substitution. Cost scales roughly <span class="arithmatex">\(O(N^{1.5\text{–}2})\)</span> in 3D due to fill-in, and memory grows faster than linear; but direct methods always converge to the (numerically) exact answer and are robust for ill-conditioned systems (contact, near-incompressibility, mixed shell/solid models). <strong>Iterative</strong> (Krylov) methods generate successive approximations via matrix-vector products, with cost per iteration that's much lower and scales better for very large sparse systems — but can stagnate on ill-conditioned systems without an effective preconditioner. This is why direct solvers remain the default for nonlinear/contact analysis in most production codes even though they scale worse asymptotically: robustness under changing, sometimes-indefinite tangents matters more than raw per-solve cost for most practical problem sizes.</p>
+<p><strong>Q: What is the Krylov-subspace formulation behind GMRES, and how does it differ from CG?</strong>
+For <span class="arithmatex">\(A\mathbf x = \mathbf b\)</span> with initial residual <span class="arithmatex">\(\mathbf r_0\)</span>, the Krylov subspace is</p>
+<div class="arithmatex">\[\boxed{\mathcal K_m = \operatorname{span}\{\mathbf r_0, A\mathbf r_0, \ldots, A^{m-1}\mathbf r_0\}}\]</div>
+<p><strong>GMRES</strong> chooses <span class="arithmatex">\(\mathbf x_m \in \mathbf x_0 + \mathcal K_m\)</span> to minimize <span class="arithmatex">\(\|\mathbf b - A\mathbf x_m\|_2\)</span> over that subspace, and — unlike CG — requires neither symmetry nor positive-definiteness of <span class="arithmatex">\(A\)</span>, making it the standard choice for general (e.g. unsymmetric, or symmetric-indefinite from contact/mixed formulations) FE tangent systems. <strong>CG (Conjugate Gradient)</strong> is restricted to symmetric positive-definite <span class="arithmatex">\(A\)</span>, where it minimizes the <span class="arithmatex">\(A\)</span>-norm of the error over the same style of Krylov subspace at lower memory/compute cost per iteration than GMRES (GMRES's cost per iteration grows with <span class="arithmatex">\(m\)</span> unless restarted, since it must store/orthogonalize against the whole growing basis; CG uses short recurrences and constant per-iteration cost).</p>
+<p><strong>Q: Why is preconditioning central to iterative FE solvers?</strong>
+A preconditioner <span class="arithmatex">\(M^{-1}\)</span> transforms the system to <span class="arithmatex">\(M^{-1}A\mathbf x = M^{-1}\mathbf b\)</span> (or a symmetric variant), with the objective of giving the transformed system a more favorable spectrum or field of values for the Krylov method — clustering eigenvalues, reducing the condition number. Critically, <span class="arithmatex">\(M^{-1}\)</span> need <strong>not</strong> approximate <span class="arithmatex">\(A^{-1}\)</span> accurately; it only needs to make the transformed system easier to solve. For large sparse FE systems, the choice and quality of preconditioner is often the single largest factor determining whether an iterative solver is practical at all.</p>
+<p><strong>Q: How do the Abaqus and MSC Nastran solvers compare architecturally?</strong>
+Abaqus was designed nonlinear-first, with Standard (implicit) / Explicit as its core split from inception. Nastran was designed linear-first (aerospace certification analysis: linear statics, modal, frequency response), with nonlinear capability (SOL 400) added later as an extension. Both default to <strong>sparse multifrontal direct solvers</strong> (LU for unsymmetric, LDL<span class="arithmatex">\(^T\)</span>/Cholesky for symmetric/SPD). Nastran's implementation is tuned for low-memory, out-of-core operation — a legacy of memory-constrained hardware, and still strong for huge linear/modal models. Abaqus's is tuned for nonlinear/contact robustness — reliable refactorization every Newton iteration even as <span class="arithmatex">\(\mathbf K_T\)</span>'s definiteness changes (e.g. through buckling or contact status changes). For iterative solvers, both are Krylov-based with preconditioning but differ in choice: Abaqus commonly uses incomplete-LU (ILU) preconditioning (for symmetric systems, single load case, statics/quasi-static only, with no guaranteed convergence), while Nastran uses Block Incomplete Cholesky (BIC) preconditioning with PCG.</p>
+<hr />
+<h2 id="4-petsc-snes-ksp-and-the-solver-hierarchy">4. PETSc: SNES, KSP, and the Solver Hierarchy</h2>
+<p><strong>Q: What is the relationship between PETSc's SNES and KSP?</strong>
+<strong>SNES</strong> (Scalable Nonlinear Equations Solver) solves the nonlinear problem <span class="arithmatex">\(\mathbf R(\mathbf d) = 0\)</span>. Its Newton-type methods produce a linearized system <span class="arithmatex">\(\mathbf J_R\,\Delta\mathbf d = -\mathbf R\)</span> at each nonlinear iteration; <strong>KSP</strong> (Krylov Subspace solver) then solves that linear system. The hierarchy is</p>
+<div class="arithmatex">\[\boxed{\text{SNES} \to \text{nonlinear iteration} \to \text{Jacobian} \to \text{KSP} \to \text{linear solve}}\]</div>
+<p>SNES and a Krylov method like GMRES therefore operate at strictly different levels: SNES controls the <em>outer</em> nonlinear iteration (convergence criteria, globalization, line search), KSP (with a chosen method — GMRES, CG, etc. — and preconditioner) solves each resulting <em>linear</em> system. This mirrors the "three nested loops" picture at the top of this file: SNES = middle loop, KSP = inner loop.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.expand", "navigation.top", "content.code.copy", "content.action.edit", "content.tabs.link", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
