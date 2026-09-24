@@ -78,3 +78,34 @@ a[target="_blank"]::after {
 .md-search.search-active .md-search__form::after {
   display: none;
 }
+
+/* thin font typography */
+:root {
+  --md-text-font: "Lato";
+  --md-code-font: "Roboto Mono";
+}
+
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.md-typeset h1 {
+  font-weight: 400;
+}
+
+.md-typeset h2 {
+  font-weight: 400;
+}
+
+.md-typeset h3 {
+  font-weight: 400;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  font-family: var(--md-text-font-family);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}

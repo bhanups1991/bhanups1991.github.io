@@ -1,0 +1,1189 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bhanu Pratap Sharma">
+      
+      
+        <link rel="canonical" href="https://bhanups1991.github.io/faq_fea/">
+      
+      
+        <link rel="prev" href="../glossary/">
+      
+      
+        <link rel="next" href="../derivations/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>FEA Review - Bhanu Pratap Sharma, PhD</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../javascripts/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finite-element-method-faq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bhanu Pratap Sharma, PhD" class="md-header__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bhanu Pratap Sharma, PhD
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FEA Review
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="custom-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bhanu Pratap Sharma, PhD" class="md-nav__button md-logo" aria-label="Bhanu Pratap Sharma, PhD" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Bhanu Pratap Sharma, PhD
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Log
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Research Log
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weak_form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weak Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tensors_with_bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensors with Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element Method
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finite Element Method
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isoparametric_elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Isoparametric Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometric_nonlinearity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometric Nonlinearity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signorini_conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signorini Conditions in Contact Mechanics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../piola_traction_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piola Traction Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consistent Reminders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FEA Review
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FEA Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-weak-forms-and-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Weak Forms and Boundary Conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-isoparametric-elements-and-the-jacobian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Isoparametric Elements and the Jacobian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-locking-hourglassing-and-cures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Locking, Hourglassing, and Cures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-strainstress-evaluation-and-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Strain/Stress Evaluation and Post-Processing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mesh-refinement-h-vs-p-and-convergence-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mesh Refinement: h vs. p, and Convergence Rates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sources-of-nonlinearity-and-the-tangent-stiffness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Sources of Nonlinearity and the Tangent Stiffness
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivations and Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-weak-forms-and-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Weak Forms and Boundary Conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-isoparametric-elements-and-the-jacobian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Isoparametric Elements and the Jacobian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-locking-hourglassing-and-cures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Locking, Hourglassing, and Cures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-strainstress-evaluation-and-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Strain/Stress Evaluation and Post-Processing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mesh-refinement-h-vs-p-and-convergence-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mesh Refinement: h vs. p, and Convergence Rates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sources-of-nonlinearity-and-the-tangent-stiffness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Sources of Nonlinearity and the Tangent Stiffness
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="finite-element-method-faq">Finite Element Method — FAQ</h1>
+<div class="admonition info">
+<p class="admonition-title">Under Revision</p>
+<p>Page under heavy revision.</p>
+</div>
+<p><img alt="Page under construction" class="center" src="/images/under_revision.png#only-light" width="400" />
+<img alt="Page under construction" class="center" src="/images/under_revision_dark.png#only-dark" width="400" /></p>
+<hr />
+<h2 id="1-weak-forms-and-boundary-conditions">1. Weak Forms and Boundary Conditions</h2>
+<p><strong>Q: How does strong-form equilibrium become the FE weak form?</strong>
+Starting from pointwise balance <span class="arithmatex">\(-\nabla\cdot\boldsymbol\sigma = \mathbf b\)</span>, multiply by an admissible virtual displacement <span class="arithmatex">\(\delta\mathbf u\)</span> and integrate by parts:</p>
+<div class="arithmatex">\[\int_\Omega \boldsymbol\sigma:\nabla\delta\mathbf u\,dV = \int_\Omega \mathbf b\cdot\delta\mathbf u\,dV + \int_{\Gamma_t}\mathbf t\cdot\delta\mathbf u\,dS\]</div>
+<p>Integration by parts always produces a boundary flux term; what happens to it depends on how the boundary conditions are treated. This is the same derivation for the scalar Poisson case: <span class="arithmatex">\(-\nabla^2 u = f \Rightarrow \int_\Omega \nabla u\cdot\nabla v\,dx - \int_{\partial\Omega}(\nabla u\cdot n)\,v\,ds = \int_\Omega fv\,dx\)</span>.</p>
+<p><strong>Q: What's the difference between essential and natural boundary conditions?</strong>
+<strong>Essential</strong> BCs prescribe the primary variable (displacement) and define the admissible function space itself. <strong>Natural</strong> BCs prescribe a derived quantity (traction) and fall out automatically from the boundary term generated by integration by parts. This is why a traction-free edge needs no explicit code — the weak form already "knows" <span class="arithmatex">\(\mathbf t = 0\)</span> there.</p>
+<p><strong>Q: Why does the boundary integral vanish in standard (strong) Dirichlet enforcement?</strong>
+Because test functions are chosen from <span class="arithmatex">\(H^1_0(\Omega)\)</span> — the subspace of <span class="arithmatex">\(H^1\)</span> functions with zero trace (zero boundary values) by construction. Since <span class="arithmatex">\(v=0\)</span> on <span class="arithmatex">\(\partial\Omega\)</span>, <span class="arithmatex">\(\int_{\partial\Omega}(\nabla u\cdot n)v\,ds \equiv 0\)</span> automatically; it isn't dropped or approximated, the space definition kills it. The trial function then lives in the affine space <span class="arithmatex">\(u \in u_D + H^1_0(\Omega)\)</span>: search over all <span class="arithmatex">\(H^1_0\)</span> corrections on top of a fixed boundary lift <span class="arithmatex">\(u_D\)</span>. This is exactly what applying a <code>DirichletBC</code> does numerically — pin the boundary DOFs, solve for the interior ones.</p>
+<p><strong>Q: What is Nitsche's method and why does it exist?</strong>
+Nitsche's method enforces Dirichlet BCs <strong>weakly</strong>, through extra terms in the variational form, rather than by constraining the function space. It's needed whenever strong enforcement is inconvenient — unfitted meshes, embedded interfaces, or contact, where the constraint boundary doesn't align with the mesh. Both <span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(v\)</span> now live in the <em>full</em> <span class="arithmatex">\(H^1(\Omega)\)</span>, so the boundary integral no longer vanishes and must be dealt with explicitly.</p>
+<p><strong>Q: What are the two extra terms Nitsche adds, and what does each do?</strong>
+Starting from the integrated-by-parts form with a non-vanishing boundary integral, two corrections are added:</p>
+<div class="arithmatex">\[-\int_{\partial\Omega}(\nabla v\cdot n)(u-u_D)\,ds \;+\; \frac{\alpha}{h}\int_{\partial\Omega}(u-u_D)\,v\,ds\]</div>
+<ul>
+<li><strong>Symmetry term</strong> <span class="arithmatex">\(-\int_{\partial\Omega}(\nabla v\cdot n)(u-u_D)\,ds\)</span>: the transpose of the flux term already present, restoring <span class="arithmatex">\(a(u,v)=a(v,u)\)</span>. Without it the system matrix is non-symmetric, breaking standard solvers and error analysis.</li>
+<li><strong>Penalty/coercivity term</strong> <span class="arithmatex">\(\frac{\alpha}{h}\int_{\partial\Omega}(u-u_D)v\,ds\)</span>: enforces <span class="arithmatex">\(u\approx u_D\)</span>. <span class="arithmatex">\(\alpha\)</span> must be large enough (above a mesh/trace-inequality-dependent threshold) for coercivity; <span class="arithmatex">\(h\)</span> (element diameter) ensures the penalty scales correctly under mesh refinement.</li>
+</ul>
+<p><strong>Q: Why are both Nitsche terms needed — can one be dropped?</strong>
+Neither alone suffices: penalty-only is coercive but not symmetric (suboptimal convergence order); symmetry-only is symmetric but not coercive (the system may be singular). Together they give a form that is <strong>consistent</strong> (the exact solution satisfies it), <strong>symmetric</strong>, and <strong>coercive</strong> — the three properties needed for optimal convergence.</p>
+<p><strong>Q: What is the final Nitsche bilinear/linear form?</strong></p>
+<div class="arithmatex">\[a(u,v) = \int_\Omega \nabla u\cdot\nabla v\,dx + \int_{\partial\Omega}\Big[-(n\cdot\nabla u)v - (n\cdot\nabla v)u + \tfrac{\alpha}{h}uv\Big]ds$$
+$$L(v) = \int_\Omega fv\,dx + \int_{\partial\Omega}\Big[-(n\cdot\nabla v)u_D + \tfrac{\alpha}{h}u_D v\Big]ds\]</div>
+<p>All <span class="arithmatex">\(u\)</span>-dependent terms go into <span class="arithmatex">\(a(u,v)\)</span>; known Dirichlet data <span class="arithmatex">\(u_D\)</span> becomes right-hand-side data in <span class="arithmatex">\(L(v)\)</span> — the standard split producing <span class="arithmatex">\(Au=b\)</span>. The same skeleton, with a one-sided inequality instead of an equality constraint, underlies Nitsche-based contact enforcement (see the Contact Mechanics FAQ).</p>
+<hr />
+<h2 id="2-isoparametric-elements-and-the-jacobian">2. Isoparametric Elements and the Jacobian</h2>
+<p><strong>Q: What's the one-sentence idea behind isoparametric elements?</strong>
+Use the <strong>same shape functions</strong> for the geometry map (reference → physical element) and for interpolating the solution. "Iso" = same, "parametric" = the coordinate parametrization; one set of shape functions does both jobs.</p>
+<p><strong>Q: What problem do isoparametric elements actually solve?</strong>
+Two, simultaneously: (1) straight-edged elements on curved domains leave a permanent geometry error that never vanishes no matter how the element degree is raised; curved isoparametric elements hug the real geometry. (2) Gauss quadrature and shape-function differentiation are only clean on a standard reference shape (bi-unit square, unit triangle) — isoparametric elements let all calculus happen once on that reference element <span class="arithmatex">\(\hat K\)</span>, then map results back.</p>
+<p><strong>Q: How does the geometry map work, and how is the solution interpolated the same way?</strong>
+For element <span class="arithmatex">\(K\)</span> with <span class="arithmatex">\(n\)</span> nodes at <span class="arithmatex">\(\{\mathbf x_i\}\)</span>:</p>
+<div class="arithmatex">\[\mathbf x(\boldsymbol\xi) = \sum_{i=1}^n N_i(\boldsymbol\xi)\,\mathbf x_i, \qquad u_h(\boldsymbol\xi) = \sum_{i=1}^n N_i(\boldsymbol\xi)\,u_i\]</div>
+<p>Same <span class="arithmatex">\(N_i\)</span>, same <span class="arithmatex">\(\boldsymbol\xi\)</span> — physical coordinates interpolated from nodal coordinates, solution interpolated from nodal solution values. Note: <span class="arithmatex">\(\boldsymbol\xi\)</span> are purely computational (parent) coordinates and are <em>not</em> automatically the physical reference configuration of continuum mechanics (see next question, and the Continuum Mechanics FAQ).</p>
+<p><strong>Q: What is the Jacobian, and what are its two critical uses?</strong></p>
+<div class="arithmatex">\[J = \frac{\partial(x,y)}{\partial(\xi,\eta)}, \qquad \frac{\partial x}{\partial \xi} = \sum_i \frac{\partial N_i}{\partial\xi}x_i\]</div>
+<ol>
+<li><strong>Physical gradients of shape functions</strong> (needed for <span class="arithmatex">\(\nabla u_h\)</span> in the weak form): <span class="arithmatex">\(\big[\partial N_i/\partial x,\ \partial N_i/\partial y\big]^T = J^{-1}\big[\partial N_i/\partial\xi,\ \partial N_i/\partial\eta\big]^T\)</span>.</li>
+<li><strong>Change of variables for integration</strong>: <span class="arithmatex">\(\int_K f\,dx\,dy = \int_{\hat K} f\,|\det J|\,d\xi\,d\eta\)</span>.</li>
+</ol>
+<p><span class="arithmatex">\(|\det J|\)</span> is the local area/volume scaling factor. If <span class="arithmatex">\(\det J = 0\)</span> anywhere inside the element, the map is degenerate and the stiffness matrix is garbage — the deeper reason mesh quality matters. A negative <span class="arithmatex">\(\det J\)</span> signals an inverted element under the standard mapping convention.</p>
+<p><strong>Q: Is Gauss quadrature exact for isoparametric elements?</strong>
+Generally no. Gauss quadrature is exact only for polynomials up to a specified degree, but the isoparametric transformation introduces <span class="arithmatex">\(J^{-1}\)</span> and <span class="arithmatex">\(\det J\)</span> into the integrand, making it rational rather than polynomial for any element whose geometry map isn't affine (i.e. anything but a parallelepiped/straight-sided simplex). So for general quadrilaterals, hexahedra, or curved elements, finite-point quadrature is a numerical <strong>approximation</strong>, with accuracy depending on element order, distortion, and the chosen integration rule.</p>
+<p><strong>Q: What are the sub-, iso-, and superparametric variants?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Geometry order</th>
+<th>Solution order</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subparametric</td>
+<td>Lower</td>
+<td>Higher</td>
+<td>Flat-sided elements with high-order solution; rare</td>
+</tr>
+<tr>
+<td>Isoparametric</td>
+<td>Same</td>
+<td>Same</td>
+<td>Standard workhorse of FEM</td>
+</tr>
+<tr>
+<td>Superparametric</td>
+<td>Higher</td>
+<td>Lower</td>
+<td>Exact geometry, coarse solution; specialized</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Q: Is the isoparametric map valid for any element with any number of nodes?</strong>
+Yes, with one critical condition: <span class="arithmatex">\(F_K:\hat K\to K\)</span> must be a <strong>bijection</strong> — one-to-one, onto, with <span class="arithmatex">\(\det J \neq 0\)</span> everywhere inside the element. This holds for 2-node lines, linear quads/triangles, quadratic serendipity/curved elements, 20-node hexahedra, and in principle any <span class="arithmatex">\(n\)</span>. The danger is <strong>badly placed midside nodes</strong>: moving one too far toward a corner can drive <span class="arithmatex">\(\det J\)</span> to zero or negative somewhere inside the element, meaning the map folds over itself. Mesh-quality checks exist precisely to guarantee the isoparametric map stays a valid bijection everywhere.</p>
+<p><strong>Q: How does the isoparametric reference element relate to the reference/current configuration of continuum mechanics? Are they the same thing?</strong>
+No — same language, different objects, and this trips up almost everyone:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Continuum mechanics</th>
+<th>Isoparametric FEM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain 1</td>
+<td>Undeformed body <span class="arithmatex">\(\mathcal B_0\)</span>, coords <span class="arithmatex">\(\mathbf X\)</span></td>
+<td>Reference element <span class="arithmatex">\(\hat K\)</span>, coords <span class="arithmatex">\(\boldsymbol\xi\)</span></td>
+</tr>
+<tr>
+<td>Domain 2</td>
+<td>Deformed body <span class="arithmatex">\(\mathcal B_t\)</span>, coords <span class="arithmatex">\(\mathbf x\)</span></td>
+<td>Physical element <span class="arithmatex">\(K\)</span>, coords <span class="arithmatex">\(\mathbf x\)</span></td>
+</tr>
+<tr>
+<td>Map</td>
+<td>Deformation <span class="arithmatex">\(\boldsymbol\varphi(\mathbf X)\)</span> — <strong>physics</strong></td>
+<td>Element map <span class="arithmatex">\(F_K(\boldsymbol\xi)\)</span> — <strong>bookkeeping</strong></td>
+</tr>
+<tr>
+<td>Jacobian</td>
+<td><span class="arithmatex">\(\mathbf F = \nabla_X\boldsymbol\varphi\)</span> — carries stress/strain</td>
+<td><span class="arithmatex">\(J = \partial\mathbf x/\partial\boldsymbol\xi\)</span> — carries integration weights, gradients</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Material is actually moving</td>
+<td>Nothing moves; pure change of variables</td>
+</tr>
+</tbody>
+</table>
+<p>The <span class="arithmatex">\(\hat K \to K\)</span> isoparametric map is purely mathematical; the <span class="arithmatex">\(\mathcal B_0 \to \mathcal B_t\)</span> continuum map is physical. This also explains why a mesh Jacobian remains necessary even for an Eulerian FE formulation whose spatial mesh does <em>not</em> follow material particles: the discretization still needs a parent-to-physical mapping, entirely separate from the material deformation gradient <span class="arithmatex">\(\mathbf F\)</span>.</p>
+<p><strong>Q: How do the two Jacobians interact in geometrically nonlinear problems?</strong>
+Three configurations coexist: <span class="arithmatex">\(\hat K \xrightarrow{J_0} K_0 \xrightarrow{\mathbf F} K_t\)</span>, where <span class="arithmatex">\(\hat K\to K_0\)</span> is the isoparametric map to the (fixed) undeformed mesh and <span class="arithmatex">\(K_0\to K_t\)</span> is the physical deformation. The total Jacobian is <span class="arithmatex">\(J_t = \mathbf F\,J_0\)</span>. In a <strong>Total Lagrangian</strong> formulation, integration stays over the reference configuration using <span class="arithmatex">\(J_0\)</span> — the mesh coordinates never change — and all the physics of deformation is carried by <span class="arithmatex">\(\mathbf F\)</span> inside the constitutive/kinematic expressions.</p>
+<p><strong>Q: What happens if isoparametric elements aren't used?</strong>
+Two options, both bad:
+- <strong>Subparametric</strong> (straight-edged geometry, higher-order solution): geometry error persists no matter the solution polynomial order — a curved boundary stays a polygon forever; only <span class="arithmatex">\(h\)</span>-refinement reduces it.
+- <strong>Shape functions defined directly in physical space</strong>: theoretically possible, practically disastrous — every element has a different shape, so nothing (Gauss points, shape-function tables) can be reused, and constructing well-behaved polynomials on distorted/curved physical elements is genuinely hard. The efficiency of assembly collapses.</p>
+<p>Isoparametric elements aren't mathematically mandatory; they're the dominant choice because they make implementation uniform, efficient, and mathematically clean across all element shapes.</p>
+<p><strong>Q: Why do higher-order elements require matching geometry order to solution order?</strong>
+Two error sources exist simultaneously: geometry approximation of <span class="arithmatex">\(\partial\Omega\)</span> and solution approximation of <span class="arithmatex">\(u\)</span>. The classical estimate is</p>
+<div class="arithmatex">\[\|u-u_h\|_{H^1} \le C\big(h^k|u|_{H^{k+1}} + h^{p+1}|\text{geometry error}|\big)\]</div>
+<p>where <span class="arithmatex">\(k\)</span> is the solution polynomial degree and <span class="arithmatex">\(p\)</span> the geometry-map degree. If <span class="arithmatex">\(k&gt;p\)</span>, the geometry error dominates and the extra solution accuracy is wasted. Isoparametric elements enforce <span class="arithmatex">\(k=p\)</span> so neither error pollutes the other; in DOLFINx-style code, <code>("Lagrange", 2)</code> upgrades both consistently. Linear elements give <span class="arithmatex">\(O(h^1)\)</span> in the <span class="arithmatex">\(H^1\)</span> norm with flat edges, quadratic <span class="arithmatex">\(O(h^2)\)</span> with curved edges, etc. — going up an order changes the <strong>convergence rate</strong>, not just a constant factor.</p>
+<p><strong>Q: Is there a subtlety with higher-order elements under geometric nonlinearity?</strong>
+Yes. The isoparametric map describes fixed mesh geometry; the deformation gradient <span class="arithmatex">\(\mathbf F\)</span> is computed from the displacement field <span class="arithmatex">\(u_h\)</span>, whose polynomial order is <strong>one less</strong> than <span class="arithmatex">\(u_h\)</span> itself (differentiation drops the degree by one). So with quadratic displacement elements, strains — and hence stresses — are only linear within each element. A high-order quadrature rule tuned to expect higher-order stress variation will not find it; this is one reason element-order choices in nonlinear solid mechanics need more care than in linear problems.</p>
+<hr />
+<h2 id="3-locking-hourglassing-and-cures">3. Locking, Hourglassing, and Cures</h2>
+<p><strong>Q: Shear locking vs. volumetric locking — how do they compare?</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Shear locking</th>
+<th>Volumetric locking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trigger</td>
+<td>bending, linear elements</td>
+<td>near-incompressibility (any order, worst for linear)</td>
+</tr>
+<tr>
+<td>Constraint over-enforced</td>
+<td>transverse shear strain <span class="arithmatex">\(\approx 0\)</span> (Kirchhoff limit)</td>
+<td><span class="arithmatex">\(\operatorname{div}(\mathbf u)=0\)</span> pointwise</td>
+</tr>
+<tr>
+<td>Material-dependent?</td>
+<td>No — geometry/interpolation issue</td>
+<td>Yes — tied to Poisson's ratio/material law</td>
+</tr>
+<tr>
+<td>Typical fix</td>
+<td>reduced integration, quadratic elements, incompatible modes</td>
+<td>mixed u–p formulation, B-bar, selective reduced integration</td>
+</tr>
+</tbody>
+</table>
+<p>Both are the same underlying phenomenon: the discrete displacement space cannot represent the physical zero-strain constraint (zero shear in pure bending; zero volumetric strain at incompressibility) without picking up spurious strain energy, which artificially stiffens the element.</p>
+<p><strong>Q: What's the mechanism of shear locking for a low-order bent element, concretely?</strong>
+For a 2-node Timoshenko beam, <span class="arithmatex">\(\gamma(x) = dw/dx - \theta(x)\)</span>. Linear shape functions make <span class="arithmatex">\(dw/dx\)</span> constant but <span class="arithmatex">\(\theta(x)\)</span> linear, so <span class="arithmatex">\(\gamma(x)\)</span> is forced away from zero whenever curvature (<span class="arithmatex">\(\theta_1\neq\theta_2\)</span>) is present: <span class="arithmatex">\(\gamma(x) = (w_2-w_1)/L - \theta_1 - (\theta_2-\theta_1)x/L\)</span>. Any real bending drags along spurious shear strain, and since shear stiffness <span class="arithmatex">\(GA_s \sim Et^2\)</span> while bending stiffness <span class="arithmatex">\(EI \sim Et^3\)</span>, the spurious shear term dominates the energy as thickness <span class="arithmatex">\(t\to 0\)</span>, artificially stiffening the element — the relative damage worsens with slenderness. An equivalent 2D picture: for a Q4 element under pure bending (<span class="arithmatex">\(u_x=-\kappa xy\)</span>, <span class="arithmatex">\(u_y=\tfrac12\kappa x^2\)</span>, exact <span class="arithmatex">\(\gamma_{xy}=0\)</span>), bilinear interpolation with nodal values at <span class="arithmatex">\(x=\pm a\)</span> gives <span class="arithmatex">\(\partial u_y^h/\partial x = 0\)</span> while <span class="arithmatex">\(\partial u_x^h/\partial y = -\kappa x\)</span>, so <span class="arithmatex">\(\gamma_{xy}^h = -\kappa x \neq 0\)</span>.</p>
+<p><strong>Q: Is hourglassing a consequence of shear or volumetric locking?</strong>
+Neither — it's a side effect of the <em>cure</em> (uniform reduced integration), not of locking itself. They're opposite failure modes of the same lever (integration order): too much integration → locking; too little → hourglassing.</p>
+<p><strong>Q: What does "undersampling" mean in a rank/null-space picture?</strong>
+<span class="arithmatex">\(K_e = \sum_{gp} w_{gp}\,B^T(\xi_{gp})\,D\,B(\xi_{gp})\,|J(\xi_{gp})|\)</span>. Each Gauss point's contribution has rank <span class="arithmatex">\(\le\)</span> (number of strain components), so <span class="arithmatex">\(\operatorname{rank}(K_e) \le n_{gp}\times(\text{strain components})\)</span>. By rank–nullity, <span class="arithmatex">\(\dim(\text{null space}) = (\text{DOFs}) - \operatorname{rank}(K_e)\)</span>. For a 4-node quad with 1-point reduced integration: <span class="arithmatex">\(\operatorname{rank}(K_e)\le 3\)</span>, DOFs <span class="arithmatex">\(=8 \Rightarrow \dim(\text{null space})\ge 5\)</span>, but only 3 are legitimate rigid-body modes — the extra <span class="arithmatex">\(\ge2\)</span> are hourglass modes: displacement patterns whose strain field vanishes exactly at the single sample point (like a sine wave sampled only at its zero crossings) despite storing real energy elsewhere in the element.</p>
+<p><strong>Q: What is Selective Reduced Integration (SRI)?</strong>
+Integrate the <em>problematic</em> strain term (shear for shear locking, volumetric for volumetric locking) at reduced order, while integrating the well-behaved term (bending/deviatoric) at full order — removing the over-constraint that causes locking without undersampling the terms that trigger hourglassing. A middle path between full integration (locks) and uniform reduced integration (hourglasses).</p>
+<p><strong>Q: What is the B-bar method, in the same rank framework?</strong>
+Split strain into deviatoric + volumetric parts. Keep <span class="arithmatex">\(B_{dev}\)</span> from full shape-function derivatives; replace <span class="arithmatex">\(B_{vol}\)</span> with a lower-order/averaged <span class="arithmatex">\(\bar B_{vol}\)</span>, still evaluated at the <strong>full</strong> set of Gauss points. Since <span class="arithmatex">\(n_{gp}\)</span> is unchanged, the ceiling on <span class="arithmatex">\(\operatorname{rank}(K_e)\)</span> never drops — no hourglass risk introduced. The cure comes from making <span class="arithmatex">\(\bar B_{vol}\)</span> itself a poorer, lower-rank operator (unable to resolve the incompressible mode finely enough to over-charge it energy), not from sampling fewer points. For linear problems B-bar and SRI can be shown to produce an identical <span class="arithmatex">\(K_e\)</span> — same cure, different mechanism (under-representing vs. undersampling).</p>
+<p><strong>Q: What are incompatible modes, and how do they relate to hourglassing?</strong>
+Enrich the interpolation with extra internal "bubble" DOFs (statically condensed out) that let the element bend with a richer internal curvature field, fixing shear locking without forcing spurious shear strain — the same effect as SRI/B-bar, achieved by adding kinematic freedom rather than weakening the sampling. Quadrature stays fully integrated (<span class="arithmatex">\(n_{gp}\)</span> untouched), so no hourglass risk is introduced. ("Incompatible" refers to a separate issue: these modes can break inter-element displacement continuity, requiring Taylor's correction term to pass the patch test.)</p>
+<p><strong>Q: What does the patch test establish, and what does it not establish?</strong>
+It checks whether an element assembly reproduces a simple exact field — classically, constant strain — under appropriate boundary conditions. Passing demonstrates basic consistency (convergence as <span class="arithmatex">\(h\to0\)</span> is not ruled out), but it does <strong>not</strong> guarantee good bending behavior, resistance to locking, robustness under severe distortion, accurate contact pressure, or good dynamic performance.</p>
+<hr />
+<h2 id="4-strainstress-evaluation-and-post-processing">4. Strain/Stress Evaluation and Post-Processing</h2>
+<p><strong>Q: Where are strains and stresses actually computed — nodes or Gauss points?</strong>
+<strong>Gauss (integration) points</strong>, not nodes. The FE solve only produces nodal displacements <span class="arithmatex">\(\mathbf d\)</span> from <span class="arithmatex">\(K\mathbf d = F\)</span>; strain and stress are derived quantities: <span class="arithmatex">\(\boldsymbol\varepsilon(\xi) = B(\xi)\,\mathbf d_e\)</span>, <span class="arithmatex">\(\boldsymbol\sigma(\xi) = D\,\boldsymbol\varepsilon(\xi)\)</span>. They're evaluated at Gauss points because (a) <span class="arithmatex">\(B\)</span> is already evaluated there during stiffness assembly, (b) Gauss points are provably <strong>superconvergent</strong> for strain/stress — more accurate than any other location, including the nodes — and (c) nonlinear state variables (plastic strain, contact status) are naturally stored and updated there.</p>
+<p><strong>Q: How do you get nodal stress values for plotting, then?</strong>
+Extrapolation + averaging, done as a post-processing step: extrapolate each element's Gauss-point values to its own nodes (using the same or a specially fitted shape function, evaluated outside the Gauss-point range), then average across elements sharing a node. This is why "averaged" vs. "unaveraged" nodal stress is a standard post-processor toggle, and why unaveraged contour plots look discontinuous across element boundaries while averaged ones look smooth.</p>
+<hr />
+<h2 id="5-mesh-refinement-h-vs-p-and-convergence-rates">5. Mesh Refinement: h vs. p, and Convergence Rates</h2>
+<p><strong>Q: Does halving the element size <span class="arithmatex">\(h\)</span> halve the <span class="arithmatex">\(L^2\)</span> error?</strong>
+Not quite — that rate belongs to the <strong>energy (<span class="arithmatex">\(H^1\)</span>) norm</strong>, not <span class="arithmatex">\(L^2\)</span>. For polynomial degree <span class="arithmatex">\(p\)</span>: energy-norm error <span class="arithmatex">\(\sim O(h^p)\)</span>; <span class="arithmatex">\(L^2\)</span>-norm error <span class="arithmatex">\(\sim O(h^{p+1})\)</span> (one order higher, via the Aubin–Nitsche duality trick). For <strong>linear elements</strong> (<span class="arithmatex">\(p=1\)</span>): energy-norm error <span class="arithmatex">\(\sim O(h)\)</span> (halving <span class="arithmatex">\(h\)</span> does halve it), but <span class="arithmatex">\(L^2\)</span> error <span class="arithmatex">\(\sim O(h^2)\)</span> (halving <span class="arithmatex">\(h\)</span> quarters it).</p>
+<p><strong>Q: h-refinement vs. p-refinement — how do their convergence behaviors differ?</strong>
+- <strong>h-refinement</strong> (fixed <span class="arithmatex">\(p\)</span>): algebraic convergence, <span class="arithmatex">\(O(h^p)\)</span>.
+- <strong>p-refinement</strong> (fixed mesh): <strong>exponential</strong> convergence for smooth solutions (spectral-element-like behavior).
+- <span class="arithmatex">\(h\)</span> wins at singularities — no polynomial degree fixes a true singularity locally; <span class="arithmatex">\(p\)</span> wins where the solution is smooth.
+- <strong>hp-refinement</strong>: <span class="arithmatex">\(h\)</span>-refine (graded mesh) at singularities, <span class="arithmatex">\(p\)</span>-refine in smooth regions — recovers exponential convergence even in the presence of singularities.</p>
+<p><strong>Q: Where does h-refinement typically win in practice?</strong>
+Fracture mechanics (crack-tip <span class="arithmatex">\(r^{-1/2}\)</span> singularity), contact mechanics (sharp gradients and near-discontinuities at the contact edge, moving active/inactive set), shock/compaction-front propagation in dynamic problems (steep near-discontinuous front), re-entrant corners/notches, thin boundary/shear layers.</p>
+<p><strong>Q: Where does p-refinement typically win in practice?</strong>
+Smooth linear-elastic stress analysis away from singularities, modal/vibration analysis (smooth global mode shapes), heat conduction in smooth homogeneous domains, low-to-moderate-frequency wave propagation/acoustics with smooth fields, smooth-geometry Dirichlet problems with no contact.</p>
+<p><strong>Q: One-line framing of the whole trade-off?</strong>
+h-refinement compensates for <em>lost regularity</em> (shrink the region a polynomial has to approximate); p-refinement exploits <em>smoothness that's already there</em> (more local approximation power per DOF). The same logic drives hp-adaptive methods: spend <span class="arithmatex">\(h\)</span> where regularity is bad, <span class="arithmatex">\(p\)</span> where it's good.</p>
+<hr />
+<h2 id="6-sources-of-nonlinearity-and-the-tangent-stiffness">6. Sources of Nonlinearity and the Tangent Stiffness</h2>
+<p><strong>Q: Where does nonlinearity in the FE weak form come from?</strong>
+Three independent, combinable sources:
+- <strong>Material</strong>: constitutive law <span class="arithmatex">\(\sigma(\varepsilon)\)</span> nonlinear (plasticity, hyperelasticity) — this alone makes the residual nonlinear even under small-strain kinematics, since the strain–displacement relation stays linear but <span class="arithmatex">\(\sigma\)</span> vs. <span class="arithmatex">\(\varepsilon\)</span> does not.
+- <strong>Geometric</strong>: the strain measure is nonlinear in displacement (e.g. Green–Lagrange strain's quadratic term); equilibrium and kinematics both depend on the current, unknown configuration.
+- <strong>Contact/boundary</strong>: the domain of definition of the residual changes with the solution (evolving gap, active set, normals, friction, topology) — often non-smooth, not just nonlinear, and can make the residual nonlinear even when material and kinematics are both linear.</p>
+<p><strong>Q: What exactly is linearized to build the tangent, and is that before or after discretization?</strong>
+The Gateaux/Fréchet derivative of the residual <span class="arithmatex">\(R\)</span> w.r.t. displacement <span class="arithmatex">\(u\)</span>, in direction <span class="arithmatex">\(\Delta u\)</span>, giving a tangent bilinear form that's then discretized into <span class="arithmatex">\(K_T = \partial R/\partial \mathbf d\)</span>. For standard Galerkin FEM, linearize-then-discretize and discretize-then-linearize commute — "consistent tangent" means doing this consistently either way. In practice (e.g. FEniCS/UFL) the function space is already fixed when differentiating, so it's effectively discretize-then-linearize done symbolically.</p>
+<p><strong>Q: Where do the "dropped higher-order terms" of linearization actually come from?</strong>
+<span class="arithmatex">\(F_{int} = \int \boldsymbol\sigma{:}\delta\boldsymbol\varepsilon\,dV\)</span> involves two Taylor expansions, both truncated:
+- <strong>Stress side</strong>: <span class="arithmatex">\(\sigma(\varepsilon+\Delta\varepsilon) \approx \sigma(\varepsilon) + (\partial\sigma/\partial\varepsilon)\Delta\varepsilon + \text{HOT}\)</span> → the <strong>material tangent</strong>; the truncated terms reflect constitutive nonlinearity, independent of geometry.
+- <strong>Strain side</strong>: if strain itself is nonlinear in <span class="arithmatex">\(u\)</span> (e.g. Green–Lagrange has a <span class="arithmatex">\(\nabla u^T\nabla u\)</span> term), <span class="arithmatex">\(\varepsilon(u+\Delta u)\)</span> has a quadratic-in-<span class="arithmatex">\(\Delta u\)</span> piece → the <strong>geometric tangent</strong>.
+- Contact adds a third piece from linearizing the contact traction/gap term, often non-smooth rather than polynomial.</p>
+<p>So <span class="arithmatex">\(K_T = K_{\text{material}} + K_{\text{geometric}}\,(+\,K_{\text{contact}})\)</span>: geometric nonlinearity is just the most visible source (explicit quadratic term), not the only one.</p>
+<p><strong>Q: How does linearizing the internal virtual work produce material and geometric stiffness explicitly?</strong>
+Starting from <span class="arithmatex">\(\delta W_{int} = \int_{\Omega_0} \mathbf S{:}\delta\mathbf E\,dV_0\)</span> (reference-configuration virtual work in terms of the second Piola–Kirchhoff stress <span class="arithmatex">\(\mathbf S\)</span> and Green–Lagrange strain variation <span class="arithmatex">\(\delta\mathbf E\)</span> — see the Continuum Mechanics FAQ for their definitions), linearization gives</p>
+<div class="arithmatex">\[\Delta(\delta W_{int}) = \int_{\Omega_0}\Delta\mathbf S:\delta\mathbf E\,dV_0 + \int_{\Omega_0}\mathbf S:\Delta(\delta\mathbf E)\,dV_0\]</div>
+<p>Using <span class="arithmatex">\(\Delta\mathbf S = \mathbf C_{\text{tan}}{:}\Delta\mathbf E\)</span> (the constitutive tangent), the first term gives the <strong>material stiffness</strong> <span class="arithmatex">\(K_M\)</span>; the second — which involves the <em>existing</em> stress <span class="arithmatex">\(\mathbf S\)</span> acting on the second variation of a nonlinear strain measure — gives the <strong>geometric (initial-stress) stiffness</strong> <span class="arithmatex">\(K_G\)</span>. Together, <span class="arithmatex">\(K_T = K_M + K_G\)</span>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.instant", "navigation.expand", "navigation.top", "content.code.copy", "content.action.edit", "content.tabs.link", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

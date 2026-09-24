@@ -5,6 +5,8 @@ site_author: Bhanu Pratap Sharma
 theme:
   name: material
   logo: images/logo.png
+  font:
+    text: Inter
 
   palette:
 
