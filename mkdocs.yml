@@ -59,7 +59,7 @@ nav:
     - Signorini Conditions in Contact Mechanics: signorini_conditions.md
     - Piola Traction Decomposition: piola_traction_decomposition.md
     - Consistent Reminders: glossary.md
-    - FAQs for Review: FAQs_review.md
+    - FEA Review: faq_fea.md
     - Derivations and Proofs: derivations.md
 
 markdown_extensions:
