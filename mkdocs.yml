@@ -61,8 +61,8 @@ nav:
     - Signorini Conditions in Contact Mechanics: signorini_conditions.md
     - Piola Traction Decomposition: piola_traction_decomposition.md
     - Consistent Reminders: glossary.md
-    - FEA Review: faq_fea.md
-    - Derivations and Proofs: derivations.md
+    # - Common Topics: faq_fea.md
+    # - Derivations and Proofs: derivations.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

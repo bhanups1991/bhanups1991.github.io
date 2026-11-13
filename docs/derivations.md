@@ -3,8 +3,8 @@
 !!! info "Under Revision"
     Page under heavy revision.
 
-![Page under construction](/images/under_revision.png#only-light){ width="400" .center }
-![Page under construction](/images/under_revision_dark.png#only-dark){ width="400" .center }
+<!-- ![Page under construction](/images/under_revision.png#only-light){ width="400" .center }
+![Page under construction](/images/under_revision_dark.png#only-dark){ width="400" .center } -->
 
 Color convention: <span style="color:#1565C0">blue</span> = kinematics/geometric quantities; <span style="color:#2E7D32">green</span> = stress/constitutive quantities; <span style="color:#C62828">red</span> = residual/contact quantities; <span style="color:#6A1B9A">purple</span> = FE/solver quantities.
 

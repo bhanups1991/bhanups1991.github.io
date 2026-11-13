@@ -11,7 +11,7 @@ In these notes, I try to explain things as simply as I possibly can. I have obse
 
 ### AI Usage
 
-I use local ([`qwen2.5-coder-7b-instruct`](https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct), [`qwen2.5-14b-instruct`](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)) and cloud-based (Gemini, ChatGPT) AI tools to edit and proofread text, debug and optimize code, and generate images. I do not claim any novelty for the material shared here as most of it is already well documented in numerous books and research papers. I am simply revisiting the same and explaining it in simple words.
+I use local models ([`qwen2.5-coder-7b-instruct`](https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct), [`qwen2.5-14b-instruct`](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)) and cloud-based tools (Gemini, ChatGPT) for text editing, code debugging, and image generation. I claim no novelty for the material shared here. Most of it is already well documented in books and research papers, and these notes simply revisit established concepts and, occasionally, recent research.
 
 ---
 
